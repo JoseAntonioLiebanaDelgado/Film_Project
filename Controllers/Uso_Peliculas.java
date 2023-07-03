@@ -57,26 +57,16 @@ public class Uso_Peliculas {
         repartoTopGunMaverick.add("Glen Powell");
         repartoTopGunMaverick.add("Jennifer Connelly");
 
-        //TODO: Añadir mas de un genero por pelicula
 
-        Film LaComunidadDelAnillo = new Film("El señor de los anillos: La comunidad del anillo", Genero.FANTASIA, 2001, "228", "Peter Jakson", repartoESDLA_1_2_3, Pegi.DOCE, 4);
-
-        Film LasDosTorres = new Film("El señor de los anillos: Las dos torres", Genero.FANTASIA, 2002, "259", "Peter Jakson", repartoESDLA_1_2_3, Pegi.TRECE, 4);
-
-        Film ELRetornoDelRey = new Film("El señor de los anillos: El retorno del rey", Genero.FANTASIA, 2003, "254", "Peter Jakson", repartoESDLA_1_2_3, Pegi.TRECE, 4);
-
-        Film UnViajeInesperado = new Film("El Hobbit: Un viaje inesperado", Genero.FANTASIA, 2012, "182", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.SIETE, 4);
-
-        Film LaDesolacionDeSmaug = new Film("El Hobbit: La desolacion de Smaug", Genero.FANTASIA, 2013, "186", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.TRECE, 4);
-
-        Film LaBatallaDeLosCincoEjercitos = new Film("El Hobbit: La batalla de los cinco ejercitos", Genero.FANTASIA, 2014, "164", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.DIECIOCHO, 4);
-
+        Film LaComunidadDelAnillo = new Film("El señor de los anillos: La comunidad del anillo", Genero.AVENTURAFANTASIA, 2001, "228", "Peter Jakson", repartoESDLA_1_2_3, Pegi.DOCE, 4);
+        Film LasDosTorres = new Film("El señor de los anillos: Las dos torres", Genero.AVENTURAFANTASIA, 2002, "259", "Peter Jakson", repartoESDLA_1_2_3, Pegi.TRECE, 4);
+        Film ELRetornoDelRey = new Film("El señor de los anillos: El retorno del rey", Genero.AVENTURAFANTASIA, 2003, "254", "Peter Jakson", repartoESDLA_1_2_3, Pegi.TRECE, 4);
+        Film UnViajeInesperado = new Film("El Hobbit: Un viaje inesperado", Genero.AVENTURAFANTASIA, 2012, "182", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.SIETE, 4);
+        Film LaDesolacionDeSmaug = new Film("El Hobbit: La desolacion de Smaug", Genero.AVENTURAFANTASIA, 2013, "186", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.TRECE, 4);
+        Film LaBatallaDeLosCincoEjercitos = new Film("El Hobbit: La batalla de los cinco ejercitos", Genero.AVENTURAFANTASIA, 2014, "164", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.DIECIOCHO, 4);
         Film Gladiator = new Film("Gladiator", Genero.ACCION, 2000, "155", "Ridley Scott", repartoGladiator, Pegi.TRECE, 4);
-
         Film SalvarAlSoldadoRyan = new Film("Salvar al soldado Ryan", Genero.BELICO, 1998, "169", "Steven Spielberg", repartoSalvarAlSoldadoRyan, Pegi.TRECE, 4);
-
         Film TopGun = new Film("Top Gun", Genero.ACCION, 1986, "110", "Tony Scott", repartoTopGun, Pegi.CERO,4);
-
         Film TopGunMaverick = new Film("Top Gun: Maverick", Genero.ACCION, 2022, "130", "Joseph Kosinski", repartoTopGunMaverick, Pegi.TRECE, 4);
 
 
@@ -84,7 +74,9 @@ public class Uso_Peliculas {
                 "de los actores que aparecen en esta pelicula son " + repartoESDLA_1_2_3 + ". Esta pelicula es recomendada para mayores de " + Pegi.TRECE + " años y es del genero de " + Genero.FANTASIA + ".");
 
 
+
         ArrayList<Film> listaPeliculas = new ArrayList<>();
+//        listaPeliculas = bibliotecaInicial();
 
         listaPeliculas.add(LaComunidadDelAnillo);
         listaPeliculas.add(LasDosTorres);
@@ -97,11 +89,39 @@ public class Uso_Peliculas {
         listaPeliculas.add(TopGun);
         listaPeliculas.add(TopGunMaverick);
 
-        for (int i = 0; i < listaPeliculas.size(); i++) {
-            Film pelicula = listaPeliculas.get(i);
-            //System.out.println("Título: " + pelicula.getNombre() + ", Año de lanzamiento: " + pelicula.getAnyoLanzamiento() + ", Reparto: " + pelicula.getReparto() + ", Género: " + pelicula.getGenero());
-        }
 
+        for (int i = 0; i < listaPeliculas.size(); i++) {
+            // Obtenemos las películas en la posición i de la lista utilizando el método get(i).
+            // La película se asigna a la variable llamada pelicula de tipo Film.
+            Film pelicula = listaPeliculas.get(i);
+            System.out.println("Título: " + pelicula.getNombre() + ". Anyo de lanzamiento: " + pelicula.getAnyoLanzamiento() +
+                    ". Duracion: " + pelicula.getDuracion() + " minutos. Director: " + pelicula.getDirector() +
+                    ". Reparto: " + pelicula.getReparto() + ". Puntuacion: " + pelicula.getPuntuacion());
+        }
     }
 
+//    private static ArrayList<Film> bibliotecaInicial() {
+//        return
+//    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
