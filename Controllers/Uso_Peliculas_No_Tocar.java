@@ -6,7 +6,7 @@ import Models.Pelicula_No_tocar;
 
 import java.util.ArrayList;
 
-public class Uso_Peliculas {
+public class Uso_Peliculas_No_Tocar {
     public static void main(String[] args) {
 
         //ArrayList para almacenar reparto (5 actores/actrices) -- 3 peliculas de ESDLA
