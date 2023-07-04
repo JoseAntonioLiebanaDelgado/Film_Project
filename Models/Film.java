@@ -6,28 +6,26 @@ import ENUM.Pegi;
 import java.util.ArrayList;
 
 public class Film {
+
     //Hacemos los atributos protected para que puedan ser tratados como un atributo propio en las clases hijas.
     protected String nombre;
-//    protected String genero;
+    protected Genero genero;
     protected int anyoLanzamiento;
     protected String duracion;
     protected String director;
-    protected ArrayList<String> reparto; // Tener en cuenta el rango (0-5)
-    protected String pegi;
+    protected ArrayList<String> reparto;
+    protected Pegi pegi;
     protected float puntuacion; //Con rango de 0 a 5
-
-
-    //TODO: Las enum hay que ponerlas aqui a bajo o no?
 
 
     public Film(String nombre, Genero genero, int anyoLanzamiento, String duracion, String director, ArrayList<String> reparto, Pegi pegi, float puntuacion) {
         this.nombre = nombre; //el 2 nombre es el que entra por parametro
-//        this.genero = genero;
+        this.genero = genero;
         this.anyoLanzamiento = anyoLanzamiento;
         this.duracion = duracion;
         this.director = director;
         this.reparto = reparto;
-//        this.pegi = pegi;
+        this.pegi = pegi;
         this.puntuacion = puntuacion;
     }
 
@@ -35,9 +33,9 @@ public class Film {
         return nombre;
     }
 
-//    public String getGenero() {
-//        return genero;
-//    }
+    public String getGenero() {
+        return genero.toString();
+    }
 
     public int getAnyoLanzamiento() {
         return anyoLanzamiento;
@@ -55,9 +53,9 @@ public class Film {
         return reparto;
     }
 
-//    public String getPegi() {
-//        return pegi;
-//    }
+    public String getPegi() {
+        return pegi.toString();
+    }
 
     public float getPuntuacion() {
         return puntuacion;

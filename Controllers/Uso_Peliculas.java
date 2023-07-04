@@ -58,12 +58,12 @@ public class Uso_Peliculas {
         repartoTopGunMaverick.add("Jennifer Connelly");
 
 
-        Film LaComunidadDelAnillo = new Film("El señor de los anillos: La comunidad del anillo", Genero.AVENTURAFANTASIA, 2001, "228", "Peter Jakson", repartoESDLA_1_2_3, Pegi.DOCE, 4);
-        Film LasDosTorres = new Film("El señor de los anillos: Las dos torres", Genero.AVENTURAFANTASIA, 2002, "259", "Peter Jakson", repartoESDLA_1_2_3, Pegi.TRECE, 4);
-        Film ELRetornoDelRey = new Film("El señor de los anillos: El retorno del rey", Genero.AVENTURAFANTASIA, 2003, "254", "Peter Jakson", repartoESDLA_1_2_3, Pegi.TRECE, 4);
-        Film UnViajeInesperado = new Film("El Hobbit: Un viaje inesperado", Genero.AVENTURAFANTASIA, 2012, "182", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.SIETE, 4);
-        Film LaDesolacionDeSmaug = new Film("El Hobbit: La desolacion de Smaug", Genero.AVENTURAFANTASIA, 2013, "186", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.TRECE, 4);
-        Film LaBatallaDeLosCincoEjercitos = new Film("El Hobbit: La batalla de los cinco ejercitos", Genero.AVENTURAFANTASIA, 2014, "164", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.DIECIOCHO, 4);
+        Film LaComunidadDelAnillo = new Film("El señor de los anillos: La comunidad del anillo", Genero.AVENTURA_FANTASIA, 2001, "228", "Peter Jakson", repartoESDLA_1_2_3, Pegi.DOCE, 4);
+        Film LasDosTorres = new Film("El señor de los anillos: Las dos torres", Genero.AVENTURA_FANTASIA, 2002, "259", "Peter Jakson", repartoESDLA_1_2_3, Pegi.TRECE, 4);
+        Film ELRetornoDelRey = new Film("El señor de los anillos: El retorno del rey", Genero.AVENTURA_FANTASIA, 2003, "254", "Peter Jakson", repartoESDLA_1_2_3, Pegi.TRECE, 4);
+        Film UnViajeInesperado = new Film("El Hobbit: Un viaje inesperado", Genero.AVENTURA_FANTASIA, 2012, "182", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.SIETE, 4);
+        Film LaDesolacionDeSmaug = new Film("El Hobbit: La desolacion de Smaug", Genero.AVENTURA_FANTASIA, 2013, "186", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.TRECE, 4);
+        Film LaBatallaDeLosCincoEjercitos = new Film("El Hobbit: La batalla de los cinco ejercitos", Genero.AVENTURA_FANTASIA, 2014, "164", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.DIECIOCHO, 4);
         Film Gladiator = new Film("Gladiator", Genero.ACCION, 2000, "155", "Ridley Scott", repartoGladiator, Pegi.TRECE, 4);
         Film SalvarAlSoldadoRyan = new Film("Salvar al soldado Ryan", Genero.BELICO, 1998, "169", "Steven Spielberg", repartoSalvarAlSoldadoRyan, Pegi.TRECE, 4);
         Film TopGun = new Film("Top Gun", Genero.ACCION, 1986, "110", "Tony Scott", repartoTopGun, Pegi.CERO,4);
@@ -71,12 +71,10 @@ public class Uso_Peliculas {
 
 
         System.out.println("El titulo de la pelicula es " + LaComunidadDelAnillo.getNombre() + ", la fecha de lanzamiento fue en el año " + LaComunidadDelAnillo.getAnyoLanzamiento() + ", 5 " +
-                "de los actores que aparecen en esta pelicula son " + repartoESDLA_1_2_3 + ". Esta pelicula es recomendada para mayores de " + Pegi.TRECE + " años y es del genero de " + Genero.FANTASIA + ".");
-
+                "de los actores que aparecen en esta pelicula son " + repartoESDLA_1_2_3 + ". Esta pelicula es recomendada para mayores de " + Pegi.TRECE + " años y es del genero de " + Genero.FANTASIA + ".\n");
 
 
         ArrayList<Film> listaPeliculas = new ArrayList<>();
-//        listaPeliculas = bibliotecaInicial();
 
         listaPeliculas.add(LaComunidadDelAnillo);
         listaPeliculas.add(LasDosTorres);
@@ -89,20 +87,42 @@ public class Uso_Peliculas {
         listaPeliculas.add(TopGun);
         listaPeliculas.add(TopGunMaverick);
 
+        //TODO: Switch case para el pegi
 
-        for (int i = 0; i < listaPeliculas.size(); i++) {
-            // Obtenemos las películas en la posición i de la lista utilizando el método get(i).
-            // La película se asigna a la variable llamada pelicula de tipo Film.
-            Film pelicula = listaPeliculas.get(i);
-            System.out.println("Título: " + pelicula.getNombre() + ". Anyo de lanzamiento: " + pelicula.getAnyoLanzamiento() +
-                    ". Duracion: " + pelicula.getDuracion() + " minutos. Director: " + pelicula.getDirector() +
-                    ". Reparto: " + pelicula.getReparto() + ". Puntuacion: " + pelicula.getPuntuacion());
-        }
+//        imprimirListaPeliculas(/*lista*/listaPeliculas);
+//        System.out.println("----\n");
+        imprimirListaPeliculasForeach(listaPeliculas);
     }
 
-//    private static ArrayList<Film> bibliotecaInicial() {
-//        return
+//    public static void imprimirListaPeliculas(ArrayList<Film> lista){
+//        for (int i = 0; i < lista.size(); i++) {
+//            // Obtenemos las películas en la posición i de la lista utilizando el método get(i).
+//            // La película se asigna a la variable llamada pelicula de tipo Film.
+//            Film pelicula = lista.get(i);
+//            System.out.println("Título: " + pelicula.getNombre() + ". Genero: " + pelicula.getGenero() + ". Anyo de lanzamiento: " + pelicula.getAnyoLanzamiento() +
+//                    ". Duracion: " + pelicula.getDuracion() + " minutos. Director: " + pelicula.getDirector() +
+//                    ". Reparto: " + pelicula.getReparto() + ". Pegi: " + pelicula.getPegi() + ". Puntuacion: " + pelicula.getPuntuacion() + ".");
+//        }
 //    }
+
+
+    public static void imprimirListaPeliculasForeach(ArrayList<Film> lista){
+        lista.forEach(peli -> {
+            System.out.println("Título: " + peli.getNombre() + ". Genero: " + peli.getGenero() + ". Anyo de lanzamiento: " + peli.getAnyoLanzamiento() +
+                    ". Duracion: " + peli.getDuracion() + " minutos. Director: " + peli.getDirector() +
+                    ". Reparto: " + peli.getReparto() + ". Pegi: " + peli.getPegi() + ". Puntuacion: " + peli.getPuntuacion() + ".");
+        });
+    }
+
+
+    //TODO: Crear una clase padre (dejo vacia)
+    //TODO: Crear una clase serie --> Tiene que tener una instancia de la clase capitulo
+    //TODO: Clase capitulo
+    //TODO: Clase Anime --> Tiene que tener una instancia de la clase capitulo
+    //TODO: Cambiar nombre de film a pelicula
+    //TODO: Crear otra clase pelicula
+
+
 
 
 }
