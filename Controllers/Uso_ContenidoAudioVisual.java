@@ -102,24 +102,39 @@ public class Uso_ContenidoAudioVisual {
         listaPeliculas.add(TopGun);
         listaPeliculas.add(TopGunMaverick);
 
-
         //Creamos la cabecera de la funcion y le pasamos por parametro el ArrayList (listaPeliculas).
+        System.out.println("\nLISTA PELICULAS:");
         imprimirListaPeliculasForeach(listaPeliculas);
+
 
 
 //        ----------------------------------------   PASAMOS A LAS SERIES   ----------------------------------------
 
 
+
+        //TODO: Insertar los atributos creados en la clase (Serie). --> Los que no han sido heredados <-- .
+        //TODO: Se imprime "reparto" pero sin valor, cuando en las series no está el atributo de reparto. (Reparto solo está en peliculas).
+
         Serie GameOfThrones = new Serie("Juego de tronos", Genero.FANTASIA_DRAMA_ACCION_AVENTURA_TERROR, 2011, "4214", "David Benioff", Pegi.DIECISEIS, 4);
         Serie Vikings = new Serie("Vikingos", Genero.ACCION_AVENTURA, 2013, "2684", "Michael Hirst", Pegi.DIECISEIS, 4);
         Serie BigBangTheory = new Serie("Big Bang Theory", Genero.COMEDIA, 2007, "8340", "Mark Cendrowski", Pegi.TRECE, 4);
 
+        ArrayList<Serie> listaSeries = new ArrayList<>();
+
+        //Añadimos 3 series a la lista.
+        listaSeries.add(GameOfThrones);
+        listaSeries.add(Vikings);
+        listaSeries.add(BigBangTheory);
+
+        //Creamos la cabecera de la funcion y le pasamos por parametro el ArrayList (listaSeries).
+        System.out.println("\nLISTA SERIES:");
+        imprimirListaSeriesForeach(listaSeries);
 
 
-
-
-
-        
+        //        ----------------------------------------    PASAMOS A LOS CAPITULOS    ----------------------------------------
+        //        ----------------------------------------       PASAMOS AL ANIME        ----------------------------------------
+        //        ----------------------------------------    PASAMOS AL ANIME PELIS     ----------------------------------------
+        //        ----------------------------------------    PASAMOS AL ANIME SERIES    ----------------------------------------
 
 
     } //Llave cierre Main.
@@ -134,6 +149,20 @@ public class Uso_ContenidoAudioVisual {
             System.out.println("Título: " + peli.getNombre() + ". Genero: " + peli.getGenero() + ". Anyo de lanzamiento: " + peli.getAnyoLanzamiento() +
                     ". Duracion: " + peli.getDuracionMinutos() + " minutos. Director: " + peli.getDirector() +
                     ". Reparto: " + peli.getReparto() + ". Pegi: " + peli.getPegi() + ". Puntuacion: " + peli.getPuntuacion() + ".");
+        });
+    }
+
+    /**
+     * Creamos la función que imprimirá la lista de series con cada uno de sus atributos, haciendo uso de ArrayList y un bucle for-each.
+     * FALTAN POR AÑADIR LOS ATRIBUTOS QUE HEMOS CREADO EN LA CLASE SERIE (LOS QUE NO HAN SIDO HEREDADOS).
+     *
+     * @param lista
+     */
+    public static void imprimirListaSeriesForeach(ArrayList<Serie> lista) {
+        lista.forEach(serie -> {
+            System.out.println("Título: " + serie.getNombre() + ". Genero: " + serie.getGenero() + ". Anyo de lanzamiento: " + serie.getAnyoLanzamiento() +
+                    ". Duracion: " + serie.getDuracionMinutos() + " minutos. Director: " + serie.getDirector() +
+                    ". Reparto: " + ". Pegi: " + serie.getPegi() + ". Puntuacion: " + serie.getPuntuacion() + ".");
         });
     }
 
