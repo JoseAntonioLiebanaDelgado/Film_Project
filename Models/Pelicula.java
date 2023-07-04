@@ -5,7 +5,7 @@ import ENUM.Pegi;
 
 import java.util.ArrayList;
 
-public class Film {
+public class Pelicula {
 
     //Hacemos los atributos protected para que puedan ser tratados como un atributo propio en las clases hijas.
     protected String nombre;
@@ -18,7 +18,7 @@ public class Film {
     protected float puntuacion; //Con rango de 0 a 5
 
 
-    public Film(String nombre, Genero genero, int anyoLanzamiento, String duracion, String director, ArrayList<String> reparto, Pegi pegi, float puntuacion) {
+    public Pelicula(String nombre, Genero genero, int anyoLanzamiento, String duracion, String director, ArrayList<String> reparto, Pegi pegi, float puntuacion) {
         this.nombre = nombre; //el 2 nombre es el que entra por parametro
         this.genero = genero;
         this.anyoLanzamiento = anyoLanzamiento;
