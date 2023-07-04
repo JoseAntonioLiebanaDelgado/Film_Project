@@ -3,16 +3,26 @@ package Controllers;
 import ENUM.Genero;
 import ENUM.Pegi;
 import Models.Pelicula;
+import Models.Serie;
 
 import java.util.ArrayList;
 
+/**
+ * Creación de la clase Uso_ContenidoAudioVisual.
+ */
 public class Uso_ContenidoAudioVisual {
+
+    /**
+     * Creación del método Main.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
 
         //Creamos las ArrayList necesarias para el atributo de reparto de cada objeto.
         //E a ser el reparto de cada pelicula en este caso.
 
-        //ArrayList para almacenar reparto (5 actores/actrices) -- 3 peliculas de ESDLA
+        //ArrayList para almacenar reparto (5 actores/actrices) -- 3 peliculas de ESDLA.
         ArrayList<String> repartoESDLA_1_2_3 = new ArrayList<>();
         repartoESDLA_1_2_3.add("Elijah Wood");
         repartoESDLA_1_2_3.add("Sean Astin");
@@ -20,7 +30,7 @@ public class Uso_ContenidoAudioVisual {
         repartoESDLA_1_2_3.add("Orlando Bloom");
         repartoESDLA_1_2_3.add("Ian McKellen");
 
-        //ArrayList para almacenar reparto (5 actores/actrices) -- 3 peliculas de ElHobbit
+        //ArrayList para almacenar reparto (5 actores/actrices) -- 3 peliculas de ElHobbit.
         ArrayList<String> repartoELHobbit_1_2_3 = new ArrayList<>();
         repartoELHobbit_1_2_3.add("Martin Freeman");
         repartoELHobbit_1_2_3.add("Ian McKellen");
@@ -28,7 +38,7 @@ public class Uso_ContenidoAudioVisual {
         repartoELHobbit_1_2_3.add("Andy Serkis");
         repartoELHobbit_1_2_3.add("Hugo Weaving");
 
-        //ArrayList para almacenar reparto (5 actores/actrices) -- Gladiator
+        //ArrayList para almacenar reparto (5 actores/actrices) -- Gladiator.
         ArrayList<String> repartoGladiator = new ArrayList<>();
         repartoGladiator.add("Russell Crowe");
         repartoGladiator.add("Joaquin Phoenix");
@@ -36,7 +46,7 @@ public class Uso_ContenidoAudioVisual {
         repartoGladiator.add("Oliver Reed");
         repartoGladiator.add("Richard Harris");
 
-        //ArrayList para almacenar reparto (5 actores/actrices) -- Salvar al soldado Ryan
+        //ArrayList para almacenar reparto (5 actores/actrices) -- Salvar al soldado Ryan.
         ArrayList<String> repartoSalvarAlSoldadoRyan = new ArrayList<>();
         repartoSalvarAlSoldadoRyan.add("Tom Hanks");
         repartoSalvarAlSoldadoRyan.add("Matt Damon");
@@ -44,7 +54,7 @@ public class Uso_ContenidoAudioVisual {
         repartoSalvarAlSoldadoRyan.add("Vin Diesel");
         repartoSalvarAlSoldadoRyan.add("Edward Burns");
 
-        //ArrayList para almacenar reparto (5 actores/actrices) -- Top Gun
+        //ArrayList para almacenar reparto (5 actores/actrices) -- Top Gun.
         ArrayList<String> repartoTopGun = new ArrayList<>();
         repartoTopGun.add("Tom Cruise");
         repartoTopGun.add("Val Kilmer");
@@ -52,7 +62,7 @@ public class Uso_ContenidoAudioVisual {
         repartoTopGun.add("Anthony Edwards");
         repartoTopGun.add("Meg Ryan");
 
-        //ArrayList para almacenar reparto (5 actores/actrices) -- Top Gun Maverick
+        //ArrayList para almacenar reparto (5 actores/actrices) -- Top Gun Maverick.
         ArrayList<String> repartoTopGunMaverick = new ArrayList<>();
         repartoTopGunMaverick.add("Tom Cruise");
         repartoTopGunMaverick.add("Miles Teller");
@@ -72,7 +82,7 @@ public class Uso_ContenidoAudioVisual {
         Pelicula LaBatallaDeLosCincoEjercitos = new Pelicula("El Hobbit: La batalla de los cinco ejercitos", Genero.AVENTURA_FANTASIA, 2014, "164", "Peter Jakson", repartoELHobbit_1_2_3, Pegi.DIECIOCHO, 4);
         Pelicula Gladiator = new Pelicula("Gladiator", Genero.ACCION, 2000, "155", "Ridley Scott", repartoGladiator, Pegi.TRECE, 4);
         Pelicula SalvarAlSoldadoRyan = new Pelicula("Salvar al soldado Ryan", Genero.BELICO, 1998, "169", "Steven Spielberg", repartoSalvarAlSoldadoRyan, Pegi.TRECE, 4);
-        Pelicula TopGun = new Pelicula("Top Gun", Genero.ACCION, 1986, "110", "Tony Scott", repartoTopGun, Pegi.CERO,4);
+        Pelicula TopGun = new Pelicula("Top Gun", Genero.ACCION, 1986, "110", "Tony Scott", repartoTopGun, Pegi.CERO, 4);
         Pelicula TopGunMaverick = new Pelicula("Top Gun: Maverick", Genero.ACCION, 2022, "130", "Joseph Kosinski", repartoTopGunMaverick, Pegi.TRECE, 4);
 
 
@@ -80,7 +90,7 @@ public class Uso_ContenidoAudioVisual {
         //Hacemos esto porque queremos imprimirlas mas tarde a traves de una funcion.
         ArrayList<Pelicula> listaPeliculas = new ArrayList<>();
 
-        //Añadimos 10 peliculas a la lista
+        //Añadimos 10 peliculas a la lista.
         listaPeliculas.add(LaComunidadDelAnillo);
         listaPeliculas.add(LasDosTorres);
         listaPeliculas.add(ELRetornoDelRey);
@@ -96,13 +106,30 @@ public class Uso_ContenidoAudioVisual {
         //Creamos la cabecera de la funcion y le pasamos por parametro el ArrayList (listaPeliculas).
         imprimirListaPeliculasForeach(listaPeliculas);
 
-    } //Llave cierre Main
+
+//        ----------------------------------------   PASAMOS A LAS SERIES   ----------------------------------------
+
+
+        Serie GameOfThrones = new Serie("Juego de tronos", Genero.FANTASIA_DRAMA_ACCION_AVENTURA_TERROR, 2011, "4214", "David Benioff", Pegi.DIECISEIS, 4);
+        Serie Vikings = new Serie("Vikingos", Genero.ACCION_AVENTURA, 2013, "2684", "Michael Hirst", Pegi.DIECISEIS, 4);
+        Serie BigBangTheory = new Serie("Big Bang Theory", Genero.COMEDIA, 2007, "8340", "Mark Cendrowski", Pegi.TRECE, 4);
+
+
+
+
+
+
+        
+
+
+    } //Llave cierre Main.
 
     /**
      * Creamos la función que imprimirá la lista de peliculas con cada uno de sus atributos, haciendo uso de ArrayList y un bucle for-each.
+     *
      * @param lista
      */
-    public static void imprimirListaPeliculasForeach(ArrayList<Pelicula> lista){
+    public static void imprimirListaPeliculasForeach(ArrayList<Pelicula> lista) {
         lista.forEach(peli -> {
             System.out.println("Título: " + peli.getNombre() + ". Genero: " + peli.getGenero() + ". Anyo de lanzamiento: " + peli.getAnyoLanzamiento() +
                     ". Duracion: " + peli.getDuracionMinutos() + " minutos. Director: " + peli.getDirector() +
@@ -110,6 +137,6 @@ public class Uso_ContenidoAudioVisual {
         });
     }
 
-} //LLave cierre programa
+} //LLave cierre programa.
 
 
