@@ -10,6 +10,8 @@ public class AnimeSerie extends Anime {
 
     int numeroCapitulos;
     boolean finalizado;
+    Capitulo capitulo;
+
 
 
     /**

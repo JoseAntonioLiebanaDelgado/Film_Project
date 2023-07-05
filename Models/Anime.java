@@ -8,7 +8,6 @@ import ENUM.Pegi;
  */
 public class Anime extends ContenidoAudioVisual {
     protected String estudio;
-    protected Capitulo capitulo;
 
     /**
      * Método constructor de la clase Anime.
@@ -26,7 +25,6 @@ public class Anime extends ContenidoAudioVisual {
 
         //Asignar
         this.estudio = estudio;
-        this.capitulo = capitulo;
     }
 
     /**
@@ -36,14 +34,5 @@ public class Anime extends ContenidoAudioVisual {
      */
     public String getEstudio() {
         return estudio;
-    }
-
-    /**
-     * Método getter.
-     *
-     * @return capitulo
-     */
-    public Capitulo getCapitulo() {
-        return capitulo;
     }
 }
