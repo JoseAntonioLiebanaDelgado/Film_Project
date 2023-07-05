@@ -18,7 +18,16 @@ public class AnimePelicula extends Anime {
      * @param pegi
      * @param puntuacion
      */
-    public AnimePelicula(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos, String director, Pegi pegi, float puntuacion, String estudio, Capitulo capitulo) {
+    public AnimePelicula(String nombre,
+                         Genero genero,
+                         int anyoLanzamiento,
+                         String duracionMinutos,
+                         String director,
+                         Pegi pegi,
+                         float puntuacion,
+                         String estudio,
+                         Capitulo capitulo) {
+
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion, estudio, capitulo);
     }
 }

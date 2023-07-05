@@ -20,7 +20,16 @@ public class Anime extends ContenidoAudioVisual {
      * @param pegi
      * @param puntuacion
      */
-    public Anime(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos, String director, Pegi pegi, float puntuacion, String estudio, Capitulo capitulo) {
+    public Anime(String nombre,
+                 Genero genero,
+                 int anyoLanzamiento,
+                 String duracionMinutos,
+                 String director,
+                 Pegi pegi,
+                 float puntuacion,
+                 String estudio,
+                 Capitulo capitulo) {
+
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion);
 
         //Asignar

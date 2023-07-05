@@ -12,8 +12,6 @@ public class AnimeSerie extends Anime {
     boolean finalizado;
     Capitulo capitulo;
 
-
-
     /**
      * Método constructor de la clase AnimeSeries.
      *
@@ -25,7 +23,18 @@ public class AnimeSerie extends Anime {
      * @param pegi
      * @param puntuacion
      */
-    public AnimeSerie(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos, String director, Pegi pegi, float puntuacion, String estudio, int numeroCapitulos, boolean finalizado, Capitulo capitulo) {
+    public AnimeSerie(String nombre,
+                      Genero genero,
+                      int anyoLanzamiento,
+                      String duracionMinutos,
+                      String director,
+                      Pegi pegi,
+                      float puntuacion,
+                      String estudio,
+                      int numeroCapitulos,
+                      boolean finalizado,
+                      Capitulo capitulo) {
+
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion, estudio, capitulo);
 
         this.numeroCapitulos = numeroCapitulos;

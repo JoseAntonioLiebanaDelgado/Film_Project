@@ -34,6 +34,7 @@ public class Serie extends ContenidoAudioVisual {
                  int numeroTemporadas,
                  boolean finalizado,
                  Capitulo capitulo) {
+
         // "Super" llama al constructor de la clase Padre (ContenidoAudioVisual).
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion);
 
@@ -42,7 +43,6 @@ public class Serie extends ContenidoAudioVisual {
         this.finalizado = finalizado;
         this.capitulo = capitulo;
     }
-
 
     /**
      * Método getter.

@@ -25,7 +25,15 @@ public class Pelicula extends ContenidoAudioVisual {
      * @param pegi
      * @param puntuacion
      */
-    public Pelicula(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos, String director, ArrayList<String> reparto, Pegi pegi, float puntuacion) {
+    public Pelicula(String nombre,
+                    Genero genero,
+                    int anyoLanzamiento,
+                    String duracionMinutos,
+                    String director,
+                    ArrayList<String> reparto,
+                    Pegi pegi,
+                    float puntuacion) {
+
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion);
 
         this.reparto = reparto;

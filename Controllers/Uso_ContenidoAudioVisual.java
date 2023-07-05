@@ -309,8 +309,37 @@ public class Uso_ContenidoAudioVisual {
         listaAnime.add(onePiece);
         listaAnime.add(narutoShippuden);
 
+        imprimirListaPeliculasForeach(listaPeliculas);
 
     }//Llave cierre Main.
+
+    public static void imprimirListaPeliculasForeach(ArrayList<Pelicula> lista) {
+
+        lista.forEach(peli -> {
+
+            Pegi valorPegi = peli.getPegi();
+
+            if (valorPegi == Pegi.CERO) {
+                System.out.println(valorPegi.getNombre());
+            } else if (valorPegi == Pegi.TRES) {
+                System.out.println(valorPegi.getNombre());
+            } else if (valorPegi == Pegi.SIETE) {
+                System.out.println(valorPegi.getNombre());
+            } else if (valorPegi == Pegi.DOCE) {
+                System.out.println(valorPegi.getNombre());
+            } else if (valorPegi == Pegi.TRECE) {
+                System.out.println(valorPegi.getNombre());
+            } else if (valorPegi == Pegi.DIECISEIS) {
+                System.out.println(valorPegi.getNombre());
+            } else if (valorPegi == Pegi.DIECIOCHO) {
+                System.out.println(valorPegi.getNombre());
+            } else {
+                System.out.println("Valor de Pegi desconocido");
+            }
+        });
+
+    }//Llave cierre Main
+
 }//LLave cierre programa.
 
 

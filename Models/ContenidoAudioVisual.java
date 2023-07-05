@@ -28,8 +28,13 @@ class ContenidoAudioVisual {
      * @param pegi
      * @param puntuacion
      */
-    protected ContenidoAudioVisual(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos,
-                                   String director, Pegi pegi, float puntuacion) {
+    protected ContenidoAudioVisual(String nombre,
+                                   Genero genero,
+                                   int anyoLanzamiento,
+                                   String duracionMinutos,
+                                   String director,
+                                   Pegi pegi,
+                                   float puntuacion) {
 
         this.nombre = nombre;
         this.genero = genero;
