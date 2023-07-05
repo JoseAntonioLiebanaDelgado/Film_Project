@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Creación de la clase Película.
  */
 public class Pelicula extends ContenidoAudioVisual {
-    public ArrayList<String> reparto;
+    protected ArrayList<String> reparto;
 
     /**
      * Creación del método constructor de la clase Película.
@@ -21,14 +21,14 @@ public class Pelicula extends ContenidoAudioVisual {
      * @param anyoLanzamiento
      * @param duracionMinutos
      * @param director
-     * @param repartoESDLA_1_2_3
+     * @param reparto
      * @param pegi
      * @param puntuacion
      */
-    public Pelicula(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos, String director, ArrayList<String> repartoESDLA_1_2_3, Pegi pegi, float puntuacion) {
+    public Pelicula(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos, String director, ArrayList<String> reparto, Pegi pegi, float puntuacion) {
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion);
-        this.reparto = reparto;
 
+        this.reparto = reparto;
     }
 
     /**

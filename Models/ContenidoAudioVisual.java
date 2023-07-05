@@ -6,7 +6,7 @@ import ENUM.Pegi;
 /**
  * Clase Padre -- ContenidoAudioVisual -- .
  */
-public class ContenidoAudioVisual {
+class ContenidoAudioVisual {
 
     protected String nombre;
     protected Genero genero;
@@ -28,8 +28,9 @@ public class ContenidoAudioVisual {
      * @param pegi
      * @param puntuacion
      */
-    public ContenidoAudioVisual(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos,
-                                String director, Pegi pegi, float puntuacion) {
+    protected ContenidoAudioVisual(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos,
+                                   String director, Pegi pegi, float puntuacion) {
+
         this.nombre = nombre;
         this.genero = genero;
         this.anyoLanzamiento = anyoLanzamiento;

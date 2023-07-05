@@ -1,31 +1,29 @@
 package Models;
 
-import ENUM.Genero;
-import ENUM.Pegi;
-
 /**
  * Creamos la clase Capitulo que hereda de ContenidoAudioVisual.
  */
-public class Capitulo extends ContenidoAudioVisual {
-    protected String nombreSerie;
-    protected int numeroCapitulo;
+public class Capitulo {
+    protected String titulo;
+    protected int numero;
     protected int numeroTemporada;
     protected String sinopsis;
     protected String ambientacion;
 
     /**
      * Constructor de la clase Capitulo.
-     *
-     * @param nombre
-     * @param genero
-     * @param anyoLanzamiento
-     * @param duracionMinutos
-     * @param director
-     * @param pegi
-     * @param puntuacion
      */
-    public Capitulo(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos, String director, Pegi pegi, float puntuacion) {
-        super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion);
+    public Capitulo(String titulo,
+                    int numero,
+                    int numeroTemporada,
+                    String sinopsis,
+                    String ambientacion) {
+
+        this.titulo = titulo;
+        this.numero = numero;
+        this.numeroTemporada = numeroTemporada;
+        this.sinopsis = sinopsis;
+        this.ambientacion = ambientacion;
     }
 
     /**
@@ -33,8 +31,8 @@ public class Capitulo extends ContenidoAudioVisual {
      *
      * @return nombreSerie
      */
-    public String getNombreSerie() {
-        return nombreSerie;
+    public String getTitulo() {
+        return titulo;
     }
 
     /**
@@ -42,8 +40,8 @@ public class Capitulo extends ContenidoAudioVisual {
      *
      * @return numeroCapitulo
      */
-    public int getNumeroCapitulo() {
-        return numeroCapitulo;
+    public int getNumero() {
+        return numero;
     }
 
     /**

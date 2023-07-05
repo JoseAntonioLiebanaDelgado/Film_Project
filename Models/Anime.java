@@ -7,9 +7,8 @@ import ENUM.Pegi;
  * Creación de la clase Anime, que hereda de ContenidoAudioVisual.
  */
 public class Anime extends ContenidoAudioVisual {
-    protected int numeroCapitulos;
     protected String estudio;
-    protected boolean finalizado;
+    protected Capitulo capitulo;
 
     /**
      * Método constructor de la clase Anime.
@@ -22,7 +21,29 @@ public class Anime extends ContenidoAudioVisual {
      * @param pegi
      * @param puntuacion
      */
-    public Anime(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos, String director, Pegi pegi, float puntuacion) {
+    public Anime(String nombre, Genero genero, int anyoLanzamiento, String duracionMinutos, String director, Pegi pegi, float puntuacion, String estudio, Capitulo capitulo) {
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion);
+
+        //Asignar
+        this.estudio = estudio;
+        this.capitulo = capitulo;
+    }
+
+    /**
+     * Método getter.
+     *
+     * @return estudio
+     */
+    public String getEstudio() {
+        return estudio;
+    }
+
+    /**
+     * Método getter.
+     *
+     * @return capitulo
+     */
+    public Capitulo getCapitulo() {
+        return capitulo;
     }
 }
