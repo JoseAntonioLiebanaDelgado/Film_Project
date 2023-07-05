@@ -8,6 +8,7 @@ import ENUM.Pegi;
  */
 public class Anime extends ContenidoAudioVisual {
     protected int numeroCapitulos;
+    protected String estudio;
     protected boolean finalizado;
 
     /**

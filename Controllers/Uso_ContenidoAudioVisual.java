@@ -2,6 +2,8 @@ package Controllers;
 
 import ENUM.Genero;
 import ENUM.Pegi;
+import Models.Anime;
+import Models.Capitulo;
 import Models.Pelicula;
 import Models.Serie;
 
@@ -107,13 +109,10 @@ public class Uso_ContenidoAudioVisual {
         imprimirListaPeliculasForeach(listaPeliculas);
 
 
-
 //        ----------------------------------------   PASAMOS A LAS SERIES   ----------------------------------------
 
 
-
         //TODO: Insertar los atributos creados en la clase (Serie). --> Los que no han sido heredados <-- .
-        //TODO: Se imprime "reparto" pero sin valor, cuando en las series no está el atributo de reparto. (Reparto solo está en peliculas).
 
         Serie GameOfThrones = new Serie("Juego de tronos", Genero.FANTASIA_DRAMA_ACCION_AVENTURA_TERROR, 2011, "4214", "David Benioff", Pegi.DIECISEIS, 4);
         Serie Vikings = new Serie("Vikingos", Genero.ACCION_AVENTURA, 2013, "2684", "Michael Hirst", Pegi.DIECISEIS, 4);
@@ -131,13 +130,54 @@ public class Uso_ContenidoAudioVisual {
         imprimirListaSeriesForeach(listaSeries);
 
 
-        //        ----------------------------------------    PASAMOS A LOS CAPITULOS    ----------------------------------------
-        //        ----------------------------------------       PASAMOS AL ANIME        ----------------------------------------
-        //        ----------------------------------------    PASAMOS AL ANIME PELIS     ----------------------------------------
-        //        ----------------------------------------    PASAMOS AL ANIME SERIES    ----------------------------------------
+//        ----------------------------------------    PASAMOS A LOS CAPITULOS    ----------------------------------------
+
+
+        //TODO: Insertar los atributos creados en la clase (Capitulo). --> Los que no han sido heredados <-- .
+
+        Capitulo E10_T04_LosNinos = new Capitulo("Los niños", Genero.FANTASIA_DRAMA_ACCION_AVENTURA_TERROR, 2014, "54", "David Benioff", Pegi.DIECISEIS, 4);
+        Capitulo E19_T06_ElsenorDa = new Capitulo("El Señor da..", Genero.ACCION_AVENTURA, 2020, "44", "Michael Hirst", Pegi.DIECISEIS, 4);
+        Capitulo E17_T01_FactorMandarina = new Capitulo("Factor Mandarina", Genero.COMEDIA, 2008, "20", "Mark Cendrowski", Pegi.TRECE, 4);
+
+        ArrayList<Capitulo> listaCapitulos = new ArrayList<>();
+
+        //Añadimos 3 series a la lista.
+        listaCapitulos.add(E10_T04_LosNinos);
+        listaCapitulos.add(E19_T06_ElsenorDa);
+        listaCapitulos.add(E17_T01_FactorMandarina);
+
+        //Creamos la cabecera de la funcion y le pasamos por parametro el ArrayList (listaCapitulos).
+        System.out.println("\nLISTA CAPITULOS:");
+        imprimirListaCapitulosForeach(listaCapitulos);
+
+
+//        ----------------------------------------       PASAMOS AL ANIME        ----------------------------------------
+
+
+        //TODO: Insertar los atributos creados en la clase (Anime). --> Los que no han sido heredados <-- .
+
+        Anime DragonBallZ = new Anime("Dragon ball Z", Genero.ACCION_AVENTURA_COMEDIA_ARTESMARCIALES_FANTASIA, 1989, "6984", "Daisuke Nishio", Pegi.SIETE, 4);
+        Anime OnePiece = new Anime("One piece", Genero.ACCION_AVENTURA_COMEDIA_ARTESMARCIALES_FANTASIA, 1997, "Null", "Eiichiro Oda", Pegi.SIETE, 4);
+        Anime YuYuHakusho = new Anime("YuYuHakusho", Genero.FANTASIA, 1990, "2240", "Yoshihiro Togashi", Pegi.SIETE, 4);
+
+        ArrayList<Anime> listaAnime = new ArrayList<>();
+
+        //Añadimos 3 Anime a la lista.
+        listaAnime.add(DragonBallZ);
+        listaAnime.add(OnePiece);
+        listaAnime.add(YuYuHakusho);
+
+        //Creamos la cabecera de la funcion y le pasamos por parametro el ArrayList (listaAnime).
+        System.out.println("\nLISTA ANIME:");
+        imprimirListaAnimesForeach(listaAnime);
+
+
+//        ----------------------------------------    PASAMOS AL ANIME PELIS     ----------------------------------------
+//        ----------------------------------------    PASAMOS AL ANIME SERIES    ----------------------------------------
 
 
     } //Llave cierre Main.
+
 
     /**
      * Creamos la función que imprimirá la lista de peliculas con cada uno de sus atributos, haciendo uso de ArrayList y un bucle for-each.
@@ -162,7 +202,35 @@ public class Uso_ContenidoAudioVisual {
         lista.forEach(serie -> {
             System.out.println("Título: " + serie.getNombre() + ". Genero: " + serie.getGenero() + ". Anyo de lanzamiento: " + serie.getAnyoLanzamiento() +
                     ". Duracion: " + serie.getDuracionMinutos() + " minutos. Director: " + serie.getDirector() +
-                    ". Reparto: " + ". Pegi: " + serie.getPegi() + ". Puntuacion: " + serie.getPuntuacion() + ".");
+                    ". Pegi: " + serie.getPegi() + ". Puntuacion: " + serie.getPuntuacion() + ".");
+        });
+    }
+
+    /**
+     * Creamos la función que imprimirá la lista de series con cada uno de sus atributos, haciendo uso de ArrayList y un bucle for-each.
+     * FALTAN POR AÑADIR LOS ATRIBUTOS QUE HEMOS CREADO EN LA CLASE CAPITULO (LOS QUE NO HAN SIDO HEREDADOS).
+     *
+     * @param lista
+     */
+    private static void imprimirListaCapitulosForeach(ArrayList<Capitulo> lista) {
+        lista.forEach(cap -> {
+            System.out.println("Título: " + cap.getNombre() + ". Genero: " + cap.getGenero() + ". Anyo de lanzamiento: " + cap.getAnyoLanzamiento() +
+                    ". Duracion: " + cap.getDuracionMinutos() + " minutos. Director: " + cap.getDirector() +
+                    ". Pegi: " + cap.getPegi() + ". Puntuacion: " + cap.getPuntuacion() + ".");
+        });
+    }
+
+    /**
+     * Creamos la función que imprimirá la lista de series con cada uno de sus atributos, haciendo uso de ArrayList y un bucle for-each.
+     * FALTAN POR AÑADIR LOS ATRIBUTOS QUE HEMOS CREADO EN LA CLASE CAPITULO (LOS QUE NO HAN SIDO HEREDADOS).
+     *
+     * @param lista
+     */
+    private static void imprimirListaAnimesForeach(ArrayList<Anime> lista) {
+        lista.forEach(anime -> {
+            System.out.println("Título: " + anime.getNombre() + ". anime: " + anime.getGenero() + ". Anyo de lanzamiento: " + anime.getAnyoLanzamiento() +
+                    ". Duracion: " + anime.getDuracionMinutos() + " minutos. Director: " + anime.getDirector() +
+                    ". Pegi: " + anime.getPegi() + ". Puntuacion: " + anime.getPuntuacion() + ".");
         });
     }
 
