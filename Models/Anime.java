@@ -27,8 +27,8 @@ public class Anime extends ContenidoAudioVisual {
                  String director,
                  Pegi pegi,
                  float puntuacion,
-                 String estudio,
-                 Capitulo capitulo) {
+                 String estudio
+                 ) {
 
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion);
 

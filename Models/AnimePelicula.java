@@ -25,9 +25,8 @@ public class AnimePelicula extends Anime {
                          String director,
                          Pegi pegi,
                          float puntuacion,
-                         String estudio,
-                         Capitulo capitulo) {
+                         String estudio) {
 
-        super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion, estudio, capitulo);
+        super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion, estudio);
     }
 }

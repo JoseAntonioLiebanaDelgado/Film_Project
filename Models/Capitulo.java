@@ -19,7 +19,20 @@ public class Capitulo {
                     String sinopsis,
                     String ambientacion) {
 
-        this.titulo = titulo;
+        //Expresion regular
+
+        if (titulo.equalsIgnoreCase("")){
+            this.titulo = "Titulo Erroneo";
+        }else{
+            this.titulo = titulo;
+        }
+
+
+
+
+
+
+//        this.titulo = titulo;
         this.numero = numero;
         this.numeroTemporada = numeroTemporada;
         this.sinopsis = sinopsis;

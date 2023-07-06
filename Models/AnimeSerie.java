@@ -35,7 +35,7 @@ public class AnimeSerie extends Anime {
                       boolean finalizado,
                       Capitulo capitulo) {
 
-        super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion, estudio, capitulo);
+        super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion, estudio);
 
         this.numeroCapitulos = numeroCapitulos;
         this.finalizado = finalizado;

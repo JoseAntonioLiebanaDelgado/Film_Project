@@ -2,10 +2,7 @@ package Controllers;
 
 import ENUM.Genero;
 import ENUM.Pegi;
-import Models.Anime;
-import Models.Capitulo;
-import Models.Pelicula;
-import Models.Serie;
+import Models.*;
 
 import java.util.ArrayList;
 
@@ -73,11 +70,11 @@ public class Uso_ContenidoAudioVisual {
         repartoTopGunMaverick.add("Jennifer Connelly");
 
 
-        //Creamos 10 Objetos Pelicula.
+        //Creamos 10 Objetos Pelicula. (minutos 228)
         Pelicula LaComunidadDelAnillo = new Pelicula("El señor de los anillos: La comunidad del anillo",
                 Genero.AVENTURA_FANTASIA,
                 2001,
-                "228",
+                "null",
                 "Peter Jakson",
                 repartoESDLA_1_2_3,
                 Pegi.DOCE,
@@ -181,6 +178,7 @@ public class Uso_ContenidoAudioVisual {
 
 //        ----------------------------------------   SERIES   ----------------------------------------
 
+
         //Creamos 3 objetos Capitulo. Añadiremos uno en cada objeto Serie.
         Capitulo winterIsComing = new Capitulo("Winter is coming",
                 1,
@@ -247,10 +245,10 @@ public class Uso_ContenidoAudioVisual {
         listaSeries.add(bigBangTheory);
 
 
-//       ----------------------------------------    ANIME    ----------------------------------------
+//       ----------------------------------------    ANIMESERIE    ----------------------------------------
 
 
-        //Creamos 3 objetos Capitulo. Añadiremos uno en cada objeto Anime.
+        //Creamos 3 objetos Capitulo. Añadiremos uno en cada objeto AnimeSerie.
         Capitulo elMiniGokuEsAdorableSoyGohan = new Capitulo("¡El mini-Goku es adorable! Soy Gohan",
                 1,
                 1,
@@ -270,76 +268,94 @@ public class Uso_ContenidoAudioVisual {
                 "bbb");
 
 
-        //Creamos 3 objetos Serie.
-        Anime dragonBallZ = new Anime("Dragon ball Z",
-                Genero.ACCION_AVENTURA_COMEDIA_ARTESMARCIALES_FANTASIA,
-                1989,
-                "6984",
+        //Creamos 3 objetos AnimeSerie.
+        AnimeSerie dragonBallZ = new AnimeSerie("Dragon Ball Z",
+                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
+                1998,
+                "6.984",
                 "Daisuke Nishio",
-                Pegi.SIETE,
+                Pegi.TRECE,
                 4,
                 "Toei Animation",
+                291,
+                true,
                 elMiniGokuEsAdorableSoyGohan);
 
-        Anime onePiece = new Anime("One piece",
-                Genero.ACCION_AVENTURA_COMEDIA_ARTESMARCIALES_FANTASIA,
+        AnimeSerie onePiece = new AnimeSerie("One Piece",
+                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA,
                 1997,
-                "En emision",
+                "En emisión",
                 "Eiichiro Oda",
-                Pegi.SIETE,
+                Pegi.TRECE,
                 4,
                 "Toei Animation",
+                1065, // Deberia de poner que está en emision
+                false,
                 yoSoyLuffyElFuturoReyDeLosPiratas);
 
-        Anime narutoShippuden = new Anime("YuYuHakusho",
-                Genero.FANTASIA,
+        AnimeSerie narutoShippuden = new AnimeSerie("Naruto Shippuden",
+                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
                 2007,
-                "11,500",
+                "11.500",
                 "Hayato Date",
-                Pegi.DOCE,
+                Pegi.TRECE,
                 4,
                 "Pierrot",
+                500,
+                true,
                 vueltaACasa);
 
 
-        //Hacemos uso de ArrayList para crear una lista de Animes.
-        ArrayList<Anime> listaAnime = new ArrayList<>();
-        //Añadimos 3 Anime a la lista.
-        listaAnime.add(dragonBallZ);
-        listaAnime.add(onePiece);
-        listaAnime.add(narutoShippuden);
+        //       ----------------------------------------    ANIMEPELICULA    ----------------------------------------
+
+
+        AnimePelicula dragonBallZElUltimoCombate = new AnimePelicula("Dragon Ball Z: El ultimo combate",
+                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
+                1990,
+                "48",
+                "Daisuke Nishio",
+                Pegi.TRECE,
+                4,
+                "Toei Animation");
+
+        AnimePelicula onrPieceStampede = new AnimePelicula("One Piece: Stampede",
+                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
+                2019,
+                "101",
+                "Takashi Ōtsuka",
+                Pegi.DIECISEIS,
+                4,
+                "Toei Animation");
+
+        AnimePelicula narutoShippudenKizuna = new AnimePelicula("Naruto Shippuden: Kizuna",
+                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
+                2008,
+                "93",
+                "Daisuke Nishio",
+                Pegi.DOCE,
+                4,
+                "Pierrot");
 
         imprimirListaPeliculasForeach(listaPeliculas);
 
     }//Llave cierre Main.
 
+    /**
+     * Método que imprime los objetos de tipo Película, con sus respectivos atributos utilizando un bucle for-each.
+     * Para imprimir el String que le hemos asignado a cada atributo de la Enum Pegui utilizamos "peli.getPegi().getNombre()".
+     *
+     * @param lista
+     */
     public static void imprimirListaPeliculasForeach(ArrayList<Pelicula> lista) {
 
+        // Para imprimir el String que le hemos asignado a cada atributo de la Enum Pegui utilizamos "peli.getPegi().getNombre()"
         lista.forEach(peli -> {
-
-            Pegi valorPegi = peli.getPegi();
-
-            if (valorPegi == Pegi.CERO) {
-                System.out.println(valorPegi.getNombre());
-            } else if (valorPegi == Pegi.TRES) {
-                System.out.println(valorPegi.getNombre());
-            } else if (valorPegi == Pegi.SIETE) {
-                System.out.println(valorPegi.getNombre());
-            } else if (valorPegi == Pegi.DOCE) {
-                System.out.println(valorPegi.getNombre());
-            } else if (valorPegi == Pegi.TRECE) {
-                System.out.println(valorPegi.getNombre());
-            } else if (valorPegi == Pegi.DIECISEIS) {
-                System.out.println(valorPegi.getNombre());
-            } else if (valorPegi == Pegi.DIECIOCHO) {
-                System.out.println(valorPegi.getNombre());
-            } else {
-                System.out.println("Valor de Pegi desconocido");
-            }
+            System.out.println("Título: " + peli.getNombre() + ". Genero: " + peli.getGenero() + ". Anyo de lanzamiento: " + peli.getAnyoLanzamiento() +
+                    ". Duracion: " + peli.getDuracionMinutos() + " minutos. Director: " + peli.getDirector() +
+                    ". Reparto: " + peli.getReparto() + ". Pegi: " + peli.getPegi().getNombre() + ". Puntuacion: " + peli.getPuntuacion() + ".");
         });
 
     }//Llave cierre Main
-
 }//LLave cierre programa.
 
 

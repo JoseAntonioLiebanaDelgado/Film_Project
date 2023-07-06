@@ -16,7 +16,7 @@ public enum Pegi {
      * Constructor de la clase Pegi.
      * @param nombre
      */
-    private Pegi(String nombre) {
+    Pegi(String nombre) {
         this.nombre = nombre;
     }
 
