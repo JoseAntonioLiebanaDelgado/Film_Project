@@ -22,41 +22,41 @@ public class Capitulo {
 
         //TODO: Expresion regular
 
-        if (titulo.equalsIgnoreCase("") || (!titulo.matches("^[a-zA-Z0-9]+$"))) {
-            this.titulo = "Titulo erroneo";
-        } else {
-            this.titulo = titulo;
-        }
 
+//        if (titulo.equalsIgnoreCase("") || (!titulo.matches("^[a-zA-Z0-9]+$"))) {
+//            this.titulo = "Titulo erroneo";
+//        } else {
+//            this.titulo = titulo;
+//        }
+        this.titulo = (titulo.equalsIgnoreCase("") || !titulo.matches("^[a-zA-Z0-9]+$")) ? "Titulo erroneo" : titulo;
 
-//       this.numero = numero;
+//        if (numero <= 0) {
+//            this.numero = 0;
+//        } else {
+//            this.numero = numero;
+//        }
+        this.numero = (numero <= 0) ? 0 : numero;
 
-//        int numEntero = 4;
-//        String numCadena= String.valueOf(numEntero);
-//
-//        String numCadena= Integer.toString(numEntero);
+//        if (numeroTemporada <= 0) {
+//            this.numeroTemporada = 0;
+//        } else {
+//            this.numeroTemporada = numeroTemporada;
+//        }
+        this.numeroTemporada = (numeroTemporada <= 0) ? 0 : numeroTemporada;
 
+//        if (sinopsis.equalsIgnoreCase("") || (!sinopsis.matches("^[a-zA-Z0-9]+$"))) {
+//            this.sinopsis = "Sinopsis erroneo";
+//        } else {
+//            this.sinopsis = sinopsis;
+//        }
+        this.sinopsis = (sinopsis.equalsIgnoreCase("") || !sinopsis.matches("^[a-zA-Z0-9]+$")) ? "Sinopsis erronea" : sinopsis;
 
-        if (numero <= 0) {
-
-        }
-
-
-//       this.numeroTemporada = numeroTemporada;
-
-
-        if (sinopsis.equalsIgnoreCase("") || (!sinopsis.matches("^[a-zA-Z0-9]+$"))) {
-            this.sinopsis = "Sinopsis erroneo";
-        } else {
-            this.sinopsis = sinopsis;
-        }
-
-
-        if ((ambientacion.equalsIgnoreCase("")) || (!ambientacion.matches("^[a-zA-Z0-9]+$"))) {
-            this.ambientacion = "Ambientacion erronea";
-        } else {
-            this.ambientacion = ambientacion;
-        }
+//        if ((ambientacion.equalsIgnoreCase("")) || (!ambientacion.matches("^[a-zA-Z0-9]+$"))) {
+//            this.ambientacion = "Ambientacion erronea";
+//        } else {
+//            this.ambientacion = ambientacion;
+//        }
+        this.ambientacion = (ambientacion.equalsIgnoreCase("") || !ambientacion.matches("^[a-zA-Z0-9]+$")) ? "Ambientacion erronea" : ambientacion;
     }
 
     /**
