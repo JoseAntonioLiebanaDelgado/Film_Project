@@ -19,24 +19,44 @@ public class Capitulo {
                     String sinopsis,
                     String ambientacion) {
 
-        //Expresion regular
 
-        if (titulo.equalsIgnoreCase("")){
-            this.titulo = "Titulo Erroneo";
-        }else{
+        //TODO: Expresion regular
+
+        if (titulo.equalsIgnoreCase("") || (!titulo.matches("^[a-zA-Z0-9]+$"))) {
+            this.titulo = "Titulo erroneo";
+        } else {
             this.titulo = titulo;
         }
 
 
+//       this.numero = numero;
+
+//        int numEntero = 4;
+//        String numCadena= String.valueOf(numEntero);
+//
+//        String numCadena= Integer.toString(numEntero);
 
 
+        if (numero <= 0) {
+
+        }
 
 
-//        this.titulo = titulo;
-        this.numero = numero;
-        this.numeroTemporada = numeroTemporada;
-        this.sinopsis = sinopsis;
-        this.ambientacion = ambientacion;
+//       this.numeroTemporada = numeroTemporada;
+
+
+        if (sinopsis.equalsIgnoreCase("") || (!sinopsis.matches("^[a-zA-Z0-9]+$"))) {
+            this.sinopsis = "Sinopsis erroneo";
+        } else {
+            this.sinopsis = sinopsis;
+        }
+
+
+        if ((ambientacion.equalsIgnoreCase("")) || (!ambientacion.matches("^[a-zA-Z0-9]+$"))) {
+            this.ambientacion = "Ambientacion erronea";
+        } else {
+            this.ambientacion = ambientacion;
+        }
     }
 
     /**
