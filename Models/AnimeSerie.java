@@ -37,9 +37,13 @@ public class AnimeSerie extends Anime {
 
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion, estudio);
 
-        this.numeroCapitulos = numeroCapitulos;
         this.finalizado = finalizado;
         this.capitulo = capitulo;
+
+
+        this.numeroCapitulos = (numeroCapitulos < 0) ? 0 : numeroCapitulos;
+//        this.finalizado = (finalizado != true && (finalizado != false)) ? false : finalizado;
+//        this.capitulo = (capitulo != capitulo) ? null : capitulo;
     }
 
     /**

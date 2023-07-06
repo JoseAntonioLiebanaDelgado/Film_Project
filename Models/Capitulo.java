@@ -21,8 +21,6 @@ public class Capitulo {
 
 
         //TODO: Expresion regular
-
-
 //        if (titulo.equalsIgnoreCase("") || (!titulo.matches("^[a-zA-Z0-9]+$"))) {
 //            this.titulo = "Titulo erroneo";
 //        } else {

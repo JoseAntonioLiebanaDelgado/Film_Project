@@ -19,20 +19,5 @@ public class Apuntes {
 //        int edad = 18;
 //        String mensaje = (edad >= 18) ? "Es mayor de edad" : "Es menor de edad";
 //----------------------------------------------------------------------------------------------
-
-        boolean todoOk = false;
-
-        String mensajee = (todoOk == true) ? "Empiezo a ordenar la habitacion que tengo para dias, " +
-                "que esto parece la casa de los gitanos. Así esta noche me cargo todas las clases haciendo lo mismo" : "Si no esta bien " +
-                "pues a ver si lo arreglo antes de liarme a ordenar y limpiar";
-
-
-
-
-
-
-
-
-
     }
 }

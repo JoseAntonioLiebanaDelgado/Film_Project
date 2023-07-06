@@ -13,7 +13,6 @@ class ContenidoAudioVisual {
     protected int anyoLanzamiento;
     protected String duracionMinutos;
     protected String director;
-
     protected Pegi pegi;
     protected float puntuacion;
 
@@ -36,15 +35,17 @@ class ContenidoAudioVisual {
                                    Pegi pegi,
                                    float puntuacion) {
 
-        this.nombre = nombre;
         this.genero = genero;
-        this.anyoLanzamiento = anyoLanzamiento;
-        this.duracionMinutos = duracionMinutos;
-        this.director = director;
         this.pegi = pegi;
-        this.puntuacion = puntuacion;
-    }
 
+        this.nombre = (nombre.equalsIgnoreCase("") || !nombre.matches("^[a-zA-Z0-9]+$")) ? "Titulo erroneo" : nombre;
+        //this.genero = genero;
+        this.anyoLanzamiento = (anyoLanzamiento <= 0) ? 0 : anyoLanzamiento;
+        this.duracionMinutos = (duracionMinutos.equalsIgnoreCase("") || !duracionMinutos.matches("^[a-zA-Z0-9]+$")) ? "Duracion erronea" : duracionMinutos;
+        this.director = (director.equalsIgnoreCase("") || !director.matches("^[a-zA-Z0-9]+$")) ? "Director erroneo" : director;
+        //this.pegi = pegi;
+        this.puntuacion = (puntuacion < 0) || (puntuacion > 5) ? 0 : puntuacion;
+    }
 
     /**
      * Método getter.

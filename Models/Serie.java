@@ -38,10 +38,13 @@ public class Serie extends ContenidoAudioVisual {
         // "Super" llama al constructor de la clase Padre (ContenidoAudioVisual).
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion);
 
-        this.numeroCapitulos = numeroCapitulos;
-        this.numeroTemporadas = numeroTemporadas;
-        this.finalizado = finalizado;
-        this.capitulo = capitulo;
+//        this.finalizado = finalizado;
+//        this.capitulo = capitulo;
+
+        this.numeroCapitulos = (numeroCapitulos <= 0) ? 0 : numeroCapitulos;
+        this.numeroTemporadas = (numeroTemporadas <= 0) ? 0 : numeroTemporadas;
+        //this.finalizado = (finalizado != true && (finalizado != false)) ? false : finalizado;
+        //this.capitulo = (capitulo != capitulo) ? null : capitulo;
     }
 
     /**
