@@ -36,7 +36,12 @@ public class Pelicula extends ContenidoAudioVisual {
 
         super(nombre, genero, anyoLanzamiento, duracionMinutos, director, pegi, puntuacion);
 
-        this.reparto = reparto;
+        ArrayList<String> repartoErroneo = new ArrayList<>() {
+            {
+                add("Elijah Wood");
+            }
+        };
+        this.reparto = (reparto.isEmpty()) ? repartoErroneo : reparto;
     }
 
     /**

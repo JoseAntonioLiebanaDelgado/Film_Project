@@ -1,5 +1,7 @@
 package Apuntes;
 
+import java.util.ArrayList;
+
 public class Apuntes {
     public static void main(String[] args) {
 
@@ -19,5 +21,21 @@ public class Apuntes {
 //        int edad = 18;
 //        String mensaje = (edad >= 18) ? "Es mayor de edad" : "Es menor de edad";
 //----------------------------------------------------------------------------------------------
+
+//        ArrayList<String> repartoErroneo = new ArrayList<>() {
+//            {
+//                add("Elijah Wood");
+//            }
+//        };
+//        this.reparto = (reparto.isEmpty()) ? repartoErroneo : reparto;
+//    }
+//----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
     }
 }
