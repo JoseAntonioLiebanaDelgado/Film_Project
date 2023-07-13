@@ -9,46 +9,56 @@ public class MarcoPrincipal {
     public static void main(String[] args) {
 
         //-------------------------------------------------------------------------------------------------------------------------------
+
+        //-------------------------------------------------------------------------------------------------------------------------------
+
         //Creacion de Variables
 
-        JFrame miJFrame = new JFrame("Dummy Title");
-        JPanel panel1 = new JPanel();
-        JPanel panel2 = new JPanel();
-        JLabel tituloLabel = new JLabel("Dummy Title");
-        GridLayout miJFrameGridLayout = new GridLayout();
+        JFrame framePadre = new JFrame("Titulo Marco");
+        JPanel panelPrincipalIzquierdo = new JPanel();
+        JPanel panelPrincipalDerecho = new JPanel();
+        JLabel tituloDelPanelDerechoLabel = new JLabel("Nombre App");
+        GridLayout disposicionFramePadreGridLayout = new GridLayout();
+
         //-------------------------------------------------------------------------------------------------------------------------------
 
         //-------------------------------------------------------------------------------------------------------------------------------
+
         //Configuraciones
 
-        panel1.setBackground(Color.BLUE);
-        panel2.setBackground(Color.ORANGE);
-        tituloLabel.setOpaque(true);
-        tituloLabel.setBackground(Color.GREEN);
-        tituloLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        miJFrame.setSize(1500, 1000);
+        panelPrincipalIzquierdo.setBackground(Color.BLUE);
+        panelPrincipalDerecho.setBackground(Color.ORANGE);
+        tituloDelPanelDerechoLabel.setOpaque(true);
+        tituloDelPanelDerechoLabel.setBackground(Color.GREEN);
+        tituloDelPanelDerechoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        framePadre.setSize(1500, 1000);
 
         //-------------------------------------------------------------------------------------------------------------------------------
 
         //-------------------------------------------------------------------------------------------------------------------------------
+
         //Añadir objetos a la vista
 
-        miJFrame.add(panel1);
-        miJFrame.add(panel2);
-        panel2.add(tituloLabel);
+        framePadre.add(panelPrincipalIzquierdo);
+        framePadre.add(panelPrincipalDerecho);
+        panelPrincipalDerecho.add(tituloDelPanelDerechoLabel);
+
         //-------------------------------------------------------------------------------------------------------------------------------
 
         //-------------------------------------------------------------------------------------------------------------------------------
+
         //Aplicar disposiciones (Lyouts)
 
-        miJFrame.setLayout(miJFrameGridLayout);
+        framePadre.setLayout(disposicionFramePadreGridLayout);
 
-        
+        //-------------------------------------------------------------------------------------------------------------------------------
 
-        //Hacemos que el Frame sea visible
-        miJFrame.setVisible(true);
+        //-------------------------------------------------------------------------------------------------------------------------------
 
+        //Visivilidad
 
+        framePadre.setVisible(true);
 
+        //-------------------------------------------------------------------------------------------------------------------------------
     }
 }
