@@ -1,41 +1,54 @@
 package Swing;
 
+import com.sun.jdi.OpaqueFrameException;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class MarcoPrincipal {
     public static void main(String[] args) {
 
-        //Creamos un objeto de tipo JFrame
-        JFrame miJFrame = new JFrame("Dummy Title");
+        //-------------------------------------------------------------------------------------------------------------------------------
+        //Creacion de Variables
 
-        //Creamos dos paneles
+        JFrame miJFrame = new JFrame("Dummy Title");
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
+        JLabel tituloLabel = new JLabel("Dummy Title");
+        GridLayout miJFrameGridLayout = new GridLayout();
+        //-------------------------------------------------------------------------------------------------------------------------------
 
-        //Añadimos colores a los panelesd
+        //-------------------------------------------------------------------------------------------------------------------------------
+        //Configuraciones
+
         panel1.setBackground(Color.BLUE);
         panel2.setBackground(Color.ORANGE);
+        tituloLabel.setOpaque(true);
+        tituloLabel.setBackground(Color.GREEN);
+        tituloLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+        miJFrame.setSize(1500, 1000);
 
-        //Añadimos paneles al frame
+        //-------------------------------------------------------------------------------------------------------------------------------
+
+        //-------------------------------------------------------------------------------------------------------------------------------
+        //Añadir objetos a la vista
+
         miJFrame.add(panel1);
         miJFrame.add(panel2);
+        panel2.add(tituloLabel);
+        //-------------------------------------------------------------------------------------------------------------------------------
 
-        //Layout = Disposicion //Set = Asignar //Get = Coger //Grid = Tablero-Cuadricula
-        miJFrame.setLayout(new GridLayout());
+        //-------------------------------------------------------------------------------------------------------------------------------
+        //Aplicar disposiciones (Lyouts)
 
-        //Asignamos tamaño al frame
-        miJFrame.setSize(1500, 1000);
+        miJFrame.setLayout(miJFrameGridLayout);
+
+        
 
         //Hacemos que el Frame sea visible
         miJFrame.setVisible(true);
 
-        //Visualizamos tamaño de cada panel por consola
-        System.out.println("Panel 1" + panel1.getSize());
-        System.out.println("Panel 2" + panel2.getSize());
+
+
     }
 }
-
-
-// Marcar apartados de ambas partes
-// 1 la de la derecha
