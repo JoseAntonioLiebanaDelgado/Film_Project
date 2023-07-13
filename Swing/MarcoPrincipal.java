@@ -19,6 +19,8 @@ public class MarcoPrincipal {
         JPanel panelPrincipalDerecho = new JPanel();
         JLabel tituloDelPanelDerechoLabel = new JLabel("Nombre App");
         GridLayout disposicionFramePadreGridLayout = new GridLayout();
+        JPanel cuadroDelPanelPrincipalDerecho = new JPanel();
+        GridLayout disposicionPanelPrincipalDerecho = new GridLayout(2 ,1);
 
         //-------------------------------------------------------------------------------------------------------------------------------
 
@@ -30,7 +32,10 @@ public class MarcoPrincipal {
         panelPrincipalDerecho.setBackground(Color.ORANGE);
         tituloDelPanelDerechoLabel.setOpaque(true);
         tituloDelPanelDerechoLabel.setBackground(Color.GREEN);
+        cuadroDelPanelPrincipalDerecho.setBackground(Color.darkGray);
+
         tituloDelPanelDerechoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         framePadre.setSize(1500, 1000);
 
         //-------------------------------------------------------------------------------------------------------------------------------
@@ -42,6 +47,7 @@ public class MarcoPrincipal {
         framePadre.add(panelPrincipalIzquierdo);
         framePadre.add(panelPrincipalDerecho);
         panelPrincipalDerecho.add(tituloDelPanelDerechoLabel);
+        panelPrincipalDerecho.add(cuadroDelPanelPrincipalDerecho);
 
         //-------------------------------------------------------------------------------------------------------------------------------
 
@@ -50,6 +56,8 @@ public class MarcoPrincipal {
         //Aplicar disposiciones (Lyouts)
 
         framePadre.setLayout(disposicionFramePadreGridLayout);
+        panelPrincipalDerecho.setLayout(disposicionPanelPrincipalDerecho);
+
 
         //-------------------------------------------------------------------------------------------------------------------------------
 
