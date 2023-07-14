@@ -8,65 +8,41 @@ import java.awt.*;
 public class MarcoPrincipal {
     public static void main(String[] args) {
 
-        //-------------------------------------------------------------------------------------------------------------------------------
 
-        //-------------------------------------------------------------------------------------------------------------------------------
+        GridLayout disposicionFramePadreGridLayout = new GridLayout();
 
-        //Creacion de Variables
-
-        JFrame framePadre = new JFrame("Titulo Marco");
+        JFrame framePadre = new JFrame();
         JPanel panelPrincipalIzquierdo = new JPanel();
         JPanel panelPrincipalDerecho = new JPanel();
-        JLabel tituloDelPanelDerechoLabel = new JLabel("Nombre App");
-        GridLayout disposicionFramePadreGridLayout = new GridLayout();
-        JPanel cuadroDelPanelPrincipalDerecho = new JPanel();
-        GridLayout disposicionPanelPrincipalDerecho = new GridLayout(2 ,1);
 
-        //-------------------------------------------------------------------------------------------------------------------------------
 
-        //-------------------------------------------------------------------------------------------------------------------------------
-
-        //Configuraciones
-
-        panelPrincipalIzquierdo.setBackground(Color.BLUE);
-        panelPrincipalDerecho.setBackground(Color.ORANGE);
-        tituloDelPanelDerechoLabel.setOpaque(true);
-        tituloDelPanelDerechoLabel.setBackground(Color.GREEN);
-        cuadroDelPanelPrincipalDerecho.setBackground(Color.darkGray);
-
-        tituloDelPanelDerechoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-
+        JLabel b1 = new JLabel("Boton 1");
+        JPanel b2 = new JPanel();
+        b2.setBackground(Color.GREEN);
+        panelPrincipalIzquierdo.setBackground(Color.orange);
+        panelPrincipalDerecho.setBackground(Color.blue);
         framePadre.setSize(1500, 1000);
 
-        //-------------------------------------------------------------------------------------------------------------------------------
+        panelPrincipalDerecho.setLayout(new GridBagLayout());
 
-        //-------------------------------------------------------------------------------------------------------------------------------
+        GridBagConstraints gc = new GridBagConstraints();
+        gc.fill = GridBagConstraints.HORIZONTAL;
 
-        //Añadir objetos a la vista
+        gc.gridx = 0;
+        gc.gridy = 0;
+        panelPrincipalDerecho.add(b1, gc);
+
+        gc.gridx = 0;
+        gc.gridy = 1;
+        panelPrincipalDerecho.add(b2, gc);
 
         framePadre.add(panelPrincipalIzquierdo);
         framePadre.add(panelPrincipalDerecho);
-        panelPrincipalDerecho.add(tituloDelPanelDerechoLabel);
-        panelPrincipalDerecho.add(cuadroDelPanelPrincipalDerecho);
-
-        //-------------------------------------------------------------------------------------------------------------------------------
-
-        //-------------------------------------------------------------------------------------------------------------------------------
-
-        //Aplicar disposiciones (Lyouts)
 
         framePadre.setLayout(disposicionFramePadreGridLayout);
-        panelPrincipalDerecho.setLayout(disposicionPanelPrincipalDerecho);
-
-
-        //-------------------------------------------------------------------------------------------------------------------------------
-
-        //-------------------------------------------------------------------------------------------------------------------------------
-
-        //Visivilidad
+        framePadre.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         framePadre.setVisible(true);
 
-        //-------------------------------------------------------------------------------------------------------------------------------
     }
 }
