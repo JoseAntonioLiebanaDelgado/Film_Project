@@ -3,7 +3,7 @@ package Swing;
 import javax.swing.*;
 import java.awt.*;
 
-public class MarcoPrincipal {
+public class Pruebas {
     public static void main(String[] args) {
         GridLayout disposicionFramePadreGridLayout = new GridLayout();
 
