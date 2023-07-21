@@ -20,16 +20,14 @@ public class Pruebas {
         panelSuperiorIzquierdo.setBackground(Color.RED);
 
 
-//        ImageIcon imagenBoton1 = new ImageIcon("/Users/joseantonioliebanadelgado/Documents/Developer/Dev-Github/Film_Project/263100.png");
-        ImageIcon imagenBoton1 = new ImageIcon("263100.png");
-
+        ImageIcon imagenBoton1 = new ImageIcon("people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg");
         // Redimensionar la imagen
-        Image imagenOriginal = imagenBoton1.getImage();
-        Image imagenRedimensionada = imagenOriginal.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+        Image imagenOriginalBoton1 = imagenBoton1.getImage();
+        Image imagenRedimensionadaBoton1 = imagenOriginalBoton1.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
 
         // Crear un nuevo ImageIcon con la imagen redimensionada
-        ImageIcon imagenRedimensionadaIcon = new ImageIcon(imagenRedimensionada);
-        JButton botonIzquierdoPanelSuperiorIzquierdo = new JButton(imagenRedimensionadaIcon);
+        ImageIcon imagenRedimensionadaIconB1 = new ImageIcon(imagenRedimensionadaBoton1);
+        JButton botonIzquierdoPanelSuperiorIzquierdo = new JButton(imagenRedimensionadaIconB1);
         botonIzquierdoPanelSuperiorIzquierdo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -38,13 +36,21 @@ public class Pruebas {
         });
 
 
-        JButton botonDerechoPanelSuperiorIzquierdo = new JButton("Boton 2");
+        ImageIcon imagenBoton2 = new ImageIcon("263100.png");
+        // Redimensionar la imagen
+        Image imagenOriginalBoton2 = imagenBoton2.getImage();
+        Image imagenRedimensionadaBoton2 = imagenOriginalBoton2.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+
+        // Crear un nuevo ImageIcon con la imagen redimensionada
+        ImageIcon imagenRedimensionadaIconB2 = new ImageIcon(imagenRedimensionadaBoton2);
+        JButton botonDerechoPanelSuperiorIzquierdo = new JButton(imagenRedimensionadaIconB2);
         botonDerechoPanelSuperiorIzquierdo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Has clicado el Boton 2. Boton superior derecho del panel de la izquierdo");
+                System.out.println("Has clicado el Boton 2. Boton superior derecho del panel de la izquierda");
             }
         });
+
 
 
 
@@ -93,9 +99,6 @@ public class Pruebas {
 
         panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 30, 120));
         panelSuperiorIzquierdo.setOpaque(true);
-
-//        disposicionPanelSuperiorIzquierdoFlowLayout.setHgap(150);
-//        disposicionPanelSuperiorIzquierdoFlowLayout.setVgap(30);
 
         botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50,50));
         botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.blue);
@@ -148,7 +151,6 @@ public class Pruebas {
         panelSuperiorIzquierdo.add(Box.createRigidArea(new Dimension(225, 110))); // Espacio entre los botones
         panelSuperiorIzquierdo.add(botonDerechoPanelSuperiorIzquierdo);
         panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
-
 
         panelPrincipalIzquierdo.add(containerPanelCentralIzquierdo);
         containerPanelCentralIzquierdo.add(panelCentralIzquierdo);
@@ -217,7 +219,6 @@ public class Pruebas {
         framePadre.setLayout(disposicionFramePadreGridLayout);
 
         panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getSize().width / 2 - 30, framePadre.getSize().height - 200));
-
 
         panelDerechoCuadrado.setPreferredSize(new Dimension(framePadre.getSize().width / 2 - 60, framePadre.getSize().height - 200));
         panelPrincipalDerecho.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 40));
