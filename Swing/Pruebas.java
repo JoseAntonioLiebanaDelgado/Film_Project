@@ -15,12 +15,21 @@ public class Pruebas {
 
         JPanel panelPrincipalIzquierdo = new JPanel();
 
-        JPanel containerPanelSuperiorIzquierdo = new JPanel();
-        GridLayout disposicionPanelSuperiorIzquierdoGridLayout = new GridLayout(1, 2);
-        JPanel panelSuperiorIzquierdo = new JPanel(disposicionPanelSuperiorIzquierdoGridLayout);
+        JPanel panelSuperiorIzquierdo = new JPanel();
+        BoxLayout disposicionPanelSuperiorIzquierdoBoxLayout = new BoxLayout(panelSuperiorIzquierdo, BoxLayout.X_AXIS);
+        panelSuperiorIzquierdo.setBackground(Color.RED);
 
 
-        JButton botonIzquierdoPanelSuperiorIzquierdo = new JButton("Boton 1");
+//        ImageIcon imagenBoton1 = new ImageIcon("/Users/joseantonioliebanadelgado/Documents/Developer/Dev-Github/Film_Project/263100.png");
+        ImageIcon imagenBoton1 = new ImageIcon("263100.png");
+
+        // Redimensionar la imagen
+        Image imagenOriginal = imagenBoton1.getImage();
+        Image imagenRedimensionada = imagenOriginal.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+
+        // Crear un nuevo ImageIcon con la imagen redimensionada
+        ImageIcon imagenRedimensionadaIcon = new ImageIcon(imagenRedimensionada);
+        JButton botonIzquierdoPanelSuperiorIzquierdo = new JButton(imagenRedimensionadaIcon);
         botonIzquierdoPanelSuperiorIzquierdo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -82,13 +91,17 @@ public class Pruebas {
         framePadre.setSize(1200, 800);
         panelPrincipalIzquierdo.setBackground(Color.orange);
 
-        containerPanelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2, 120));
-        containerPanelSuperiorIzquierdo.setOpaque(false);
-        panelSuperiorIzquierdo.setBackground(Color.pink);
+        panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 30, 120));
+        panelSuperiorIzquierdo.setOpaque(true);
 
-        botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.red);
-        botonDerechoPanelSuperiorIzquierdo.setBackground(Color.red);
+//        disposicionPanelSuperiorIzquierdoFlowLayout.setHgap(150);
+//        disposicionPanelSuperiorIzquierdoFlowLayout.setVgap(30);
 
+        botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50,50));
+        botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.blue);
+
+        botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50,50));
+        botonDerechoPanelSuperiorIzquierdo.setBackground(Color.blue);
 
         containerPanelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2, 600));
         containerPanelCentralIzquierdo.setOpaque(false);
@@ -111,7 +124,12 @@ public class Pruebas {
         containerLabel8de8.setBackground(Color.lightGray);
         label8de8.setBackground(Color.MAGENTA);
 
-        botonInferiorIzquierdo.setBackground(Color.darkGray); // No está haciendo nada
+        botonInferiorIzquierdo.setOpaque(true);
+//        botonInferiorIzquierdo.setContentAreaFilled(true);
+        botonInferiorIzquierdo.setBorderPainted(false);
+//        botonInferiorIzquierdo.setFocusPainted(false);
+        botonInferiorIzquierdo.setBackground(Color.blue);
+//        botonInferiorIzquierdo.setForeground(Color.blue); // Color texto
 
         panelPrincipalDerecho.setBackground(Color.blue);
         containerPanelDerechoLabel.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 60, 40));
@@ -123,15 +141,14 @@ public class Pruebas {
         framePadre.add(panelPrincipalIzquierdo);
         framePadre.add(panelPrincipalDerecho);
 
-        panelPrincipalIzquierdo.add(containerPanelSuperiorIzquierdo);
+        panelPrincipalIzquierdo.add(panelSuperiorIzquierdo);
 
-        containerPanelSuperiorIzquierdo.add(panelSuperiorIzquierdo);
-
+        panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
         panelSuperiorIzquierdo.add(botonIzquierdoPanelSuperiorIzquierdo);
+        panelSuperiorIzquierdo.add(Box.createRigidArea(new Dimension(225, 110))); // Espacio entre los botones
         panelSuperiorIzquierdo.add(botonDerechoPanelSuperiorIzquierdo);
+        panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
 
-        botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(10, 10));
-        botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(10, 10));
 
         panelPrincipalIzquierdo.add(containerPanelCentralIzquierdo);
         containerPanelCentralIzquierdo.add(panelCentralIzquierdo);
@@ -199,7 +216,6 @@ public class Pruebas {
 
         framePadre.setLayout(disposicionFramePadreGridLayout);
 
-        panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getSize().width / 2 - 30, framePadre.getSize().height - 100));
         panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getSize().width / 2 - 30, framePadre.getSize().height - 200));
 
 
