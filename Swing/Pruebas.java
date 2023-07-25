@@ -52,8 +52,6 @@ public class Pruebas {
         });
 
 
-
-
         JPanel containerPanelCentralIzquierdo = new JPanel();
         GridLayout disposicionPanelCentralIzquierdoGridLayout = new GridLayout(4, 2);
         JPanel panelCentralIzquierdo = new JPanel(disposicionPanelCentralIzquierdoGridLayout);
@@ -90,7 +88,141 @@ public class Pruebas {
         JPanel containerPanelDerechoLabel = new JPanel();
         JLabel panelDerechoLabel = new JLabel("Titulo App");
 
+        GridLayout disposicionPanelDerechoCuadrado = new GridLayout();
         JPanel panelDerechoCuadrado = new JPanel();
+
+
+        GridLayout disposicionPanelInfoIzquierdo = new GridLayout(8,2);
+        JPanel panelInfoIzquierdo = new JPanel();
+
+        JPanel containerPanelInfoIzquierdoPanelInterno1 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno1.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt1 = new GridBagConstraints();
+        posLabInt1.gridx = 0;
+        posLabInt1.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno2 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno2.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt2 = new GridBagConstraints();
+        posLabInt2.gridx = 0;
+        posLabInt2.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno3 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno3.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt3 = new GridBagConstraints();
+        posLabInt3.gridx = 0;
+        posLabInt3.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno4 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno4.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt4 = new GridBagConstraints();
+        posLabInt4.gridx = 0;
+        posLabInt4.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno5 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno5.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt5 = new GridBagConstraints();
+        posLabInt5.gridx = 0;
+        posLabInt5.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno6 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno6.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt6 = new GridBagConstraints();
+        posLabInt6.gridx = 0;
+        posLabInt6.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno7 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno7.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt7 = new GridBagConstraints();
+        posLabInt7.gridx = 0;
+        posLabInt7.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno8 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno8.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt8 = new GridBagConstraints();
+        posLabInt8.gridx = 0;
+        posLabInt8.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno9 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno9.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt9 = new GridBagConstraints();
+        posLabInt9.gridx = 0;
+        posLabInt9.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno10 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno10.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt10 = new GridBagConstraints();
+        posLabInt10.gridx = 0;
+        posLabInt10.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno11 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno11.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt11 = new GridBagConstraints();
+        posLabInt11.gridx = 0;
+        posLabInt11.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno12 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno12.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt12 = new GridBagConstraints();
+        posLabInt12.gridx = 0;
+        posLabInt12.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno13 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno13.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt13 = new GridBagConstraints();
+        posLabInt13.gridx = 0;
+        posLabInt13.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno14 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno14.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt14 = new GridBagConstraints();
+        posLabInt14.gridx = 0;
+        posLabInt14.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno15 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno15.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt15 = new GridBagConstraints();
+        posLabInt15.gridx = 0;
+        posLabInt15.gridy = 0;
+        JPanel containerPanelInfoIzquierdoPanelInterno16 = new JPanel();
+        containerPanelInfoIzquierdoPanelInterno16.setLayout(new GridBagLayout());
+        GridBagConstraints posLabInt16 = new GridBagConstraints();
+        posLabInt16.gridx = 0;
+        posLabInt16.gridy = 0;
+
+        JLabel panelInfoIzquierdoLabelInterna1 = new JLabel("Titulo");
+        JLabel panelInfoIzquierdoLabelInterna2 = new JLabel("...");
+        JLabel panelInfoIzquierdoLabelInterna3 = new JLabel("Genero");
+        JLabel panelInfoIzquierdoLabelInterna4 = new JLabel("...");
+        JLabel panelInfoIzquierdoLabelInterna5 = new JLabel("Año");
+        JLabel panelInfoIzquierdoLabelInterna6 = new JLabel("...");
+        JLabel panelInfoIzquierdoLabelInterna7 = new JLabel("Duracion");
+        JLabel panelInfoIzquierdoLabelInterna8 = new JLabel("...");
+        JLabel panelInfoIzquierdoLabelInterna9 = new JLabel("Director");
+        JLabel panelInfoIzquierdoLabelInterna10 = new JLabel("...");
+        JLabel panelInfoIzquierdoLabelInterna11 = new JLabel("Actores Principales");
+        JLabel panelInfoIzquierdoLabelInterna12 = new JLabel("...");
+        JLabel panelInfoIzquierdoLabelInterna13 = new JLabel("Pegi");
+        JLabel panelInfoIzquierdoLabelInterna14 = new JLabel("...");
+        JLabel panelInfoIzquierdoLabelInterna15 = new JLabel("Puntuacion");
+        JLabel panelInfoIzquierdoLabelInterna16 = new JLabel("...");
+
+
+        JPanel panelInfoDerecho = new JPanel();
+
+        JPanel panelInfoDerechoImagen = new JPanel();
+        panelInfoDerechoImagen.setLayout(new GridBagLayout());
+
+        ImageIcon imagenPortada = new ImageIcon("Gladiator.jpg");
+        JLabel etiquetaImagenPortada = new JLabel(imagenPortada);
+
+
+        GridBagConstraints posImagenPanelDerecho = new GridBagConstraints();
+        posImagenPanelDerecho.gridx = 0;
+        posImagenPanelDerecho.gridy = 1;
+        posImagenPanelDerecho.anchor = GridBagConstraints.CENTER;
+        posImagenPanelDerecho.insets= new Insets(80,10,10,10);
+
+        panelInfoDerechoImagen.add(etiquetaImagenPortada,posImagenPanelDerecho);
+
+        // Redimensionar la imagen a la mitad
+        Image imagenOriginal = imagenPortada.getImage();
+        int nuevoAncho = imagenOriginal.getWidth(null) / 2 + 50;
+        int nuevoAlto = imagenOriginal.getHeight(null) / 2 + 50;
+        Image imagenRedimensionada = imagenOriginal.getScaledInstance(nuevoAncho, nuevoAlto, Image.SCALE_SMOOTH);
+
+        // Crear un nuevo ImageIcon con la imagen redimensionada
+        ImageIcon imagenRedimensionadaIcon = new ImageIcon(imagenRedimensionada);
+
+        // Actualizar la etiqueta de la imagen con el nuevo ImageIcon
+        etiquetaImagenPortada.setIcon(imagenRedimensionadaIcon);
+
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -138,6 +270,30 @@ public class Pruebas {
         containerPanelDerechoLabel.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 60, 40));
         containerPanelDerechoLabel.setOpaque(false);
         panelDerechoCuadrado.setBackground(Color.GREEN);
+
+        panelInfoIzquierdo.setBackground(Color.red);
+
+        containerPanelInfoIzquierdoPanelInterno1.setBackground(Color.green);
+        containerPanelInfoIzquierdoPanelInterno2.setBackground(Color.red);
+        containerPanelInfoIzquierdoPanelInterno3.setBackground(Color.magenta);
+        containerPanelInfoIzquierdoPanelInterno4.setBackground(Color.lightGray);
+        containerPanelInfoIzquierdoPanelInterno5.setBackground(Color.red);
+        containerPanelInfoIzquierdoPanelInterno6.setBackground(Color.darkGray);
+        containerPanelInfoIzquierdoPanelInterno7.setBackground(Color.magenta);
+        containerPanelInfoIzquierdoPanelInterno8.setBackground(Color.cyan);
+        containerPanelInfoIzquierdoPanelInterno9.setBackground(Color.pink);
+        containerPanelInfoIzquierdoPanelInterno10.setBackground(Color.green);
+        containerPanelInfoIzquierdoPanelInterno11.setBackground(Color.gray);
+        containerPanelInfoIzquierdoPanelInterno12.setBackground(Color.orange);
+        containerPanelInfoIzquierdoPanelInterno13.setBackground(Color.red);
+        containerPanelInfoIzquierdoPanelInterno14.setBackground(Color.blue);
+        containerPanelInfoIzquierdoPanelInterno15.setBackground(Color.magenta);
+        containerPanelInfoIzquierdoPanelInterno16.setBackground(Color.green);
+
+        panelInfoIzquierdoLabelInterna1.setBackground(Color.white); // Hacer visible
+
+        panelInfoDerecho.setBackground(Color.yellow);
+        panelInfoDerechoImagen.setBackground(Color.lightGray);
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -214,9 +370,50 @@ public class Pruebas {
         panelPrincipalDerecho.add(panelDerechoCuadrado);
         containerPanelDerechoLabel.add(panelDerechoLabel);
 
+        panelDerechoCuadrado.add(panelInfoIzquierdo);
+
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno1);
+        containerPanelInfoIzquierdoPanelInterno1.add(panelInfoIzquierdoLabelInterna1);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno2);
+        containerPanelInfoIzquierdoPanelInterno2.add(panelInfoIzquierdoLabelInterna2);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno3);
+        containerPanelInfoIzquierdoPanelInterno3.add(panelInfoIzquierdoLabelInterna3);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno4);
+        containerPanelInfoIzquierdoPanelInterno4.add(panelInfoIzquierdoLabelInterna4);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno5);
+        containerPanelInfoIzquierdoPanelInterno5.add(panelInfoIzquierdoLabelInterna5);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno6);
+        containerPanelInfoIzquierdoPanelInterno6.add(panelInfoIzquierdoLabelInterna6);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno7);
+        containerPanelInfoIzquierdoPanelInterno7.add(panelInfoIzquierdoLabelInterna7);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno8);
+        containerPanelInfoIzquierdoPanelInterno8.add(panelInfoIzquierdoLabelInterna8);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno9);
+        containerPanelInfoIzquierdoPanelInterno9.add(panelInfoIzquierdoLabelInterna9);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno10);
+        containerPanelInfoIzquierdoPanelInterno10.add(panelInfoIzquierdoLabelInterna10);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno11);
+        containerPanelInfoIzquierdoPanelInterno11.add(panelInfoIzquierdoLabelInterna11);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno12);
+        containerPanelInfoIzquierdoPanelInterno12.add(panelInfoIzquierdoLabelInterna12);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno13);
+        containerPanelInfoIzquierdoPanelInterno13.add(panelInfoIzquierdoLabelInterna13);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno14);
+        containerPanelInfoIzquierdoPanelInterno14.add(panelInfoIzquierdoLabelInterna14);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno15);
+        containerPanelInfoIzquierdoPanelInterno15.add(panelInfoIzquierdoLabelInterna15);
+        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno16);
+        containerPanelInfoIzquierdoPanelInterno16.add(panelInfoIzquierdoLabelInterna16);
+
+
+        panelDerechoCuadrado.add(panelInfoDerecho);
+        panelInfoDerecho.add(panelInfoDerechoImagen);
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         framePadre.setLayout(disposicionFramePadreGridLayout);
+        panelDerechoCuadrado.setLayout((disposicionPanelDerechoCuadrado));
+        panelInfoIzquierdo.setLayout(disposicionPanelInfoIzquierdo);
 
         panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getSize().width / 2 - 30, framePadre.getSize().height - 200));
 
