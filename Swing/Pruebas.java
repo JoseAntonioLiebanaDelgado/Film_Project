@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
 
 
 public class Pruebas {
@@ -90,13 +92,24 @@ public class Pruebas {
         JPanel containerPanelDerechoLabel = new JPanel();
         JLabel panelDerechoLabel = new JLabel("Titulo App");
 
+
         GridLayout disposicionPanelDerechoCuadrado = new GridLayout();
         JPanel panelDerechoCuadrado = new JPanel();
+
 
         // Creamos un EmptyBorder con padding de 10 píxeles en todos los lados
         EmptyBorder paddingPanelDerechoCuadrado = new EmptyBorder(20, 20, 20, 20);
         // Aplicar el padding al panelDerechoCuadrado
         panelDerechoCuadrado.setBorder(paddingPanelDerechoCuadrado);
+
+
+        JButton botonTrailer = new JButton("Boton 4 - Trailer");
+        botonTrailer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Has clicado el Boton 4. Boton del trailer");
+            }
+        });
 
 
         GridLayout disposicionPanelInfoIzquierdo = new GridLayout(8, 2);
@@ -194,7 +207,17 @@ public class Pruebas {
         JLabel panelInfoIzquierdoLabelInterna9 = new JLabel("Director:");
         JLabel panelInfoIzquierdoLabelInterna10 = new JLabel("Ridley Scott");
         JLabel panelInfoIzquierdoLabelInterna11 = new JLabel("Actores Principales:");
-        JLabel panelInfoIzquierdoLabelInterna12 = new JLabel("Russel Crowe, Joaquin Phoenix, ...... ....., ........ .....");
+
+
+        JPanel panelInfoIzquierdoLabelInterna12 = new JPanel();
+        panelInfoIzquierdoLabelInterna12.setLayout(new BoxLayout(panelInfoIzquierdoLabelInterna12, BoxLayout.Y_AXIS));
+        JLabel actorLabel1 = new JLabel("Russer Crowe");
+        JLabel actorLabel2 = new JLabel("Joaquin Phoenix");
+        JLabel actorLabel3 = new JLabel("Actor 1");
+        JLabel actorLabel4 = new JLabel("Actor 2");
+        JLabel actorLabel5 = new JLabel("Actor 3");
+
+
         JLabel panelInfoIzquierdoLabelInterna13 = new JLabel("Pegi:");
         JLabel panelInfoIzquierdoLabelInterna14 = new JLabel("Mayores de 18");
         JLabel panelInfoIzquierdoLabelInterna15 = new JLabel("Puntuacion:");
@@ -204,7 +227,7 @@ public class Pruebas {
         JPanel panelInfoDerecho = new JPanel();
 
         JPanel panelInfoDerechoImagen = new JPanel();
-        panelInfoDerechoImagen.setLayout(new GridBagLayout());
+        panelInfoDerechoImagen.setLayout(new BorderLayout());
 
         ImageIcon imagenPortada = new ImageIcon("Gladiator.jpg");
         JLabel etiquetaImagenPortada = new JLabel(imagenPortada);
@@ -216,7 +239,8 @@ public class Pruebas {
         posImagenPanelDerecho.anchor = GridBagConstraints.CENTER;
         posImagenPanelDerecho.insets = new Insets(60, 10, 10, 10);
 
-        panelInfoDerechoImagen.add(etiquetaImagenPortada, posImagenPanelDerecho);
+        panelInfoDerechoImagen.add(etiquetaImagenPortada, BorderLayout.CENTER);
+
 
         // Redimensionar la imagen a la mitad
         Image imagenOriginal = imagenPortada.getImage();
@@ -229,6 +253,10 @@ public class Pruebas {
 
         // Actualizar la etiqueta de la imagen con el nuevo ImageIcon
         etiquetaImagenPortada.setIcon(imagenRedimensionadaIcon);
+
+        EmptyBorder paddingEncimaImagen = new EmptyBorder(75, 0, 0, 0);
+        etiquetaImagenPortada.setBorder(paddingEncimaImagen);
+
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -243,6 +271,8 @@ public class Pruebas {
 
         botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
         botonDerechoPanelSuperiorIzquierdo.setBackground(Color.blue);
+
+        botonTrailer.setPreferredSize(new Dimension(70, 30));
 
         containerPanelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2, 600));
         containerPanelCentralIzquierdo.setOpaque(false);
@@ -400,8 +430,16 @@ public class Pruebas {
         containerPanelInfoIzquierdoPanelInterno10.add(panelInfoIzquierdoLabelInterna10);
         panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno11);
         containerPanelInfoIzquierdoPanelInterno11.add(panelInfoIzquierdoLabelInterna11);
+
         panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno12);
         containerPanelInfoIzquierdoPanelInterno12.add(panelInfoIzquierdoLabelInterna12);
+
+        panelInfoIzquierdoLabelInterna12.add(actorLabel1);
+        panelInfoIzquierdoLabelInterna12.add(actorLabel2);
+        panelInfoIzquierdoLabelInterna12.add(actorLabel3);
+        panelInfoIzquierdoLabelInterna12.add(actorLabel4);
+        panelInfoIzquierdoLabelInterna12.add(actorLabel5);
+
         panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno13);
         containerPanelInfoIzquierdoPanelInterno13.add(panelInfoIzquierdoLabelInterna13);
         panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno14);
@@ -414,6 +452,9 @@ public class Pruebas {
 
         panelDerechoCuadrado.add(panelInfoDerecho);
         panelInfoDerecho.add(panelInfoDerechoImagen);
+        panelDerechoCuadrado.add(botonTrailer);
+        panelInfoDerechoImagen.add(botonTrailer, BorderLayout.SOUTH);
+
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
