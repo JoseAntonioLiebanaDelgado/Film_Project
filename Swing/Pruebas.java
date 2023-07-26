@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.border.EmptyBorder;
+
 
 public class Pruebas {
     public static void main(String[] args) {
@@ -91,8 +93,13 @@ public class Pruebas {
         GridLayout disposicionPanelDerechoCuadrado = new GridLayout();
         JPanel panelDerechoCuadrado = new JPanel();
 
+        // Creamos un EmptyBorder con padding de 10 píxeles en todos los lados
+        EmptyBorder paddingPanelDerechoCuadrado = new EmptyBorder(20, 20, 20, 20);
+        // Aplicar el padding al panelDerechoCuadrado
+        panelDerechoCuadrado.setBorder(paddingPanelDerechoCuadrado);
 
-        GridLayout disposicionPanelInfoIzquierdo = new GridLayout(8,2);
+
+        GridLayout disposicionPanelInfoIzquierdo = new GridLayout(8, 2);
         JPanel panelInfoIzquierdo = new JPanel();
 
         JPanel containerPanelInfoIzquierdoPanelInterno1 = new JPanel();
@@ -176,21 +183,21 @@ public class Pruebas {
         posLabInt16.gridx = 0;
         posLabInt16.gridy = 0;
 
-        JLabel panelInfoIzquierdoLabelInterna1 = new JLabel("Titulo");
-        JLabel panelInfoIzquierdoLabelInterna2 = new JLabel("...");
-        JLabel panelInfoIzquierdoLabelInterna3 = new JLabel("Genero");
-        JLabel panelInfoIzquierdoLabelInterna4 = new JLabel("...");
+        JLabel panelInfoIzquierdoLabelInterna1 = new JLabel("Titulo:");
+        JLabel panelInfoIzquierdoLabelInterna2 = new JLabel("Gladiator");
+        JLabel panelInfoIzquierdoLabelInterna3 = new JLabel("Genero:");
+        JLabel panelInfoIzquierdoLabelInterna4 = new JLabel("Accion");
         JLabel panelInfoIzquierdoLabelInterna5 = new JLabel("Año");
-        JLabel panelInfoIzquierdoLabelInterna6 = new JLabel("...");
-        JLabel panelInfoIzquierdoLabelInterna7 = new JLabel("Duracion");
-        JLabel panelInfoIzquierdoLabelInterna8 = new JLabel("...");
-        JLabel panelInfoIzquierdoLabelInterna9 = new JLabel("Director");
-        JLabel panelInfoIzquierdoLabelInterna10 = new JLabel("...");
-        JLabel panelInfoIzquierdoLabelInterna11 = new JLabel("Actores Principales");
-        JLabel panelInfoIzquierdoLabelInterna12 = new JLabel("...");
-        JLabel panelInfoIzquierdoLabelInterna13 = new JLabel("Pegi");
-        JLabel panelInfoIzquierdoLabelInterna14 = new JLabel("...");
-        JLabel panelInfoIzquierdoLabelInterna15 = new JLabel("Puntuacion");
+        JLabel panelInfoIzquierdoLabelInterna6 = new JLabel("1999");
+        JLabel panelInfoIzquierdoLabelInterna7 = new JLabel("Duracion:");
+        JLabel panelInfoIzquierdoLabelInterna8 = new JLabel("120:42");
+        JLabel panelInfoIzquierdoLabelInterna9 = new JLabel("Director:");
+        JLabel panelInfoIzquierdoLabelInterna10 = new JLabel("Ridley Scott");
+        JLabel panelInfoIzquierdoLabelInterna11 = new JLabel("Actores Principales:");
+        JLabel panelInfoIzquierdoLabelInterna12 = new JLabel("Russel Crowe, Joaquin Phoenix, ...... ....., ........ .....");
+        JLabel panelInfoIzquierdoLabelInterna13 = new JLabel("Pegi:");
+        JLabel panelInfoIzquierdoLabelInterna14 = new JLabel("Mayores de 18");
+        JLabel panelInfoIzquierdoLabelInterna15 = new JLabel("Puntuacion:");
         JLabel panelInfoIzquierdoLabelInterna16 = new JLabel("...");
 
 
@@ -207,9 +214,9 @@ public class Pruebas {
         posImagenPanelDerecho.gridx = 0;
         posImagenPanelDerecho.gridy = 1;
         posImagenPanelDerecho.anchor = GridBagConstraints.CENTER;
-        posImagenPanelDerecho.insets= new Insets(80,10,10,10);
+        posImagenPanelDerecho.insets = new Insets(60, 10, 10, 10);
 
-        panelInfoDerechoImagen.add(etiquetaImagenPortada,posImagenPanelDerecho);
+        panelInfoDerechoImagen.add(etiquetaImagenPortada, posImagenPanelDerecho);
 
         // Redimensionar la imagen a la mitad
         Image imagenOriginal = imagenPortada.getImage();
@@ -223,7 +230,6 @@ public class Pruebas {
         // Actualizar la etiqueta de la imagen con el nuevo ImageIcon
         etiquetaImagenPortada.setIcon(imagenRedimensionadaIcon);
 
-
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         framePadre.setSize(1200, 800);
@@ -232,10 +238,10 @@ public class Pruebas {
         panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 30, 120));
         panelSuperiorIzquierdo.setOpaque(true);
 
-        botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50,50));
+        botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
         botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.blue);
 
-        botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50,50));
+        botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
         botonDerechoPanelSuperiorIzquierdo.setBackground(Color.blue);
 
         containerPanelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2, 600));
