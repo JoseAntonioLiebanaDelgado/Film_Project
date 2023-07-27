@@ -5,8 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.border.EmptyBorder;
-import javax.swing.event.AncestorEvent;
-import javax.swing.event.AncestorListener;
 
 
 public class Pruebas {
@@ -209,19 +207,96 @@ public class Pruebas {
         JLabel panelInfoIzquierdoLabelInterna11 = new JLabel("Actores Principales:");
 
 
-        JPanel panelInfoIzquierdoLabelInterna12 = new JPanel();
-        panelInfoIzquierdoLabelInterna12.setLayout(new BoxLayout(panelInfoIzquierdoLabelInterna12, BoxLayout.Y_AXIS));
+        JPanel panelInfoIzquierdoPanelInterno12 = new JPanel();
+        panelInfoIzquierdoPanelInterno12.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno12, BoxLayout.Y_AXIS));
         JLabel actorLabel1 = new JLabel("Russer Crowe");
         JLabel actorLabel2 = new JLabel("Joaquin Phoenix");
-        JLabel actorLabel3 = new JLabel("Actor 1");
-        JLabel actorLabel4 = new JLabel("Actor 2");
-        JLabel actorLabel5 = new JLabel("Actor 3");
+        JLabel actorLabel3 = new JLabel("Actor 3");
+        JLabel actorLabel4 = new JLabel("Actor 4");
 
 
         JLabel panelInfoIzquierdoLabelInterna13 = new JLabel("Pegi:");
         JLabel panelInfoIzquierdoLabelInterna14 = new JLabel("Mayores de 18");
         JLabel panelInfoIzquierdoLabelInterna15 = new JLabel("Puntuacion:");
-        JLabel panelInfoIzquierdoLabelInterna16 = new JLabel("...");
+
+
+        JPanel panelInfoIzquierdoPanelInterno16 = new JPanel();
+        panelInfoIzquierdoPanelInterno16.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno16, BoxLayout.X_AXIS));
+
+        ImageIcon imagenEstrella1 = new ImageIcon("star1.jpeg");
+        // Redimensionar la imagen
+        Image imagenOriginalEstrella1 = imagenEstrella1.getImage();
+        Image rawImagenRedimensionadaEstrella1 = imagenOriginalEstrella1.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+
+        //Crear un nuevo ImageIcon con la imagen redimensionada
+        ImageIcon imagenRedimensionadaEstrella1 = new ImageIcon(rawImagenRedimensionadaEstrella1);
+        JButton estrella1 = new JButton(imagenRedimensionadaEstrella1);
+        estrella1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.out.println("Has pulsado la estrella 1");
+            }
+        });
+
+        ImageIcon imagenEstrella2 = new ImageIcon("star1.jpeg");
+        // Redimensionar la imagen
+        Image imagenOriginalEstrella2 = imagenEstrella2.getImage();
+        Image rawImagenRedimensionadaEstrella2 = imagenOriginalEstrella2.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+
+        //Crear un nuevo ImageIcon con la imagen redimensionada
+        ImageIcon imagenRedimensionadaEstrella2 = new ImageIcon(rawImagenRedimensionadaEstrella2);
+        JButton estrella2 = new JButton(imagenRedimensionadaEstrella2);
+        estrella2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.out.println("Has pulsado la estrella 2");
+            }
+        });
+
+        ImageIcon imagenEstrella3 = new ImageIcon("star1.jpeg");
+        // Redimensionar la imagen
+        Image imagenOriginalEstrella3 = imagenEstrella3.getImage();
+        Image rawImagenRedimensionadaEstrella3 = imagenOriginalEstrella3.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+
+        //Crear un nuevo ImageIcon con la imagen redimensionada
+        ImageIcon imagenRedimensionadaEstrella3 = new ImageIcon(rawImagenRedimensionadaEstrella3);
+        JButton estrella3 = new JButton(imagenRedimensionadaEstrella3);
+        estrella1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.out.println("Has pulsado la estrella 1");
+            }
+        });
+
+        ImageIcon imagenEstrella4 = new ImageIcon("star1.jpeg");
+        // Redimensionar la imagen
+        Image imagenOriginalEstrella4 = imagenEstrella1.getImage();
+        Image rawImagenRedimensionadaEstrella4 = imagenOriginalEstrella4.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+
+        //Crear un nuevo ImageIcon con la imagen redimensionada
+        ImageIcon imagenRedimensionadaEstrella4 = new ImageIcon(rawImagenRedimensionadaEstrella4);
+        JButton estrella4 = new JButton(imagenRedimensionadaEstrella4);
+        estrella1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.out.println("Has pulsado la estrella 1");
+            }
+        });
+
+        ImageIcon imagenEstrella5 = new ImageIcon("star1.jpeg");
+        // Redimensionar la imagen
+        Image imagenOriginalEstrella5 = imagenEstrella5.getImage();
+        Image rawImagenRedimensionadaEstrella5 = imagenOriginalEstrella5.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+
+        //Crear un nuevo ImageIcon con la imagen redimensionada
+        ImageIcon imagenRedimensionadaEstrella5 = new ImageIcon(rawImagenRedimensionadaEstrella5);
+        JButton estrella5 = new JButton(imagenRedimensionadaEstrella5);
+        estrella1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.out.println("Has pulsado la estrella 1");
+            }
+        });
 
 
         JPanel panelInfoDerecho = new JPanel();
@@ -326,7 +401,12 @@ public class Pruebas {
         containerPanelInfoIzquierdoPanelInterno15.setBackground(Color.magenta);
         containerPanelInfoIzquierdoPanelInterno16.setBackground(Color.green);
 
-        panelInfoIzquierdoLabelInterna1.setBackground(Color.white); // Hacer visible
+        estrella1.setBackground(Color.CYAN);
+        estrella2.setBackground(Color.CYAN);
+        estrella3.setBackground(Color.CYAN);
+        estrella4.setBackground(Color.CYAN);
+        estrella5.setBackground(Color.CYAN);
+
 
         panelInfoDerecho.setBackground(Color.yellow);
         panelInfoDerechoImagen.setBackground(Color.lightGray);
@@ -432,13 +512,12 @@ public class Pruebas {
         containerPanelInfoIzquierdoPanelInterno11.add(panelInfoIzquierdoLabelInterna11);
 
         panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno12);
-        containerPanelInfoIzquierdoPanelInterno12.add(panelInfoIzquierdoLabelInterna12);
+        containerPanelInfoIzquierdoPanelInterno12.add(panelInfoIzquierdoPanelInterno12);
 
-        panelInfoIzquierdoLabelInterna12.add(actorLabel1);
-        panelInfoIzquierdoLabelInterna12.add(actorLabel2);
-        panelInfoIzquierdoLabelInterna12.add(actorLabel3);
-        panelInfoIzquierdoLabelInterna12.add(actorLabel4);
-        panelInfoIzquierdoLabelInterna12.add(actorLabel5);
+        panelInfoIzquierdoPanelInterno12.add(actorLabel1);
+        panelInfoIzquierdoPanelInterno12.add(actorLabel2);
+        panelInfoIzquierdoPanelInterno12.add(actorLabel3);
+        panelInfoIzquierdoPanelInterno12.add(actorLabel4);
 
         panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno13);
         containerPanelInfoIzquierdoPanelInterno13.add(panelInfoIzquierdoLabelInterna13);
@@ -446,8 +525,31 @@ public class Pruebas {
         containerPanelInfoIzquierdoPanelInterno14.add(panelInfoIzquierdoLabelInterna14);
         panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno15);
         containerPanelInfoIzquierdoPanelInterno15.add(panelInfoIzquierdoLabelInterna15);
+
         panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno16);
-        containerPanelInfoIzquierdoPanelInterno16.add(panelInfoIzquierdoLabelInterna16);
+        containerPanelInfoIzquierdoPanelInterno16.add(panelInfoIzquierdoPanelInterno16);
+        containerPanelInfoIzquierdoPanelInterno16.setOpaque(false); // Establecer el fondo como transparente
+        panelInfoIzquierdoPanelInterno16.setOpaque(false); // Configurar el fondo del contenedor como transparente
+        panelInfoIzquierdoPanelInterno16.add(estrella1);
+        panelInfoIzquierdoPanelInterno16.add(estrella2);
+        panelInfoIzquierdoPanelInterno16.add(estrella3);
+        panelInfoIzquierdoPanelInterno16.add(estrella4);
+        panelInfoIzquierdoPanelInterno16.add(estrella5);
+
+        estrella1.setPreferredSize(new Dimension(20, 10));
+        estrella2.setPreferredSize(new Dimension(20, 10));
+        estrella3.setPreferredSize(new Dimension(20, 10));
+        estrella4.setPreferredSize(new Dimension(20, 10));
+        estrella5.setPreferredSize(new Dimension(20, 10));
+
+
+        // Configuramos los botones de estrella para que no muestren ningún borde
+        estrella1.setBorderPainted(false);
+        estrella2.setBorderPainted(false);
+        estrella3.setBorderPainted(false);
+        estrella4.setBorderPainted(false);
+        estrella5.setBorderPainted(false);
+
 
 
         panelDerechoCuadrado.add(panelInfoDerecho);
