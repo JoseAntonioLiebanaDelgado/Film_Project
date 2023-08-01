@@ -261,10 +261,10 @@ public class Pruebas {
         //Crear un nuevo ImageIcon con la imagen redimensionada
         ImageIcon imagenRedimensionadaEstrella3 = new ImageIcon(rawImagenRedimensionadaEstrella3);
         JButton estrella3 = new JButton(imagenRedimensionadaEstrella3);
-        estrella1.addActionListener(new ActionListener() {
+        estrella3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Has pulsado la estrella 1");
+                System.out.println("Has pulsado la estrella 3");
             }
         });
 
@@ -276,10 +276,10 @@ public class Pruebas {
         //Crear un nuevo ImageIcon con la imagen redimensionada
         ImageIcon imagenRedimensionadaEstrella4 = new ImageIcon(rawImagenRedimensionadaEstrella4);
         JButton estrella4 = new JButton(imagenRedimensionadaEstrella4);
-        estrella1.addActionListener(new ActionListener() {
+        estrella4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Has pulsado la estrella 1");
+                System.out.println("Has pulsado la estrella 4");
             }
         });
 
@@ -291,10 +291,10 @@ public class Pruebas {
         //Crear un nuevo ImageIcon con la imagen redimensionada
         ImageIcon imagenRedimensionadaEstrella5 = new ImageIcon(rawImagenRedimensionadaEstrella5);
         JButton estrella5 = new JButton(imagenRedimensionadaEstrella5);
-        estrella1.addActionListener(new ActionListener() {
+        estrella5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Has pulsado la estrella 1");
+                System.out.println("Has pulsado la estrella 5");
             }
         });
 
