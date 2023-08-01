@@ -12,13 +12,13 @@ public class Pruebas {
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        GridLayout disposicionFramePadreGridLayout = new GridLayout();
+
         JFrame framePadre = new JFrame();
+        framePadre.setLayout(new BorderLayout());
 
         JPanel panelPrincipalIzquierdo = new JPanel();
 
         JPanel panelSuperiorIzquierdo = new JPanel();
-        BoxLayout disposicionPanelSuperiorIzquierdoBoxLayout = new BoxLayout(panelSuperiorIzquierdo, BoxLayout.X_AXIS);
         panelSuperiorIzquierdo.setBackground(Color.RED);
 
 
@@ -338,7 +338,7 @@ public class Pruebas {
         framePadre.setSize(1200, 800);
         panelPrincipalIzquierdo.setBackground(Color.orange);
 
-        panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 30, 120));
+        panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2, 120));
         panelSuperiorIzquierdo.setOpaque(true);
 
         botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
@@ -347,9 +347,9 @@ public class Pruebas {
         botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
         botonDerechoPanelSuperiorIzquierdo.setBackground(Color.blue);
 
-        botonTrailer.setPreferredSize(new Dimension(70, 30));
 
-        containerPanelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2, 600));
+
+        containerPanelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 4 + 75, 600));
         containerPanelCentralIzquierdo.setOpaque(false);
         panelCentralIzquierdo.setBackground(Color.lightGray);
 
@@ -411,16 +411,19 @@ public class Pruebas {
         panelInfoDerecho.setBackground(Color.yellow);
         panelInfoDerechoImagen.setBackground(Color.lightGray);
 
+
+        botonTrailer.setPreferredSize(new Dimension(70, 30));
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        framePadre.add(panelPrincipalIzquierdo);
-        framePadre.add(panelPrincipalDerecho);
+        framePadre.add(panelPrincipalIzquierdo, BorderLayout.WEST);
+        framePadre.add(panelPrincipalDerecho, BorderLayout.CENTER);
 
         panelPrincipalIzquierdo.add(panelSuperiorIzquierdo);
 
         panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
         panelSuperiorIzquierdo.add(botonIzquierdoPanelSuperiorIzquierdo);
-        panelSuperiorIzquierdo.add(Box.createRigidArea(new Dimension(225, 110))); // Espacio entre los botones
+        panelSuperiorIzquierdo.add(Box.createRigidArea(new Dimension(150, 110))); // Espacio entre los botones
         panelSuperiorIzquierdo.add(botonDerechoPanelSuperiorIzquierdo);
         panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
 
@@ -560,7 +563,17 @@ public class Pruebas {
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        framePadre.setLayout(disposicionFramePadreGridLayout);
+        // Ajustamos el tamaño de los paneles principales en función del porcentaje del framePadre
+        int frameWidth = 1200;
+        int frameHeight = 800;
+        int panelIzquierdoWidth = frameWidth / 4 + 100; // 25% del ancho del frame + 100 px
+        int panelDerechoWidth = frameWidth - panelIzquierdoWidth;
+
+//      El constructor de Dimension toma dos argumentos, que representan el ancho y la altura del tamaño deseado para el componente (panel).
+        panelPrincipalIzquierdo.setPreferredSize(new Dimension(panelIzquierdoWidth, frameHeight));
+        panelPrincipalDerecho.setPreferredSize(new Dimension(panelDerechoWidth, frameHeight));
+
+
         panelDerechoCuadrado.setLayout((disposicionPanelDerechoCuadrado));
         panelInfoIzquierdo.setLayout(disposicionPanelInfoIzquierdo);
 
@@ -569,9 +582,12 @@ public class Pruebas {
         panelDerechoCuadrado.setPreferredSize(new Dimension(framePadre.getSize().width / 2 - 60, framePadre.getSize().height - 200));
         panelPrincipalDerecho.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 40));
 
+
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         framePadre.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        framePadre.pack(); // Esto sirve para ajustar el tamaño del frame para que se adapte al contenido
+
         framePadre.setVisible(true);
     }
 }
