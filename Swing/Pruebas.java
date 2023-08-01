@@ -96,7 +96,7 @@ public class Pruebas {
 
 
         // Creamos un EmptyBorder con padding de 10 píxeles en todos los lados
-        EmptyBorder paddingPanelDerechoCuadrado = new EmptyBorder(20, 20, 20, 20);
+        EmptyBorder paddingPanelDerechoCuadrado = new EmptyBorder(10, 10, 10, 10);
         // Aplicar el padding al panelDerechoCuadrado
         panelDerechoCuadrado.setBorder(paddingPanelDerechoCuadrado);
 
@@ -378,7 +378,7 @@ public class Pruebas {
 //        botonInferiorIzquierdo.setForeground(Color.blue); // Color texto
 
         panelPrincipalDerecho.setBackground(Color.blue);
-        containerPanelDerechoLabel.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 60, 40));
+        containerPanelDerechoLabel.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 60, 30));
         containerPanelDerechoLabel.setOpaque(false);
         panelDerechoCuadrado.setBackground(Color.GREEN);
 
@@ -482,7 +482,7 @@ public class Pruebas {
 
 
         panelPrincipalIzquierdo.add(botonInferiorIzquierdo);
-        botonInferiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 30, 20));
+        botonInferiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 25, 40));
 
 
         panelPrincipalDerecho.add(containerPanelDerechoLabel);
@@ -579,7 +579,7 @@ public class Pruebas {
 
         panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getSize().width / 2 - 30, framePadre.getSize().height - 200));
 
-        panelDerechoCuadrado.setPreferredSize(new Dimension(framePadre.getSize().width / 2 - 60, framePadre.getSize().height - 200));
+        panelDerechoCuadrado.setPreferredSize(new Dimension(framePadre.getSize().width / 2 + 100, framePadre.getSize().height - 150));
         panelPrincipalDerecho.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 40));
 
 
