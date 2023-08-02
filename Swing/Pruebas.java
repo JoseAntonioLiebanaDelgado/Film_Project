@@ -8,10 +8,16 @@ import javax.swing.border.EmptyBorder;
 
 
 public class Pruebas {
+
+//    private static JPanel crearPanel() {
+//        JPanel panel1 = new JPanel();
+//        panel1.setPreferredSize(new Dimension(350, 60));
+//        return panel1;
+//    }
+
     public static void main(String[] args) {
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
-
 
         JFrame framePadre = new JFrame();
         framePadre.setLayout(new BorderLayout());
@@ -54,26 +60,10 @@ public class Pruebas {
         });
 
 
-        JPanel containerPanelCentralIzquierdo = new JPanel();
-        GridLayout disposicionPanelCentralIzquierdoGridLayout = new GridLayout(4, 2);
-        JPanel panelCentralIzquierdo = new JPanel(disposicionPanelCentralIzquierdoGridLayout);
-
-        JPanel containerLabel1de8 = new JPanel();
-        JLabel label1de8 = new JLabel("Frodo");
-        JPanel containerLabel2de8 = new JPanel();
-        JLabel label2de8 = new JLabel("Sam");
-        JPanel containerLabel3de8 = new JPanel();
-        JLabel label3de8 = new JLabel("Pippin");
-        JPanel containerLabel4de8 = new JPanel();
-        JLabel label4de8 = new JLabel("Merry");
-        JPanel containerLabel5de8 = new JPanel();
-        JLabel label5de8 = new JLabel("Gandalf");
-        JPanel containerLabel6de8 = new JPanel();
-        JLabel label6de8 = new JLabel("Aragorn");
-        JPanel containerLabel7de8 = new JPanel();
-        JLabel label7de8 = new JLabel("Legolas");
-        JPanel containerLabel8de8 = new JPanel();
-        JLabel label8de8 = new JLabel("Gimli");
+        JPanel panelCentralIzquierdo = new JPanel();
+        JPanel panelSuperiorCentralIzquierdo = new JPanel();
+        JLabel labelPanelSuperiorCentralIzquierdo = new JLabel("Titulo");
+        JButton botonPanelSuperiorCentralIzquierdo = new JButton();
 
 
         JButton botonInferiorIzquierdo = new JButton("Boton 3");
@@ -348,27 +338,13 @@ public class Pruebas {
         botonDerechoPanelSuperiorIzquierdo.setBackground(Color.blue);
 
 
+        panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 4 + 75, 600));
+        panelCentralIzquierdo.setOpaque(true);
+        panelCentralIzquierdo.setBackground(Color.white);
 
-        containerPanelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 4 + 75, 600));
-        containerPanelCentralIzquierdo.setOpaque(false);
-        panelCentralIzquierdo.setBackground(Color.lightGray);
-
-        containerLabel1de8.setBackground(Color.GREEN);
-        label1de8.setBackground(Color.MAGENTA);
-        containerLabel2de8.setBackground(Color.blue);
-        label2de8.setBackground(Color.MAGENTA);
-        containerLabel3de8.setBackground(Color.yellow);
-        label3de8.setBackground(Color.MAGENTA);
-        containerLabel4de8.setBackground(Color.white);
-        label4de8.setBackground(Color.MAGENTA);
-        containerLabel5de8.setBackground(Color.red);
-        label5de8.setBackground(Color.MAGENTA);
-        containerLabel6de8.setBackground(Color.cyan);
-        label6de8.setBackground(Color.MAGENTA);
-        containerLabel7de8.setBackground(Color.magenta);
-        label7de8.setBackground(Color.MAGENTA);
-        containerLabel8de8.setBackground(Color.lightGray);
-        label8de8.setBackground(Color.MAGENTA);
+        panelSuperiorCentralIzquierdo.setBackground(Color.GREEN);
+        panelSuperiorCentralIzquierdo.setOpaque(true);
+        labelPanelSuperiorCentralIzquierdo.setBackground(Color.red);
 
         botonInferiorIzquierdo.setOpaque(true);
 //        botonInferiorIzquierdo.setContentAreaFilled(true);
@@ -421,64 +397,16 @@ public class Pruebas {
 
         panelPrincipalIzquierdo.add(panelSuperiorIzquierdo);
 
-        panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
+//        panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
         panelSuperiorIzquierdo.add(botonIzquierdoPanelSuperiorIzquierdo);
         panelSuperiorIzquierdo.add(Box.createRigidArea(new Dimension(150, 110))); // Espacio entre los botones
         panelSuperiorIzquierdo.add(botonDerechoPanelSuperiorIzquierdo);
-        panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
+//        panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
 
-        panelPrincipalIzquierdo.add(containerPanelCentralIzquierdo);
-        containerPanelCentralIzquierdo.add(panelCentralIzquierdo);
+        panelPrincipalIzquierdo.add(panelCentralIzquierdo);
+        panelCentralIzquierdo.add(panelSuperiorCentralIzquierdo);
+        panelCentralIzquierdo.add(botonPanelSuperiorCentralIzquierdo);
 
-        containerLabel1de8.add(label1de8);
-        containerLabel2de8.add(label2de8);
-        containerLabel3de8.add(label3de8);
-        containerLabel4de8.add(label4de8);
-        containerLabel5de8.add(label5de8);
-        containerLabel6de8.add(label6de8);
-        containerLabel7de8.add(label7de8);
-        containerLabel8de8.add(label8de8);
-
-        panelCentralIzquierdo.add(containerLabel1de8);
-        panelCentralIzquierdo.add(containerLabel2de8);
-        panelCentralIzquierdo.add(containerLabel3de8);
-        panelCentralIzquierdo.add(containerLabel4de8);
-        panelCentralIzquierdo.add(containerLabel5de8);
-        panelCentralIzquierdo.add(containerLabel6de8);
-        panelCentralIzquierdo.add(containerLabel7de8);
-        panelCentralIzquierdo.add(containerLabel8de8);
-
-        label1de8.setPreferredSize(new Dimension(285, 150));
-        label1de8.setVerticalAlignment(JLabel.CENTER);
-        label1de8.setHorizontalAlignment(JLabel.CENTER);
-
-        label2de8.setPreferredSize(new Dimension(285, 150));
-        label2de8.setVerticalAlignment(JLabel.CENTER);
-        label2de8.setHorizontalAlignment(JLabel.CENTER);
-
-        label3de8.setPreferredSize(new Dimension(285, 150));
-        label3de8.setVerticalAlignment(JLabel.CENTER);
-        label3de8.setHorizontalAlignment(JLabel.CENTER);
-
-        label4de8.setPreferredSize(new Dimension(285, 150));
-        label4de8.setVerticalAlignment(JLabel.CENTER);
-        label4de8.setHorizontalAlignment(JLabel.CENTER);
-
-        label5de8.setPreferredSize(new Dimension(285, 150));
-        label5de8.setVerticalAlignment(JLabel.CENTER);
-        label5de8.setHorizontalAlignment(JLabel.CENTER);
-
-        label6de8.setPreferredSize(new Dimension(285, 150));
-        label6de8.setVerticalAlignment(JLabel.CENTER);
-        label6de8.setHorizontalAlignment(JLabel.CENTER);
-
-        label7de8.setPreferredSize(new Dimension(285, 150));
-        label7de8.setVerticalAlignment(JLabel.CENTER);
-        label7de8.setHorizontalAlignment(JLabel.CENTER);
-
-        label8de8.setPreferredSize(new Dimension(285, 150));
-        label8de8.setVerticalAlignment(JLabel.CENTER);
-        label8de8.setHorizontalAlignment(JLabel.CENTER);
 
 
         panelPrincipalIzquierdo.add(botonInferiorIzquierdo);
@@ -554,7 +482,6 @@ public class Pruebas {
         estrella5.setBorderPainted(false);
 
 
-
         panelDerechoCuadrado.add(panelInfoDerecho);
         panelInfoDerecho.add(panelInfoDerechoImagen);
         panelDerechoCuadrado.add(botonTrailer);
@@ -577,7 +504,6 @@ public class Pruebas {
         panelDerechoCuadrado.setLayout((disposicionPanelDerechoCuadrado));
         panelInfoIzquierdo.setLayout(disposicionPanelInfoIzquierdo);
 
-        panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getSize().width / 2 - 30, framePadre.getSize().height - 200));
 
         panelDerechoCuadrado.setPreferredSize(new Dimension(framePadre.getSize().width / 2 + 100, framePadre.getSize().height - 150));
         panelPrincipalDerecho.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 40));
