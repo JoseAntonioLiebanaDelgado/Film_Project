@@ -79,10 +79,11 @@ public class Pruebas {
         JPanel containerPanelDerechoLabel = new JPanel();
         JLabel panelDerechoLabel = new JLabel("Titulo App");
 
+        EmptyBorder paddingTituloElemento = new EmptyBorder(15, 0, 0, 100);
+        labelPanelSuperiorCentralIzquierdo.setBorder(paddingTituloElemento);
 
         ImageIcon imagenReloj = new ImageIcon("crono.png");
         JLabel etiquetaImagenReloj = new JLabel(imagenReloj);
-
 
         // Redimensionar la imagen a la mitad
         Image imagenOriginalReloj = imagenReloj.getImage();
@@ -94,6 +95,10 @@ public class Pruebas {
         ImageIcon imagenRedimensionadaReloj = new ImageIcon(imagenRawRedimensionadaReloj);
         // Actualizar la etiqueta de la imagen con el nuevo ImageIcon
         etiquetaImagenReloj.setIcon(imagenRedimensionadaReloj);
+
+        EmptyBorder paddingImagenReloj = new EmptyBorder(8, 0, 0, 10);
+        etiquetaImagenReloj.setBorder(paddingImagenReloj);
+
 
         GridLayout disposicionPanelDerechoCuadrado = new GridLayout();
         JPanel panelDerechoCuadrado = new JPanel();
