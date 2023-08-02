@@ -62,8 +62,7 @@ public class Pruebas {
 
         JPanel panelCentralIzquierdo = new JPanel();
         JPanel panelSuperiorCentralIzquierdo = new JPanel();
-        JLabel labelPanelSuperiorCentralIzquierdo = new JLabel("Titulo");
-        JButton botonPanelSuperiorCentralIzquierdo = new JButton();
+        JLabel labelPanelSuperiorCentralIzquierdo = new JLabel("Titulo Elemento");
 
 
         JButton botonInferiorIzquierdo = new JButton("Boton 3");
@@ -80,6 +79,21 @@ public class Pruebas {
         JPanel containerPanelDerechoLabel = new JPanel();
         JLabel panelDerechoLabel = new JLabel("Titulo App");
 
+
+        ImageIcon imagenReloj = new ImageIcon("crono.png");
+        JLabel etiquetaImagenReloj = new JLabel(imagenReloj);
+
+
+        // Redimensionar la imagen a la mitad
+        Image imagenOriginalReloj = imagenReloj.getImage();
+        int nuevoAnchoImagenReloj = imagenOriginalReloj.getWidth(null) / 4 - 100;
+        int nuevoAltoImagenReloj = imagenOriginalReloj.getHeight(null) / 4 - 100;
+        Image imagenRawRedimensionadaReloj = imagenOriginalReloj.getScaledInstance(nuevoAnchoImagenReloj, nuevoAltoImagenReloj, Image.SCALE_SMOOTH);
+
+        // Crear un nuevo ImageIcon con la imagen redimensionada
+        ImageIcon imagenRedimensionadaReloj = new ImageIcon(imagenRawRedimensionadaReloj);
+        // Actualizar la etiqueta de la imagen con el nuevo ImageIcon
+        etiquetaImagenReloj.setIcon(imagenRedimensionadaReloj);
 
         GridLayout disposicionPanelDerechoCuadrado = new GridLayout();
         JPanel panelDerechoCuadrado = new JPanel();
@@ -308,10 +322,10 @@ public class Pruebas {
 
 
         // Redimensionar la imagen a la mitad
-        Image imagenOriginal = imagenPortada.getImage();
-        int nuevoAncho = imagenOriginal.getWidth(null) / 2 + 50;
-        int nuevoAlto = imagenOriginal.getHeight(null) / 2 + 50;
-        Image imagenRedimensionada = imagenOriginal.getScaledInstance(nuevoAncho, nuevoAlto, Image.SCALE_SMOOTH);
+        Image imagenOriginalPortada = imagenPortada.getImage();
+        int nuevoAncho = imagenOriginalPortada.getWidth(null) / 2 + 50;
+        int nuevoAlto = imagenOriginalPortada.getHeight(null) / 2 + 50;
+        Image imagenRedimensionada = imagenOriginalPortada.getScaledInstance(nuevoAncho, nuevoAlto, Image.SCALE_SMOOTH);
 
         // Crear un nuevo ImageIcon con la imagen redimensionada
         ImageIcon imagenRedimensionadaIcon = new ImageIcon(imagenRedimensionada);
@@ -331,16 +345,18 @@ public class Pruebas {
         panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2, 120));
         panelSuperiorIzquierdo.setOpaque(true);
 
-        botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
-        botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.blue);
-
-        botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
-        botonDerechoPanelSuperiorIzquierdo.setBackground(Color.blue);
+        panelSuperiorCentralIzquierdo.setPreferredSize(new Dimension(350, 60));
 
 
         panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 4 + 75, 600));
         panelCentralIzquierdo.setOpaque(true);
         panelCentralIzquierdo.setBackground(Color.white);
+
+        botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
+        botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.blue);
+
+        botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
+        botonDerechoPanelSuperiorIzquierdo.setBackground(Color.blue);
 
         panelSuperiorCentralIzquierdo.setBackground(Color.GREEN);
         panelSuperiorCentralIzquierdo.setOpaque(true);
@@ -405,8 +421,8 @@ public class Pruebas {
 
         panelPrincipalIzquierdo.add(panelCentralIzquierdo);
         panelCentralIzquierdo.add(panelSuperiorCentralIzquierdo);
-        panelCentralIzquierdo.add(botonPanelSuperiorCentralIzquierdo);
-
+        panelSuperiorCentralIzquierdo.add(labelPanelSuperiorCentralIzquierdo);
+        panelSuperiorCentralIzquierdo.add(etiquetaImagenReloj);
 
 
         panelPrincipalIzquierdo.add(botonInferiorIzquierdo);
