@@ -230,7 +230,7 @@ public class Pruebas {
         JPanel panelInfoIzquierdoPanelInterno16 = new JPanel();
         panelInfoIzquierdoPanelInterno16.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno16, BoxLayout.X_AXIS));
 
-        ImageIcon imagenEstrella1 = new ImageIcon("star1.jpeg");
+        ImageIcon imagenEstrella1 = new ImageIcon("EstrellaVacia.png");
         // Redimensionar la imagen
         Image imagenOriginalEstrella1 = imagenEstrella1.getImage();
         Image rawImagenRedimensionadaEstrella1 = imagenOriginalEstrella1.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
@@ -245,7 +245,7 @@ public class Pruebas {
             }
         });
 
-        ImageIcon imagenEstrella2 = new ImageIcon("star1.jpeg");
+        ImageIcon imagenEstrella2 = new ImageIcon("EstrellaVacia.png");
         // Redimensionar la imagen
         Image imagenOriginalEstrella2 = imagenEstrella2.getImage();
         Image rawImagenRedimensionadaEstrella2 = imagenOriginalEstrella2.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
@@ -260,7 +260,7 @@ public class Pruebas {
             }
         });
 
-        ImageIcon imagenEstrella3 = new ImageIcon("star1.jpeg");
+        ImageIcon imagenEstrella3 = new ImageIcon("EstrellaVacia.png");
         // Redimensionar la imagen
         Image imagenOriginalEstrella3 = imagenEstrella3.getImage();
         Image rawImagenRedimensionadaEstrella3 = imagenOriginalEstrella3.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
@@ -275,7 +275,7 @@ public class Pruebas {
             }
         });
 
-        ImageIcon imagenEstrella4 = new ImageIcon("star1.jpeg");
+        ImageIcon imagenEstrella4 = new ImageIcon("EstrellaVacia.png");
         // Redimensionar la imagen
         Image imagenOriginalEstrella4 = imagenEstrella1.getImage();
         Image rawImagenRedimensionadaEstrella4 = imagenOriginalEstrella4.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
@@ -290,7 +290,7 @@ public class Pruebas {
             }
         });
 
-        ImageIcon imagenEstrella5 = new ImageIcon("star1.jpeg");
+        ImageIcon imagenEstrella5 = new ImageIcon("EstrellaVacia.png");
         // Redimensionar la imagen
         Image imagenOriginalEstrella5 = imagenEstrella5.getImage();
         Image rawImagenRedimensionadaEstrella5 = imagenOriginalEstrella5.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
