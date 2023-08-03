@@ -1,19 +1,16 @@
 package Swing;
 
+import Models.Pelicula;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.border.EmptyBorder;
 
 
 public class Pruebas {
-
-//    private static JPanel crearPanel() {
-//        JPanel panel1 = new JPanel();
-//        panel1.setPreferredSize(new Dimension(350, 60));
-//        return panel1;
-//    }
 
     public static void main(String[] args) {
 
@@ -64,6 +61,7 @@ public class Pruebas {
         JPanel panelSuperiorCentralIzquierdo = new JPanel();
         JLabel labelPanelSuperiorCentralIzquierdo = new JLabel("Titulo Elemento");
 
+        JPanel lineaNegraSeparadora = new JPanel();
 
         JButton botonInferiorIzquierdo = new JButton("Boton 3");
         botonInferiorIzquierdo.addActionListener(new ActionListener() {
@@ -96,7 +94,7 @@ public class Pruebas {
         // Actualizar la etiqueta de la imagen con el nuevo ImageIcon
         etiquetaImagenReloj.setIcon(imagenRedimensionadaReloj);
 
-        EmptyBorder paddingImagenReloj = new EmptyBorder(8, 0, 0, 10);
+        EmptyBorder paddingImagenReloj = new EmptyBorder(8, 0, 0, 0);
         etiquetaImagenReloj.setBorder(paddingImagenReloj);
 
 
@@ -367,6 +365,10 @@ public class Pruebas {
         panelSuperiorCentralIzquierdo.setOpaque(true);
         labelPanelSuperiorCentralIzquierdo.setBackground(Color.red);
 
+        lineaNegraSeparadora.setBackground(Color.BLACK);
+        lineaNegraSeparadora.setPreferredSize(new Dimension(350, 5));
+
+
         botonInferiorIzquierdo.setOpaque(true);
 //        botonInferiorIzquierdo.setContentAreaFilled(true);
         botonInferiorIzquierdo.setBorderPainted(false);
@@ -429,6 +431,10 @@ public class Pruebas {
         panelSuperiorCentralIzquierdo.add(labelPanelSuperiorCentralIzquierdo);
         panelSuperiorCentralIzquierdo.add(etiquetaImagenReloj);
 
+        panelCentralIzquierdo.add(lineaNegraSeparadora);
+
+        JPanel panelCreado = crearPanel(2);
+        panelCentralIzquierdo.add(panelCreado);
 
         panelPrincipalIzquierdo.add(botonInferiorIzquierdo);
         botonInferiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 25, 40));
@@ -532,9 +538,35 @@ public class Pruebas {
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+
         framePadre.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         framePadre.pack(); // Esto sirve para ajustar el tamaño del frame para que se adapte al contenido
 
         framePadre.setVisible(true);
     }
+
+    private static JPanel crearPanel(int numeroPaneles) {
+
+        JPanel panel1 = new JPanel();
+        panel1.setPreferredSize(new Dimension(350, 524));
+        panel1.setBackground(Color.blue);
+
+        JLabel label1 = new JLabel("Nombre Peli 1");
+        label1.setPreferredSize(new Dimension(160, 40));
+        label1.setBackground(Color.RED);
+        label1.setOpaque(true);
+        JLabel label2 = new JLabel("Duracion Peli 1");
+        label2.setPreferredSize(new Dimension(160, 40));
+        label2.setBackground(Color.green);
+        label2.setOpaque(true);
+
+        panel1.add(label1);
+        panel1.add(label2);
+
+        return panel1;
+    }
 }
+
+
+
+
