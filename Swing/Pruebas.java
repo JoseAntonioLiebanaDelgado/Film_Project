@@ -393,10 +393,10 @@ public class Pruebas {
         panelPrincipalDerecho.setPreferredSize(new Dimension(panelDerechoWidth, frameHeight));
         panelPrincipalDerecho.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 40));
 
+        containerPanelDerechoLabel.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 60, 30));
+
         panelCuadradoDerechoInfoGeneral.setLayout((disposicionPanelCuadradoDerechoInfoGeneral));
         panelCuadradoDerechoInfoGeneral.setPreferredSize(new Dimension(framePadre.getSize().width / 2 + 100, framePadre.getSize().height - 150));
-
-        containerPanelDerechoLabel.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 60, 30));
 
         panelInfoIzquierdoDelPanelCuadradoGeneral.setLayout(disposicionPanelInfoIzquierdoDelPanelPrincipalDerecho);
 
@@ -500,6 +500,9 @@ public class Pruebas {
 
         framePadre.add(panelPrincipalDerecho, BorderLayout.CENTER);
 
+        panelPrincipalDerecho.add(containerPanelDerechoLabel);
+        containerPanelDerechoLabel.add(labelPanelDerecho);
+
         panelPrincipalDerecho.add(panelCuadradoDerechoInfoGeneral);
         panelCuadradoDerechoInfoGeneral.add(panelInfoIzquierdoDelPanelCuadradoGeneral);
 
@@ -549,11 +552,6 @@ public class Pruebas {
         panelInfoIzquierdoPanelInterno16.add(estrella3);
         panelInfoIzquierdoPanelInterno16.add(estrella4);
         panelInfoIzquierdoPanelInterno16.add(estrella5);
-
-//---
-
-        panelPrincipalDerecho.add(containerPanelDerechoLabel);
-        containerPanelDerechoLabel.add(labelPanelDerecho);
 
         panelCuadradoDerechoInfoGeneral.add(panelInfoDerecho);
         panelInfoDerecho.add(panelInfoDerechoImagen);
