@@ -24,8 +24,6 @@ public class Pruebas {
         JPanel panelPrincipalIzquierdo = new JPanel();
 
         JPanel panelSuperiorIzquierdo = new JPanel();
-        panelSuperiorIzquierdo.setBackground(Color.RED);
-
 
         ImageIcon imagenBoton1 = new ImageIcon("people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg");
         // Redimensionar la imagen
@@ -42,7 +40,6 @@ public class Pruebas {
             }
         });
 
-
         ImageIcon imagenBoton2 = new ImageIcon("263100.png");
         // Redimensionar la imagen
         Image imagenOriginalBoton2 = imagenBoton2.getImage();
@@ -58,31 +55,14 @@ public class Pruebas {
             }
         });
 
-
         JPanel panelCentralIzquierdo = new JPanel();
+
         JPanel panelSuperiorCentralIzquierdo = new JPanel();
+
         JLabel labelPanelSuperiorCentralIzquierdo = new JLabel("Titulo Elemento");
 
-        JPanel lineaNegraSeparadora = new JPanel();
-
-        JButton botonInferiorIzquierdo = new JButton("Boton 3");
-        botonInferiorIzquierdo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Has clicado el Boton 3. Boton inferior del panel izquierdo");
-            }
-        });
-
-
-        JPanel panelPrincipalDerecho = new JPanel();
-
-        JPanel containerPanelDerechoLabel = new JPanel();
-        JLabel panelDerechoLabel = new JLabel("Titulo App");
-
-        EmptyBorder paddingTituloElemento = new EmptyBorder(15, 0, 0, 100);
-        labelPanelSuperiorCentralIzquierdo.setBorder(paddingTituloElemento);
-
         ImageIcon imagenReloj = new ImageIcon("crono.png");
+
         JLabel etiquetaImagenReloj = new JLabel(imagenReloj);
 
         // Redimensionar la imagen a la mitad
@@ -99,28 +79,61 @@ public class Pruebas {
         EmptyBorder paddingImagenReloj = new EmptyBorder(8, 0, 0, 0);
         etiquetaImagenReloj.setBorder(paddingImagenReloj);
 
+        JPanel lineaNegraSeparadora = new JPanel();
 
-        GridLayout disposicionPanelDerechoCuadrado = new GridLayout();
-        JPanel panelDerechoCuadrado = new JPanel();
+        ArrayList<Pelicula> listaDummy = new ArrayList<>();
+        ArrayList<String> repartoSalvarAlSoldadoRyan = new ArrayList<>();
+        repartoSalvarAlSoldadoRyan.add("Tom Hanks");
+        repartoSalvarAlSoldadoRyan.add("Matt Damon");
+        repartoSalvarAlSoldadoRyan.add("Tom Sizemore");
+        repartoSalvarAlSoldadoRyan.add("Vin Diesel");
+        repartoSalvarAlSoldadoRyan.add("Edward Burns");
 
+        Pelicula peli1 = new Pelicula("Soldado",
+                Genero.BELICO,
+                1998,
+                "169",
+                "Steven Spielberg",
+                repartoSalvarAlSoldadoRyan,
+                Pegi.TRECE,
+                4);
 
-        // Creamos un EmptyBorder con padding de 10 píxeles en todos los lados
-        EmptyBorder paddingPanelDerechoCuadrado = new EmptyBorder(10, 10, 10, 10);
-        // Aplicar el padding al panelDerechoCuadrado
-        panelDerechoCuadrado.setBorder(paddingPanelDerechoCuadrado);
+        Pelicula peli2 = new Pelicula("Gladiator",
+                Genero.BELICO,
+                1998,
+                "200",
+                "Steven Spielberg",
+                repartoSalvarAlSoldadoRyan,
+                Pegi.TRECE,
+                4);
 
+        listaDummy.add(peli1);
+        listaDummy.add(peli2);
 
-        JButton botonTrailer = new JButton("Boton 4 - Trailer");
-        botonTrailer.addActionListener(new ActionListener() {
+        JPanel panelCreado = crearPanelConLabels(listaDummy);
+
+        JButton botonAñadir = new JButton("Boton 3 - Añadir");
+        botonAñadir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Has clicado el Boton 4. Boton del trailer");
+                System.out.println("Has clicado el Boton 3. Boton inferior del panel izquierdo");
             }
         });
 
+//---
 
-        GridLayout disposicionPanelInfoIzquierdo = new GridLayout(8, 2);
-        JPanel panelInfoIzquierdo = new JPanel();
+        JPanel panelPrincipalDerecho = new JPanel();
+
+        GridLayout disposicionPanelCuadradoDerechoInfoGeneral = new GridLayout();
+        JPanel panelCuadradoDerechoInfoGeneral = new JPanel();
+
+        // Creamos un EmptyBorder con padding de 10 píxeles en todos los lados
+        EmptyBorder paddingPanelCuadradoDerechoInfoGeneral = new EmptyBorder(10, 10, 10, 10);
+        // Aplicar el padding al panelDerechoCuadrado
+        panelCuadradoDerechoInfoGeneral.setBorder(paddingPanelCuadradoDerechoInfoGeneral);
+
+        GridLayout disposicionPanelInfoIzquierdoDelPanelPrincipalDerecho = new GridLayout(8, 2);
+        JPanel panelInfoIzquierdoDelPanelCuadradoGeneral = new JPanel();
 
         JPanel containerPanelInfoIzquierdoPanelInterno1 = new JPanel();
         containerPanelInfoIzquierdoPanelInterno1.setLayout(new GridBagLayout());
@@ -215,7 +228,6 @@ public class Pruebas {
         JLabel panelInfoIzquierdoLabelInterna10 = new JLabel("Ridley Scott");
         JLabel panelInfoIzquierdoLabelInterna11 = new JLabel("Actores Principales:");
 
-
         JPanel panelInfoIzquierdoPanelInterno12 = new JPanel();
         panelInfoIzquierdoPanelInterno12.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno12, BoxLayout.Y_AXIS));
         JLabel actorLabel1 = new JLabel("Russer Crowe");
@@ -223,11 +235,9 @@ public class Pruebas {
         JLabel actorLabel3 = new JLabel("Actor 3");
         JLabel actorLabel4 = new JLabel("Actor 4");
 
-
         JLabel panelInfoIzquierdoLabelInterna13 = new JLabel("Pegi:");
         JLabel panelInfoIzquierdoLabelInterna14 = new JLabel("Mayores de 18");
         JLabel panelInfoIzquierdoLabelInterna15 = new JLabel("Puntuacion:");
-
 
         JPanel panelInfoIzquierdoPanelInterno16 = new JPanel();
         panelInfoIzquierdoPanelInterno16.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno16, BoxLayout.X_AXIS));
@@ -279,7 +289,7 @@ public class Pruebas {
 
         ImageIcon imagenEstrella4 = new ImageIcon("EstrellaVacia.png");
         // Redimensionar la imagen
-        Image imagenOriginalEstrella4 = imagenEstrella1.getImage();
+        Image imagenOriginalEstrella4 = imagenEstrella4.getImage();
         Image rawImagenRedimensionadaEstrella4 = imagenOriginalEstrella4.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
 
         //Crear un nuevo ImageIcon con la imagen redimensionada
@@ -307,8 +317,11 @@ public class Pruebas {
             }
         });
 
-
         JPanel panelInfoDerecho = new JPanel();
+
+        JPanel containerPanelDerechoLabel = new JPanel();
+
+        JLabel labelPanelDerecho = new JLabel("Titulo App");
 
         JPanel panelInfoDerechoImagen = new JPanel();
         panelInfoDerechoImagen.setLayout(new BorderLayout());
@@ -316,15 +329,11 @@ public class Pruebas {
         ImageIcon imagenPortada = new ImageIcon("Gladiator.jpg");
         JLabel etiquetaImagenPortada = new JLabel(imagenPortada);
 
-
         GridBagConstraints posImagenPanelDerecho = new GridBagConstraints();
         posImagenPanelDerecho.gridx = 0;
         posImagenPanelDerecho.gridy = 1;
         posImagenPanelDerecho.anchor = GridBagConstraints.CENTER;
         posImagenPanelDerecho.insets = new Insets(60, 10, 10, 10);
-
-        panelInfoDerechoImagen.add(etiquetaImagenPortada, BorderLayout.CENTER);
-
 
         // Redimensionar la imagen a la mitad
         Image imagenOriginalPortada = imagenPortada.getImage();
@@ -341,49 +350,105 @@ public class Pruebas {
         EmptyBorder paddingEncimaImagen = new EmptyBorder(75, 0, 0, 0);
         etiquetaImagenPortada.setBorder(paddingEncimaImagen);
 
+        JButton botonTrailer = new JButton("Boton 4 - Trailer");
+        botonTrailer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Has clicado el Boton 4. Boton del trailer");
+            }
+        });
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         framePadre.setSize(1200, 800);
-        panelPrincipalIzquierdo.setBackground(Color.orange);
+
+        // Ajustamos el tamaño de los paneles principales en función del porcentaje del framePadre
+        int frameWidth = 1200;
+        int frameHeight = 800;
+        int panelIzquierdoWidth = frameWidth / 4 + 100; // 25% del ancho del frame + 100 px
+        int panelDerechoWidth = frameWidth - panelIzquierdoWidth;
+
+        // El constructor de Dimension toma dos argumentos, que representan el ancho y la altura del tamaño deseado para el componente (panel).
+        panelPrincipalIzquierdo.setPreferredSize(new Dimension(panelIzquierdoWidth, frameHeight));
 
         panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2, 120));
-        panelSuperiorIzquierdo.setOpaque(true);
+
+        botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
+
+        botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
+
+        panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 4 + 75, 600));
 
         panelSuperiorCentralIzquierdo.setPreferredSize(new Dimension(350, 60));
 
+        EmptyBorder paddingTituloElemento = new EmptyBorder(15, 0, 0, 100);
+        labelPanelSuperiorCentralIzquierdo.setBorder(paddingTituloElemento);
 
-        panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 4 + 75, 600));
+        lineaNegraSeparadora.setPreferredSize(new Dimension(350, 5));
+
+        botonAñadir.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 25, 40));
+
+//---
+
+        panelPrincipalDerecho.setPreferredSize(new Dimension(panelDerechoWidth, frameHeight));
+        panelPrincipalDerecho.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 40));
+
+        panelCuadradoDerechoInfoGeneral.setLayout((disposicionPanelCuadradoDerechoInfoGeneral));
+        panelCuadradoDerechoInfoGeneral.setPreferredSize(new Dimension(framePadre.getSize().width / 2 + 100, framePadre.getSize().height - 150));
+
+        containerPanelDerechoLabel.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 60, 30));
+
+        panelInfoIzquierdoDelPanelCuadradoGeneral.setLayout(disposicionPanelInfoIzquierdoDelPanelPrincipalDerecho);
+
+        estrella1.setPreferredSize(new Dimension(20, 10));
+        estrella2.setPreferredSize(new Dimension(20, 10));
+        estrella3.setPreferredSize(new Dimension(20, 10));
+        estrella4.setPreferredSize(new Dimension(20, 10));
+        estrella5.setPreferredSize(new Dimension(20, 10));
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------
+
+        panelSuperiorIzquierdo.setOpaque(true);
         panelCentralIzquierdo.setOpaque(true);
-        panelCentralIzquierdo.setBackground(Color.white);
+        panelSuperiorCentralIzquierdo.setOpaque(true);
+        botonAñadir.setOpaque(true);
+        botonAñadir.setBorderPainted(false);
 
-        botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
+//---
+
+        containerPanelDerechoLabel.setOpaque(false);
+        containerPanelInfoIzquierdoPanelInterno16.setOpaque(false); // Establecer el fondo como transparente
+        panelInfoIzquierdoPanelInterno16.setOpaque(false); // Configurar el fondo del contenedor como transparente
+
+        estrella1.setBorderPainted(false);
+        estrella2.setBorderPainted(false);
+        estrella3.setBorderPainted(false);
+        estrella4.setBorderPainted(false);
+        estrella5.setBorderPainted(false);
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------
+
+        panelPrincipalIzquierdo.setBackground(Color.orange);
+
+        panelSuperiorIzquierdo.setBackground(Color.RED);
         botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.blue);
-
-        botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
         botonDerechoPanelSuperiorIzquierdo.setBackground(Color.blue);
 
+        panelCentralIzquierdo.setBackground(Color.white);
         panelSuperiorCentralIzquierdo.setBackground(Color.GREEN);
-        panelSuperiorCentralIzquierdo.setOpaque(true);
         labelPanelSuperiorCentralIzquierdo.setBackground(Color.red);
 
         lineaNegraSeparadora.setBackground(Color.BLACK);
-        lineaNegraSeparadora.setPreferredSize(new Dimension(350, 5));
 
+        botonAñadir.setBackground(Color.blue);
 
-        botonInferiorIzquierdo.setOpaque(true);
-//        botonInferiorIzquierdo.setContentAreaFilled(true);
-        botonInferiorIzquierdo.setBorderPainted(false);
-//        botonInferiorIzquierdo.setFocusPainted(false);
-        botonInferiorIzquierdo.setBackground(Color.blue);
-//        botonInferiorIzquierdo.setForeground(Color.blue); // Color texto
+//---
 
         panelPrincipalDerecho.setBackground(Color.blue);
-        containerPanelDerechoLabel.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 60, 30));
-        containerPanelDerechoLabel.setOpaque(false);
-        panelDerechoCuadrado.setBackground(Color.GREEN);
 
-        panelInfoIzquierdo.setBackground(Color.red);
+        panelCuadradoDerechoInfoGeneral.setBackground(Color.GREEN);
+
+        panelInfoIzquierdoDelPanelCuadradoGeneral.setBackground(Color.red);
 
         containerPanelInfoIzquierdoPanelInterno1.setBackground(Color.green);
         containerPanelInfoIzquierdoPanelInterno2.setBackground(Color.red);
@@ -408,25 +473,18 @@ public class Pruebas {
         estrella4.setBackground(Color.CYAN);
         estrella5.setBackground(Color.CYAN);
 
-
         panelInfoDerecho.setBackground(Color.yellow);
+
         panelInfoDerechoImagen.setBackground(Color.lightGray);
-
-
-        botonTrailer.setPreferredSize(new Dimension(70, 30));
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
         framePadre.add(panelPrincipalIzquierdo, BorderLayout.WEST);
-        framePadre.add(panelPrincipalDerecho, BorderLayout.CENTER);
 
         panelPrincipalIzquierdo.add(panelSuperiorIzquierdo);
-
-//        panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
         panelSuperiorIzquierdo.add(botonIzquierdoPanelSuperiorIzquierdo);
         panelSuperiorIzquierdo.add(Box.createRigidArea(new Dimension(150, 110))); // Espacio entre los botones
         panelSuperiorIzquierdo.add(botonDerechoPanelSuperiorIzquierdo);
-//        panelSuperiorIzquierdo.add(Box.createHorizontalGlue()); // Espacio para centrar los botones
 
         panelPrincipalIzquierdo.add(panelCentralIzquierdo);
         panelCentralIzquierdo.add(panelSuperiorCentralIzquierdo);
@@ -434,75 +492,41 @@ public class Pruebas {
         panelSuperiorCentralIzquierdo.add(etiquetaImagenReloj);
 
         panelCentralIzquierdo.add(lineaNegraSeparadora);
-
-        ArrayList<Pelicula> listaDummy = new ArrayList<>();
-
-        ArrayList<String> repartoSalvarAlSoldadoRyan = new ArrayList<>();
-        repartoSalvarAlSoldadoRyan.add("Tom Hanks");
-        repartoSalvarAlSoldadoRyan.add("Matt Damon");
-        repartoSalvarAlSoldadoRyan.add("Tom Sizemore");
-        repartoSalvarAlSoldadoRyan.add("Vin Diesel");
-        repartoSalvarAlSoldadoRyan.add("Edward Burns");
-
-        Pelicula peli1 = new Pelicula("Soldado",
-                Genero.BELICO,
-                1998,
-                "169",
-                "Steven Spielberg",
-                repartoSalvarAlSoldadoRyan,
-                Pegi.TRECE,
-                4);
-
-        Pelicula peli2 = new Pelicula("Gladiator",
-                Genero.BELICO,
-                1998,
-                "200",
-                "Steven Spielberg",
-                repartoSalvarAlSoldadoRyan,
-                Pegi.TRECE,
-                4);
-
-        listaDummy.add(peli1);
-        listaDummy.add(peli2);
-
-
-        JPanel panelCreado = crearPanelConLabels(listaDummy);
         panelCentralIzquierdo.add(panelCreado);
 
-        panelPrincipalIzquierdo.add(botonInferiorIzquierdo);
-        botonInferiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 25, 40));
+        panelPrincipalIzquierdo.add(botonAñadir);
 
+//---
 
-        panelPrincipalDerecho.add(containerPanelDerechoLabel);
-        panelPrincipalDerecho.add(panelDerechoCuadrado);
-        containerPanelDerechoLabel.add(panelDerechoLabel);
+        framePadre.add(panelPrincipalDerecho, BorderLayout.CENTER);
 
-        panelDerechoCuadrado.add(panelInfoIzquierdo);
+        panelPrincipalDerecho.add(panelCuadradoDerechoInfoGeneral);
+        panelCuadradoDerechoInfoGeneral.add(panelInfoIzquierdoDelPanelCuadradoGeneral);
 
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno1);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno1);
         containerPanelInfoIzquierdoPanelInterno1.add(panelInfoIzquierdoLabelInterna1);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno2);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno2);
         containerPanelInfoIzquierdoPanelInterno2.add(panelInfoIzquierdoLabelInterna2);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno3);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno3);
         containerPanelInfoIzquierdoPanelInterno3.add(panelInfoIzquierdoLabelInterna3);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno4);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno4);
         containerPanelInfoIzquierdoPanelInterno4.add(panelInfoIzquierdoLabelInterna4);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno5);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno5);
         containerPanelInfoIzquierdoPanelInterno5.add(panelInfoIzquierdoLabelInterna5);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno6);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno6);
         containerPanelInfoIzquierdoPanelInterno6.add(panelInfoIzquierdoLabelInterna6);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno7);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno7);
         containerPanelInfoIzquierdoPanelInterno7.add(panelInfoIzquierdoLabelInterna7);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno8);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno8);
         containerPanelInfoIzquierdoPanelInterno8.add(panelInfoIzquierdoLabelInterna8);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno9);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno9);
         containerPanelInfoIzquierdoPanelInterno9.add(panelInfoIzquierdoLabelInterna9);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno10);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno10);
         containerPanelInfoIzquierdoPanelInterno10.add(panelInfoIzquierdoLabelInterna10);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno11);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno11);
         containerPanelInfoIzquierdoPanelInterno11.add(panelInfoIzquierdoLabelInterna11);
 
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno12);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno12);
         containerPanelInfoIzquierdoPanelInterno12.add(panelInfoIzquierdoPanelInterno12);
 
         panelInfoIzquierdoPanelInterno12.add(actorLabel1);
@@ -510,71 +534,39 @@ public class Pruebas {
         panelInfoIzquierdoPanelInterno12.add(actorLabel3);
         panelInfoIzquierdoPanelInterno12.add(actorLabel4);
 
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno13);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno13);
         containerPanelInfoIzquierdoPanelInterno13.add(panelInfoIzquierdoLabelInterna13);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno14);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno14);
         containerPanelInfoIzquierdoPanelInterno14.add(panelInfoIzquierdoLabelInterna14);
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno15);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno15);
         containerPanelInfoIzquierdoPanelInterno15.add(panelInfoIzquierdoLabelInterna15);
 
-        panelInfoIzquierdo.add(containerPanelInfoIzquierdoPanelInterno16);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.add(containerPanelInfoIzquierdoPanelInterno16);
         containerPanelInfoIzquierdoPanelInterno16.add(panelInfoIzquierdoPanelInterno16);
-        containerPanelInfoIzquierdoPanelInterno16.setOpaque(false); // Establecer el fondo como transparente
-        panelInfoIzquierdoPanelInterno16.setOpaque(false); // Configurar el fondo del contenedor como transparente
+
         panelInfoIzquierdoPanelInterno16.add(estrella1);
         panelInfoIzquierdoPanelInterno16.add(estrella2);
         panelInfoIzquierdoPanelInterno16.add(estrella3);
         panelInfoIzquierdoPanelInterno16.add(estrella4);
         panelInfoIzquierdoPanelInterno16.add(estrella5);
 
-        estrella1.setPreferredSize(new Dimension(20, 10));
-        estrella2.setPreferredSize(new Dimension(20, 10));
-        estrella3.setPreferredSize(new Dimension(20, 10));
-        estrella4.setPreferredSize(new Dimension(20, 10));
-        estrella5.setPreferredSize(new Dimension(20, 10));
+//---
 
+        panelPrincipalDerecho.add(containerPanelDerechoLabel);
+        containerPanelDerechoLabel.add(labelPanelDerecho);
 
-        // Configuramos los botones de estrella para que no muestren ningún borde
-        estrella1.setBorderPainted(false);
-        estrella2.setBorderPainted(false);
-        estrella3.setBorderPainted(false);
-        estrella4.setBorderPainted(false);
-        estrella5.setBorderPainted(false);
-
-
-        panelDerechoCuadrado.add(panelInfoDerecho);
+        panelCuadradoDerechoInfoGeneral.add(panelInfoDerecho);
         panelInfoDerecho.add(panelInfoDerechoImagen);
-        panelDerechoCuadrado.add(botonTrailer);
+
+        panelInfoDerechoImagen.add(etiquetaImagenPortada, BorderLayout.CENTER);
+
+        panelCuadradoDerechoInfoGeneral.add(botonTrailer);
         panelInfoDerechoImagen.add(botonTrailer, BorderLayout.SOUTH);
 
-
 //---------------------------------------------------------------------------------------------------------------------------------------------------
-
-        // Ajustamos el tamaño de los paneles principales en función del porcentaje del framePadre
-        int frameWidth = 1200;
-        int frameHeight = 800;
-        int panelIzquierdoWidth = frameWidth / 4 + 100; // 25% del ancho del frame + 100 px
-        int panelDerechoWidth = frameWidth - panelIzquierdoWidth;
-
-//      El constructor de Dimension toma dos argumentos, que representan el ancho y la altura del tamaño deseado para el componente (panel).
-        panelPrincipalIzquierdo.setPreferredSize(new Dimension(panelIzquierdoWidth, frameHeight));
-        panelPrincipalDerecho.setPreferredSize(new Dimension(panelDerechoWidth, frameHeight));
-
-
-        panelDerechoCuadrado.setLayout((disposicionPanelDerechoCuadrado));
-        panelInfoIzquierdo.setLayout(disposicionPanelInfoIzquierdo);
-
-
-        panelDerechoCuadrado.setPreferredSize(new Dimension(framePadre.getSize().width / 2 + 100, framePadre.getSize().height - 150));
-        panelPrincipalDerecho.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 40));
-
-
-//---------------------------------------------------------------------------------------------------------------------------------------------------
-
 
         framePadre.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         framePadre.pack(); // Esto sirve para ajustar el tamaño del frame para que se adapte al contenido
-
         framePadre.setVisible(true);
     }
 
@@ -583,7 +575,6 @@ public class Pruebas {
         JPanel panel1 = new JPanel();
         panel1.setPreferredSize(new Dimension(350, 510));
         panel1.setBackground(Color.blue);
-
 
         for (int i = 0; i < lista.size(); i++) {
 
@@ -600,9 +591,7 @@ public class Pruebas {
             labelDuracion.setOpaque(true);
 
             panel1.add(labelDuracion);
-
         }
-
         return panel1;
     }
 }
