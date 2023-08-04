@@ -1,5 +1,7 @@
 package Swing;
 
+import ENUM.Genero;
+import ENUM.Pegi;
 import Models.Pelicula;
 
 import javax.swing.*;
@@ -433,7 +435,38 @@ public class Pruebas {
 
         panelCentralIzquierdo.add(lineaNegraSeparadora);
 
-        JPanel panelCreado = crearPanel(2);
+        ArrayList<Pelicula> listaDummy = new ArrayList<>();
+
+        ArrayList<String> repartoSalvarAlSoldadoRyan = new ArrayList<>();
+        repartoSalvarAlSoldadoRyan.add("Tom Hanks");
+        repartoSalvarAlSoldadoRyan.add("Matt Damon");
+        repartoSalvarAlSoldadoRyan.add("Tom Sizemore");
+        repartoSalvarAlSoldadoRyan.add("Vin Diesel");
+        repartoSalvarAlSoldadoRyan.add("Edward Burns");
+
+        Pelicula peli1 = new Pelicula("Soldado",
+                Genero.BELICO,
+                1998,
+                "169",
+                "Steven Spielberg",
+                repartoSalvarAlSoldadoRyan,
+                Pegi.TRECE,
+                4);
+
+        Pelicula peli2 = new Pelicula("Gladiator",
+                Genero.BELICO,
+                1998,
+                "200",
+                "Steven Spielberg",
+                repartoSalvarAlSoldadoRyan,
+                Pegi.TRECE,
+                4);
+
+        listaDummy.add(peli1);
+        listaDummy.add(peli2);
+
+
+        JPanel panelCreado = crearPanelConLabels(listaDummy);
         panelCentralIzquierdo.add(panelCreado);
 
         panelPrincipalIzquierdo.add(botonInferiorIzquierdo);
@@ -545,23 +578,30 @@ public class Pruebas {
         framePadre.setVisible(true);
     }
 
-    private static JPanel crearPanel(int numeroPaneles) {
+    private static JPanel crearPanelConLabels(ArrayList<Pelicula> lista) {
 
         JPanel panel1 = new JPanel();
-        panel1.setPreferredSize(new Dimension(350, 524));
+        panel1.setPreferredSize(new Dimension(350, 510));
         panel1.setBackground(Color.blue);
 
-        JLabel label1 = new JLabel("Nombre Peli 1");
-        label1.setPreferredSize(new Dimension(160, 40));
-        label1.setBackground(Color.RED);
-        label1.setOpaque(true);
-        JLabel label2 = new JLabel("Duracion Peli 1");
-        label2.setPreferredSize(new Dimension(160, 40));
-        label2.setBackground(Color.green);
-        label2.setOpaque(true);
 
-        panel1.add(label1);
-        panel1.add(label2);
+        for (int i = 0; i < lista.size(); i++) {
+
+            JLabel labelTitulo = new JLabel(lista.get(i).getNombre());
+            labelTitulo.setPreferredSize(new Dimension(160, 40));
+            labelTitulo.setBackground(Color.RED);
+            labelTitulo.setOpaque(true);
+
+            panel1.add(labelTitulo);
+
+            JLabel labelDuracion = new JLabel(lista.get(i).getDuracionMinutos());
+            labelDuracion.setPreferredSize(new Dimension(160, 40));
+            labelDuracion.setBackground(Color.RED);
+            labelDuracion.setOpaque(true);
+
+            panel1.add(labelDuracion);
+
+        }
 
         return panel1;
     }
