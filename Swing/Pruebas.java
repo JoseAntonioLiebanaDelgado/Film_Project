@@ -11,7 +11,6 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.border.EmptyBorder;
 
-
 public class Pruebas {
 
     public static void main(String[] args) {
@@ -242,17 +241,25 @@ public class Pruebas {
         JPanel panelInfoIzquierdoPanelInterno16 = new JPanel();
         panelInfoIzquierdoPanelInterno16.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno16, BoxLayout.X_AXIS));
 
-        ImageIcon imagenEstrella1 = new ImageIcon("EstrellaVacia.png");
-        // Redimensionar la imagen
-        Image imagenOriginalEstrella1 = imagenEstrella1.getImage();
-        Image rawImagenRedimensionadaEstrella1 = imagenOriginalEstrella1.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+        // ImageIcon para la imagen de la estrella vacía
+        ImageIcon imagenEstrellaVacia = new ImageIcon("EstrellaVacia.png");
+        Image imagenOriginalEstrellaVacia = imagenEstrellaVacia.getImage();
+        Image rawImagenRedimensionadaEstrellaVacia = imagenOriginalEstrellaVacia.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+        ImageIcon imagenRedimensionadaEstrellaVacia = new ImageIcon(rawImagenRedimensionadaEstrellaVacia);
 
-        //Crear un nuevo ImageIcon con la imagen redimensionada
-        ImageIcon imagenRedimensionadaEstrella1 = new ImageIcon(rawImagenRedimensionadaEstrella1);
-        JButton estrella1 = new JButton(imagenRedimensionadaEstrella1);
+        // ImageIcon para la imagen de la estrella pintada
+        ImageIcon imagenEstrellaPintada = new ImageIcon("EstrellaPintada.png");
+        Image imagenOriginalEstrellaPintada = imagenEstrellaPintada.getImage();
+        Image rawImagenRedimensionadaEstrellaPintada = imagenOriginalEstrellaPintada.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
+        ImageIcon imagenRedimensionadaEstrellaPintada = new ImageIcon(rawImagenRedimensionadaEstrellaPintada);
+
+        // Crear el botón con la imagen inicial (EstrellaVacia.png)
+        JButton estrella1 = new JButton(imagenRedimensionadaEstrellaVacia);
         estrella1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                // Cambiar la imagen del botón a la imagen pintada (EstrellaPintada.png)
+                estrella1.setIcon(imagenRedimensionadaEstrellaPintada);
                 System.out.println("Has pulsado la estrella 1");
             }
         });
