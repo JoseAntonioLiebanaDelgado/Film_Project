@@ -241,88 +241,144 @@ public class Pruebas {
         JPanel panelInfoIzquierdoPanelInterno16 = new JPanel();
         panelInfoIzquierdoPanelInterno16.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno16, BoxLayout.X_AXIS));
 
+
         // ImageIcon para la imagen de la estrella vacía
         ImageIcon imagenEstrellaVacia = new ImageIcon("EstrellaVacia.png");
         Image imagenOriginalEstrellaVacia = imagenEstrellaVacia.getImage();
         Image rawImagenRedimensionadaEstrellaVacia = imagenOriginalEstrellaVacia.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
-        ImageIcon imagenRedimensionadaEstrellaVacia = new ImageIcon(rawImagenRedimensionadaEstrellaVacia);
+        ImageIcon estrellaImagenFinal = new ImageIcon(rawImagenRedimensionadaEstrellaVacia);
 
-        // ImageIcon para la imagen de la estrella pintada
-        ImageIcon imagenEstrellaPintada = new ImageIcon("EstrellaPintada.png");
-        Image imagenOriginalEstrellaPintada = imagenEstrellaPintada.getImage();
-        Image rawImagenRedimensionadaEstrellaPintada = imagenOriginalEstrellaPintada.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
-        ImageIcon imagenRedimensionadaEstrellaPintada = new ImageIcon(rawImagenRedimensionadaEstrellaPintada);
+        // Crear botones con la imagen EstrellaVacia.png
+        JButton estrella1 = new JButton(estrellaImagenFinal);
+        JButton estrella2 = new JButton(estrellaImagenFinal);
+        JButton estrella3 = new JButton(estrellaImagenFinal);
+        JButton estrella4 = new JButton(estrellaImagenFinal);
+        JButton estrella5 = new JButton(estrellaImagenFinal);
 
-        // Crear el botón con la imagen inicial (EstrellaVacia.png)
-        JButton estrella1 = new JButton(imagenRedimensionadaEstrellaVacia);
+        ArrayList<JButton> listaBotones = new ArrayList<>();
+
+        listaBotones.add(estrella1);
+        listaBotones.add(estrella2);
+        listaBotones.add(estrella3);
+        listaBotones.add(estrella4);
+        listaBotones.add(estrella5);
+
+//        estrella1.addActionListener(new ActionListener() {
+//            private boolean estrellaClicada = false;
+//
+//            @Override
+//            public void actionPerformed(ActionEvent actionEvent) {
+//                if (!estrellaClicada) {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                    pintarEstrellas(listaBotones, 0);
+//                } else {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                }
+//                estrellaClicada = !estrellaClicada;
+//            }
+//        });
+//
+//        estrella2.addActionListener(new ActionListener() {
+//            private boolean estrellaClicada = false;
+//
+//            @Override
+//            public void actionPerformed(ActionEvent actionEvent) {
+//                if (!estrellaClicada) {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                    pintarEstrellas(listaBotones, 0);
+//                } else {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                }
+//                estrellaClicada = !estrellaClicada;
+//            }
+//        });
+//
+//        estrella3.addActionListener(new ActionListener() {
+//            private boolean estrellaClicada = false;
+//
+//            @Override
+//            public void actionPerformed(ActionEvent actionEvent) {
+//                if (!estrellaClicada) {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                    pintarEstrellas(listaBotones, 0);
+//                } else {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                }
+//                estrellaClicada = !estrellaClicada;
+//            }
+//        });
+//
+//        estrella4.addActionListener(new ActionListener() {
+//            private boolean estrellaClicada = false;
+//
+//            @Override
+//            public void actionPerformed(ActionEvent actionEvent) {
+//                if (!estrellaClicada) {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                    pintarEstrellas(listaBotones, 0);
+//                } else {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                }
+//                estrellaClicada = !estrellaClicada;
+//            }
+//        });
+//
+//        estrella5.addActionListener(new ActionListener() {
+//            private boolean estrellaClicada = false;
+//
+//            @Override
+//            public void actionPerformed(ActionEvent actionEvent) {
+//                if (!estrellaClicada) {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                    pintarEstrellas(listaBotones, 0);
+//                } else {
+//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+//                }
+//                estrellaClicada = !estrellaClicada;
+//            }
+//        });
+
+
         estrella1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                // Cambiar la imagen del botón a la imagen pintada (EstrellaPintada.png)
-                estrella1.setIcon(imagenRedimensionadaEstrellaPintada);
-                System.out.println("Has pulsado la estrella 1");
+                despintarEstrellas(listaBotones, estrellaImagenFinal);
+                pintarEstrellas(listaBotones, 0);
             }
         });
 
-        ImageIcon imagenEstrella2 = new ImageIcon("EstrellaVacia.png");
-        // Redimensionar la imagen
-        Image imagenOriginalEstrella2 = imagenEstrella2.getImage();
-        Image rawImagenRedimensionadaEstrella2 = imagenOriginalEstrella2.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
-
-        //Crear un nuevo ImageIcon con la imagen redimensionada
-        ImageIcon imagenRedimensionadaEstrella2 = new ImageIcon(rawImagenRedimensionadaEstrella2);
-        JButton estrella2 = new JButton(imagenRedimensionadaEstrella2);
         estrella2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Has pulsado la estrella 2");
+                despintarEstrellas(listaBotones, estrellaImagenFinal);
+                pintarEstrellas(listaBotones, 1);
             }
         });
 
-        ImageIcon imagenEstrella3 = new ImageIcon("EstrellaVacia.png");
-        // Redimensionar la imagen
-        Image imagenOriginalEstrella3 = imagenEstrella3.getImage();
-        Image rawImagenRedimensionadaEstrella3 = imagenOriginalEstrella3.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
-
-        //Crear un nuevo ImageIcon con la imagen redimensionada
-        ImageIcon imagenRedimensionadaEstrella3 = new ImageIcon(rawImagenRedimensionadaEstrella3);
-        JButton estrella3 = new JButton(imagenRedimensionadaEstrella3);
         estrella3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Has pulsado la estrella 3");
+                despintarEstrellas(listaBotones, estrellaImagenFinal);
+                pintarEstrellas(listaBotones, 2);
             }
         });
 
-        ImageIcon imagenEstrella4 = new ImageIcon("EstrellaVacia.png");
-        // Redimensionar la imagen
-        Image imagenOriginalEstrella4 = imagenEstrella4.getImage();
-        Image rawImagenRedimensionadaEstrella4 = imagenOriginalEstrella4.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
-
-        //Crear un nuevo ImageIcon con la imagen redimensionada
-        ImageIcon imagenRedimensionadaEstrella4 = new ImageIcon(rawImagenRedimensionadaEstrella4);
-        JButton estrella4 = new JButton(imagenRedimensionadaEstrella4);
         estrella4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Has pulsado la estrella 4");
+                despintarEstrellas(listaBotones, estrellaImagenFinal);
+                pintarEstrellas(listaBotones, 3);
             }
         });
 
-        ImageIcon imagenEstrella5 = new ImageIcon("EstrellaVacia.png");
-        // Redimensionar la imagen
-        Image imagenOriginalEstrella5 = imagenEstrella5.getImage();
-        Image rawImagenRedimensionadaEstrella5 = imagenOriginalEstrella5.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
-
-        //Crear un nuevo ImageIcon con la imagen redimensionada
-        ImageIcon imagenRedimensionadaEstrella5 = new ImageIcon(rawImagenRedimensionadaEstrella5);
-        JButton estrella5 = new JButton(imagenRedimensionadaEstrella5);
         estrella5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Has pulsado la estrella 5");
+                despintarEstrellas(listaBotones, estrellaImagenFinal);
+                pintarEstrellas(listaBotones, 4);
             }
         });
+
 
         JPanel panelInfoDerecho = new JPanel();
 
@@ -598,6 +654,26 @@ public class Pruebas {
             panel1.add(labelDuracion);
         }
         return panel1;
+    }
+
+    private static void pintarEstrellas(ArrayList<JButton> listaBotones, int indiceBoton) {
+
+        ImageIcon imagenEstrellaPintada = new ImageIcon("EstrellaPintada.png");
+        Image imagenOriginalEstrellaPintada = imagenEstrellaPintada.getImage();
+        Image rawImagenRedimensionadaEstrellaPintada = imagenOriginalEstrellaPintada.getScaledInstance(12, 12, Image.SCALE_SMOOTH);
+        ImageIcon imagenRedimensionadaEstrellaPintada = new ImageIcon(rawImagenRedimensionadaEstrellaPintada);
+
+        // Pinta solo las estrellas hasta el índice especificado
+        for (int i = 0; i <= indiceBoton; i++) {
+            listaBotones.get(i).setIcon(imagenRedimensionadaEstrellaPintada);
+        }
+    }
+
+    private static void despintarEstrellas(ArrayList<JButton> listaBotones, ImageIcon imagen) {
+
+        for (int i = 0; i < listaBotones.size(); i++) {
+            listaBotones.get(i).setIcon(imagen);
+        }
     }
 }
 
