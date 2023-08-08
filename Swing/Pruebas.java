@@ -263,119 +263,79 @@ public class Pruebas {
         listaBotones.add(estrella4);
         listaBotones.add(estrella5);
 
-//        estrella1.addActionListener(new ActionListener() {
-//            private boolean estrellaClicada = false;
-//
-//            @Override
-//            public void actionPerformed(ActionEvent actionEvent) {
-//                if (!estrellaClicada) {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                    pintarEstrellas(listaBotones, 0);
-//                } else {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                }
-//                estrellaClicada = !estrellaClicada;
-//            }
-//        });
-//
-//        estrella2.addActionListener(new ActionListener() {
-//            private boolean estrellaClicada = false;
-//
-//            @Override
-//            public void actionPerformed(ActionEvent actionEvent) {
-//                if (!estrellaClicada) {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                    pintarEstrellas(listaBotones, 0);
-//                } else {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                }
-//                estrellaClicada = !estrellaClicada;
-//            }
-//        });
-//
-//        estrella3.addActionListener(new ActionListener() {
-//            private boolean estrellaClicada = false;
-//
-//            @Override
-//            public void actionPerformed(ActionEvent actionEvent) {
-//                if (!estrellaClicada) {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                    pintarEstrellas(listaBotones, 0);
-//                } else {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                }
-//                estrellaClicada = !estrellaClicada;
-//            }
-//        });
-//
-//        estrella4.addActionListener(new ActionListener() {
-//            private boolean estrellaClicada = false;
-//
-//            @Override
-//            public void actionPerformed(ActionEvent actionEvent) {
-//                if (!estrellaClicada) {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                    pintarEstrellas(listaBotones, 0);
-//                } else {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                }
-//                estrellaClicada = !estrellaClicada;
-//            }
-//        });
-//
-//        estrella5.addActionListener(new ActionListener() {
-//            private boolean estrellaClicada = false;
-//
-//            @Override
-//            public void actionPerformed(ActionEvent actionEvent) {
-//                if (!estrellaClicada) {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                    pintarEstrellas(listaBotones, 0);
-//                } else {
-//                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-//                }
-//                estrellaClicada = !estrellaClicada;
-//            }
-//        });
+        boolean[] estrellasPintadas = new boolean[5];
 
+        for (int i = 0; i < estrellasPintadas.length; i++) {
+            estrellasPintadas[i] = false;
+        }
 
         estrella1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                despintarEstrellas(listaBotones, estrellaImagenFinal);
-                pintarEstrellas(listaBotones, 0);
+                int indiceBoton = 0;
+                if (estrellasPintadas[indiceBoton]) { //Si está pintada despintamos
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                } else { //Sino, despintamos y pintamos
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                    pintarEstrellas(listaBotones, indiceBoton);
+                }
+                estrellasPintadas[indiceBoton] = !estrellasPintadas[indiceBoton];
             }
         });
 
         estrella2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                despintarEstrellas(listaBotones, estrellaImagenFinal);
-                pintarEstrellas(listaBotones, 1);
+                int indiceBoton = 1;
+                if (estrellasPintadas[indiceBoton]) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                } else {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                    pintarEstrellas(listaBotones, 1);
+                }
+                estrellasPintadas[indiceBoton] = !estrellasPintadas[indiceBoton];
             }
         });
 
         estrella3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                despintarEstrellas(listaBotones, estrellaImagenFinal);
-                pintarEstrellas(listaBotones, 2);
+                int indiceBoton = 2;
+                if (estrellasPintadas[indiceBoton]) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                } else {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                    pintarEstrellas(listaBotones, 2);
+                }
+                estrellasPintadas[indiceBoton] = !estrellasPintadas[indiceBoton];
             }
         });
 
         estrella4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                despintarEstrellas(listaBotones, estrellaImagenFinal);
-                pintarEstrellas(listaBotones, 3);
+                int indiceBoton = 3;
+                if (estrellasPintadas[indiceBoton]) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                } else {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                    pintarEstrellas(listaBotones, 3);
+                }
+                estrellasPintadas[indiceBoton] = !estrellasPintadas[indiceBoton];
             }
         });
 
         estrella5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                despintarEstrellas(listaBotones, estrellaImagenFinal);
-                pintarEstrellas(listaBotones, 4);
+                int indiceBoton = 4;
+                if (estrellasPintadas[indiceBoton]) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                } else {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                    pintarEstrellas(listaBotones, 4);
+                }
+                estrellasPintadas[indiceBoton] = !estrellasPintadas[indiceBoton];
             }
         });
 
