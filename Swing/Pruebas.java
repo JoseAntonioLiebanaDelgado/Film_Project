@@ -326,6 +326,12 @@ public class Pruebas {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 1;
+
+                // 1 PARTE:
+                // Comprobamos que no hay estrellas siguientes encendidas despues de la 2
+                boolean estrellaSiguienteEncendida = comprobarSiListaBoolEsTrue(estrellasPintadas, indiceBoton);
+
+                //Desmarcamos todas las posiciones despues de la segunda (Las pone en false)
                 desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
 
                 System.out.println("Antes--2");
@@ -334,14 +340,21 @@ public class Pruebas {
                 System.out.println(estrellasPintadas.get(indiceBoton + 1));
                 System.out.println("--Antes--2-");
 
-
+                // 2 PARTE:
+                // El boton tiene 3 casuisticas :
+                //----- -El boton esta desmarcado y hay que pintarlo
+                //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
+                //----- -El boton este marcado el solo
                 if (!estrellasPintadas.get(indiceBoton)) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
+
+                } else if (estrellaSiguienteEncendida) {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
-                    estrellasPintadas.set(indiceBoton, false);
                 }
 
                 System.out.println("Despues -2-");
