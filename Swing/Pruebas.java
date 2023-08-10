@@ -286,6 +286,7 @@ public class Pruebas {
                 // Comprobamos que no hay estrellas siguientes encendidas despues de la 1
                 boolean estrellaSiguienteEncendida = comprobarSiListaBoolEsTrue(estrellasPintadas, indiceBoton);
 
+
                 //Desmarcamos todas las posiciones despues de la primera (Las pone en false)
                 desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
 
@@ -295,16 +296,17 @@ public class Pruebas {
                 //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
                 //----- -El boton este marcado el solo
                 if (!estrellasPintadas.get(indiceBoton)) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else if (estrellaSiguienteEncendida) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                 }
+
             }
         });
 
@@ -326,15 +328,15 @@ public class Pruebas {
                 //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
                 //----- -El boton este marcado el solo
                 if (!estrellasPintadas.get(indiceBoton)) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else if (estrellaSiguienteEncendida) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                 }
             }
         });
@@ -357,15 +359,15 @@ public class Pruebas {
                 //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
                 //----- -El boton este marcado el solo
                 if (!estrellasPintadas.get(indiceBoton)) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else if (estrellaSiguienteEncendida) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                 }
             }
         });
@@ -388,15 +390,15 @@ public class Pruebas {
                 //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
                 //----- -El boton este marcado el solo
                 if (!estrellasPintadas.get(indiceBoton)) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else if (estrellaSiguienteEncendida) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                 }
             }
         });
@@ -419,15 +421,15 @@ public class Pruebas {
                 //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
                 //----- -El boton este marcado el solo
                 if (!estrellasPintadas.get(indiceBoton)) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else if (estrellaSiguienteEncendida) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                     pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
                 } else {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                 }
             }
         });
@@ -723,7 +725,7 @@ public class Pruebas {
         }
     }
 
-    private static void despintarEstrellas(ArrayList<JButton> listaBotones, ImageIcon imagen, int indice, ArrayList<Boolean> listaEstados) {
+    private static void despintarEstrellas(ArrayList<JButton> listaBotones, ImageIcon imagen, ArrayList<Boolean> listaEstados) {
 
         for (int i = 0; i < listaBotones.size(); i++) {
             listaBotones.get(i).setIcon(imagen);
