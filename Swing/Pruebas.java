@@ -293,11 +293,13 @@ public class Pruebas {
                 System.out.println(estrellasPintadas.get(indiceBoton));
                 System.out.println(estrellasPintadas.get(indiceBoton + 1));
                 System.out.println(estrellasPintadas.get(indiceBoton + 2));
+                System.out.println(estrellasPintadas.get(indiceBoton + 3));
+                System.out.println(estrellasPintadas.get(indiceBoton + 4));
                 System.out.println("--Antes--1-");
 
 
                 // 2 PARTE:
-                // El boton riene 3 casuisticas :
+                // El boton tiene 3 casuisticas :
                 //----- -El boton esta desmarcado y hay que pintarlo
                 //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
                 //----- -El boton este marcado el solo
@@ -317,6 +319,8 @@ public class Pruebas {
                 System.out.println(estrellasPintadas.get(indiceBoton));
                 System.out.println(estrellasPintadas.get(indiceBoton + 1));
                 System.out.println(estrellasPintadas.get(indiceBoton + 2));
+                System.out.println(estrellasPintadas.get(indiceBoton + 3));
+                System.out.println(estrellasPintadas.get(indiceBoton + 4));
                 System.out.println("--despues--1-");
                 System.out.println("--------------------");
             }
@@ -338,6 +342,8 @@ public class Pruebas {
                 System.out.println(estrellasPintadas.get(indiceBoton - 1));
                 System.out.println(estrellasPintadas.get(indiceBoton));
                 System.out.println(estrellasPintadas.get(indiceBoton + 1));
+                System.out.println(estrellasPintadas.get(indiceBoton + 2));
+                System.out.println(estrellasPintadas.get(indiceBoton + 3));
                 System.out.println("--Antes--2-");
 
                 // 2 PARTE:
@@ -361,7 +367,8 @@ public class Pruebas {
                 System.out.println(estrellasPintadas.get(indiceBoton - 1));
                 System.out.println(estrellasPintadas.get(indiceBoton));
                 System.out.println(estrellasPintadas.get(indiceBoton + 1));
-
+                System.out.println(estrellasPintadas.get(indiceBoton + 2));
+                System.out.println(estrellasPintadas.get(indiceBoton + 3));
                 System.out.println("--Despues--2-");
                 System.out.println("--------------------");
 
@@ -373,34 +380,47 @@ public class Pruebas {
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 2;
 
+                // 1 PARTE:
+                // Comprobamos que no hay estrellas siguientes encendidas despues de la 3
+                boolean estrellaSiguienteEncendida = comprobarSiListaBoolEsTrue(estrellasPintadas, indiceBoton);
+
+                //Desmarcamos todas las posiciones despues de la tercera (Las pone en false)
+                desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
+
                 System.out.println("Antes--3");
                 System.out.println(estrellasPintadas.get(indiceBoton - 2));
                 System.out.println(estrellasPintadas.get(indiceBoton - 1));
                 System.out.println(estrellasPintadas.get(indiceBoton));
-
-
+                System.out.println(estrellasPintadas.get(indiceBoton + 1));
+                System.out.println(estrellasPintadas.get(indiceBoton + 2));
                 System.out.println("--Antes--3-");
 
 
+                // 2 PARTE:
+                // El boton tiene 3 casuisticas :
+                //----- -El boton esta desmarcado y hay que pintarlo
+                //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
+                //----- -El boton este marcado el solo
                 if (!estrellasPintadas.get(indiceBoton)) {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
-                    pintarEstrellas(listaBotones, 2, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
+
+                } else if (estrellaSiguienteEncendida) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
+
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 }
-
-                estrellasPintadas.set(indiceBoton - 2, !estrellasPintadas.get(indiceBoton - 2));
-                estrellasPintadas.set(indiceBoton - 1, !estrellasPintadas.get(indiceBoton - 1));
-                estrellasPintadas.set(indiceBoton, !estrellasPintadas.get(indiceBoton));
 
                 System.out.println("despues--3");
                 System.out.println(estrellasPintadas.get(indiceBoton - 2));
                 System.out.println(estrellasPintadas.get(indiceBoton - 1));
                 System.out.println(estrellasPintadas.get(indiceBoton));
-
-
+                System.out.println(estrellasPintadas.get(indiceBoton + 1));
+                System.out.println(estrellasPintadas.get(indiceBoton + 2));
                 System.out.println("--despues--3-");
-
+                System.out.println("--------------------");
             }
         });
 
@@ -408,13 +428,48 @@ public class Pruebas {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 3;
-                if (estrellasPintadas.get(indiceBoton)) {
+
+                // 1 PARTE:
+                // Comprobamos que no hay estrellas siguientes encendidas despues de la 4
+                boolean estrellaSiguienteEncendida = comprobarSiListaBoolEsTrue(estrellasPintadas, indiceBoton);
+
+                //Desmarcamos todas las posiciones despues de la cuarta (Las pone en false)
+                desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
+
+                System.out.println("Antes--4");
+                System.out.println(estrellasPintadas.get(indiceBoton - 3));
+                System.out.println(estrellasPintadas.get(indiceBoton - 2));
+                System.out.println(estrellasPintadas.get(indiceBoton - 1));
+                System.out.println(estrellasPintadas.get(indiceBoton));
+                System.out.println(estrellasPintadas.get(indiceBoton + 1));
+                System.out.println("--Antes--4-");
+
+
+                // 2 PARTE:
+                // El boton tiene 3 casuisticas :
+                //----- -El boton esta desmarcado y hay que pintarlo
+                //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
+                //----- -El boton este marcado el solo
+                if (!estrellasPintadas.get(indiceBoton)) {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
+
+                } else if (estrellaSiguienteEncendida) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
+
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
-                    pintarEstrellas(listaBotones, 3, estrellasPintadas);
                 }
-                estrellasPintadas.set(indiceBoton, !estrellasPintadas.get(indiceBoton));
+
+                System.out.println("despues--4");
+                System.out.println(estrellasPintadas.get(indiceBoton - 3));
+                System.out.println(estrellasPintadas.get(indiceBoton - 2));
+                System.out.println(estrellasPintadas.get(indiceBoton - 1));
+                System.out.println(estrellasPintadas.get(indiceBoton));
+                System.out.println(estrellasPintadas.get(indiceBoton + 1));
+                System.out.println("--despues--4-");
+                System.out.println("--------------------");
             }
         });
 
@@ -422,13 +477,47 @@ public class Pruebas {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 4;
-                if (estrellasPintadas.get(indiceBoton)) {
+
+                // 1 PARTE:
+                // Comprobamos que no hay estrellas siguientes encendidas despues de la 5
+                boolean estrellaSiguienteEncendida = comprobarSiListaBoolEsTrue(estrellasPintadas, indiceBoton);
+
+                //Desmarcamos todas las posiciones despues de la quinta (Las pone en false)
+                desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
+
+                System.out.println("Antes--5");
+                System.out.println(estrellasPintadas.get(indiceBoton - 4));
+                System.out.println(estrellasPintadas.get(indiceBoton - 3));
+                System.out.println(estrellasPintadas.get(indiceBoton - 2));
+                System.out.println(estrellasPintadas.get(indiceBoton - 1));
+                System.out.println(estrellasPintadas.get(indiceBoton));
+                System.out.println("--Antes--5-");
+
+                // 2 PARTE:
+                // El boton tiene 3 casuisticas :
+                //----- -El boton esta desmarcado y hay que pintarlo
+                //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
+                //----- -El boton este marcado el solo
+                if (!estrellasPintadas.get(indiceBoton)) {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
+
+                } else if (estrellaSiguienteEncendida) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
+
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
-                    pintarEstrellas(listaBotones, 4, estrellasPintadas);
                 }
-                estrellasPintadas.set(indiceBoton, !estrellasPintadas.get(indiceBoton));
+
+                System.out.println("despues--5");
+                System.out.println(estrellasPintadas.get(indiceBoton - 4));
+                System.out.println(estrellasPintadas.get(indiceBoton - 3));
+                System.out.println(estrellasPintadas.get(indiceBoton - 2));
+                System.out.println(estrellasPintadas.get(indiceBoton - 1));
+                System.out.println(estrellasPintadas.get(indiceBoton));
+                System.out.println("--despues--5-");
+                System.out.println("--------------------");
             }
         });
 
