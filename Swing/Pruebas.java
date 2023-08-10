@@ -282,27 +282,43 @@ public class Pruebas {
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 0;
 
+                // 1 PARTE:
+                // Comprobamos que no hay estrellas siguientes encendidas despues de la 1
+                boolean estrellaSiguienteEncendida = comprobarSiListaBoolEsTrue(estrellasPintadas, indiceBoton);
+
+                //Desmarcamos todas las posiciones despues de la primera (Las pone en false)
+                desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
+
                 System.out.println("Antes--1");
                 System.out.println(estrellasPintadas.get(indiceBoton));
+                System.out.println(estrellasPintadas.get(indiceBoton + 1));
+                System.out.println(estrellasPintadas.get(indiceBoton + 2));
                 System.out.println("--Antes--1-");
 
 
-                if (!estrellasPintadas.get(indiceBoton) || estrellasPintadas.get(indiceBoton+1)) { //Sino, despintamos y pintamos
-                    System.out.println("pintamos 1");
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-                    pintarEstrellas(listaBotones, indiceBoton);
+                // 2 PARTE:
+                // El boton riene 3 casuisticas :
+                //----- -El boton esta desmarcado y hay que pintarlo
+                //----- -El boton esta marcado pero tiene botones superiores marcados, por ejemplo tener 2 estrellas marcadas y pulsar la 1 de nuevo
+                //----- -El boton este marcado el solo
+                if (!estrellasPintadas.get(indiceBoton)) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
-                    desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
+                } else if (estrellaSiguienteEncendida) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
 
-                } else { //Si está pintada despintamos
-                    System.out.println("Despintamos 1");
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                } else {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 }
 
-                estrellasPintadas.set(indiceBoton, !estrellasPintadas.get(indiceBoton));
-                System.out.println("Antes--1");
+                System.out.println("despues--1");
                 System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println("--Antes--1-");
+                System.out.println(estrellasPintadas.get(indiceBoton + 1));
+                System.out.println(estrellasPintadas.get(indiceBoton + 2));
+                System.out.println("--despues--1-");
+                System.out.println("--------------------");
             }
         });
 
@@ -310,30 +326,32 @@ public class Pruebas {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 1;
+                desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
 
                 System.out.println("Antes--2");
-                System.out.println(estrellasPintadas.get(indiceBoton-1));
+                System.out.println(estrellasPintadas.get(indiceBoton - 1));
                 System.out.println(estrellasPintadas.get(indiceBoton));
+                System.out.println(estrellasPintadas.get(indiceBoton + 1));
                 System.out.println("--Antes--2-");
 
-                if (estrellasPintadas.get(indiceBoton)) {
-                    System.out.println("Despintamos 2");
 
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                if (!estrellasPintadas.get(indiceBoton)) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, indiceBoton, estrellasPintadas);
+
                 } else {
-                    System.out.println("pintamos 2");
-
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-                    pintarEstrellas(listaBotones, 1);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    estrellasPintadas.set(indiceBoton, false);
                 }
 
-                estrellasPintadas.set(indiceBoton-1, !estrellasPintadas.get(indiceBoton-1));
-                estrellasPintadas.set(indiceBoton, !estrellasPintadas.get(indiceBoton));
-
                 System.out.println("Despues -2-");
-                System.out.println(estrellasPintadas.get(indiceBoton-1));
+                System.out.println(estrellasPintadas.get(indiceBoton - 1));
                 System.out.println(estrellasPintadas.get(indiceBoton));
+                System.out.println(estrellasPintadas.get(indiceBoton + 1));
+
                 System.out.println("--Despues--2-");
+                System.out.println("--------------------");
+
             }
         });
 
@@ -341,13 +359,35 @@ public class Pruebas {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 2;
-                if (estrellasPintadas.get(indiceBoton)) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+
+                System.out.println("Antes--3");
+                System.out.println(estrellasPintadas.get(indiceBoton - 2));
+                System.out.println(estrellasPintadas.get(indiceBoton - 1));
+                System.out.println(estrellasPintadas.get(indiceBoton));
+
+
+                System.out.println("--Antes--3-");
+
+
+                if (!estrellasPintadas.get(indiceBoton)) {
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, 2, estrellasPintadas);
                 } else {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-                    pintarEstrellas(listaBotones, 2);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 }
+
+                estrellasPintadas.set(indiceBoton - 2, !estrellasPintadas.get(indiceBoton - 2));
+                estrellasPintadas.set(indiceBoton - 1, !estrellasPintadas.get(indiceBoton - 1));
                 estrellasPintadas.set(indiceBoton, !estrellasPintadas.get(indiceBoton));
+
+                System.out.println("despues--3");
+                System.out.println(estrellasPintadas.get(indiceBoton - 2));
+                System.out.println(estrellasPintadas.get(indiceBoton - 1));
+                System.out.println(estrellasPintadas.get(indiceBoton));
+
+
+                System.out.println("--despues--3-");
+
             }
         });
 
@@ -356,10 +396,10 @@ public class Pruebas {
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 3;
                 if (estrellasPintadas.get(indiceBoton)) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 } else {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-                    pintarEstrellas(listaBotones, 3);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, 3, estrellasPintadas);
                 }
                 estrellasPintadas.set(indiceBoton, !estrellasPintadas.get(indiceBoton));
             }
@@ -370,10 +410,10 @@ public class Pruebas {
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 4;
                 if (estrellasPintadas.get(indiceBoton)) {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 } else {
-                    despintarEstrellas(listaBotones, estrellaImagenFinal);
-                    pintarEstrellas(listaBotones, 4);
+                    despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
+                    pintarEstrellas(listaBotones, 4, estrellasPintadas);
                 }
                 estrellasPintadas.set(indiceBoton, !estrellasPintadas.get(indiceBoton));
             }
@@ -656,7 +696,7 @@ public class Pruebas {
         return panel1;
     }
 
-    private static void pintarEstrellas(ArrayList<JButton> listaBotones, int indiceBoton) {
+    private static void pintarEstrellas(ArrayList<JButton> listaBotones, int indiceBoton, ArrayList<Boolean> listaBool) {
 
         ImageIcon imagenEstrellaPintada = new ImageIcon("EstrellaPintada.png");
         Image imagenOriginalEstrellaPintada = imagenEstrellaPintada.getImage();
@@ -666,29 +706,30 @@ public class Pruebas {
         // Pinta solo las estrellas hasta el índice especificado
         for (int i = 0; i <= indiceBoton; i++) {
             listaBotones.get(i).setIcon(imagenRedimensionadaEstrellaPintada);
+            listaBool.set(i, true);
         }
     }
 
-    private static void despintarEstrellas(ArrayList<JButton> listaBotones, ImageIcon imagen) {
+    private static void despintarEstrellas(ArrayList<JButton> listaBotones, ImageIcon imagen, int indice, ArrayList<Boolean> listaEstados) {
 
         for (int i = 0; i < listaBotones.size(); i++) {
             listaBotones.get(i).setIcon(imagen);
+            listaEstados.set(i, false);
         }
     }
 
-    private static Boolean comprobarSiListaBoolEsTrue(ArrayList<Boolean> listaBool) {
-        for (int i = 0; i < listaBool.size(); i++) {
-            if (!listaBool.get(i)) {
-                return false;
+    private static Boolean comprobarSiListaBoolEsTrue(ArrayList<Boolean> listaBool, int index) {
+        for (int i = index + 1; i < listaBool.size(); i++) {
+            if (listaBool.get(i)) {
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     private static void desmarcarPosicionesPosteriores(int indice, ArrayList<Boolean> listaBool) {
-        for (int i = indice+1; i < listaBool.size(); i++){
+        for (int i = indice + 1; i < listaBool.size(); i++) {
             listaBool.set(i, false);
-            System.out.println("A");
         }
     }
 }
