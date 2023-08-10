@@ -289,15 +289,6 @@ public class Pruebas {
                 //Desmarcamos todas las posiciones despues de la primera (Las pone en false)
                 desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
 
-                System.out.println("Antes--1");
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println(estrellasPintadas.get(indiceBoton + 1));
-                System.out.println(estrellasPintadas.get(indiceBoton + 2));
-                System.out.println(estrellasPintadas.get(indiceBoton + 3));
-                System.out.println(estrellasPintadas.get(indiceBoton + 4));
-                System.out.println("--Antes--1-");
-
-
                 // 2 PARTE:
                 // El boton tiene 3 casuisticas :
                 //----- -El boton esta desmarcado y hay que pintarlo
@@ -314,15 +305,6 @@ public class Pruebas {
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 }
-
-                System.out.println("despues--1");
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println(estrellasPintadas.get(indiceBoton + 1));
-                System.out.println(estrellasPintadas.get(indiceBoton + 2));
-                System.out.println(estrellasPintadas.get(indiceBoton + 3));
-                System.out.println(estrellasPintadas.get(indiceBoton + 4));
-                System.out.println("--despues--1-");
-                System.out.println("--------------------");
             }
         });
 
@@ -338,14 +320,6 @@ public class Pruebas {
                 //Desmarcamos todas las posiciones despues de la segunda (Las pone en false)
                 desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
 
-                System.out.println("Antes--2");
-                System.out.println(estrellasPintadas.get(indiceBoton - 1));
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println(estrellasPintadas.get(indiceBoton + 1));
-                System.out.println(estrellasPintadas.get(indiceBoton + 2));
-                System.out.println(estrellasPintadas.get(indiceBoton + 3));
-                System.out.println("--Antes--2-");
-
                 // 2 PARTE:
                 // El boton tiene 3 casuisticas :
                 //----- -El boton esta desmarcado y hay que pintarlo
@@ -362,16 +336,6 @@ public class Pruebas {
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 }
-
-                System.out.println("Despues -2-");
-                System.out.println(estrellasPintadas.get(indiceBoton - 1));
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println(estrellasPintadas.get(indiceBoton + 1));
-                System.out.println(estrellasPintadas.get(indiceBoton + 2));
-                System.out.println(estrellasPintadas.get(indiceBoton + 3));
-                System.out.println("--Despues--2-");
-                System.out.println("--------------------");
-
             }
         });
 
@@ -387,15 +351,6 @@ public class Pruebas {
                 //Desmarcamos todas las posiciones despues de la tercera (Las pone en false)
                 desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
 
-                System.out.println("Antes--3");
-                System.out.println(estrellasPintadas.get(indiceBoton - 2));
-                System.out.println(estrellasPintadas.get(indiceBoton - 1));
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println(estrellasPintadas.get(indiceBoton + 1));
-                System.out.println(estrellasPintadas.get(indiceBoton + 2));
-                System.out.println("--Antes--3-");
-
-
                 // 2 PARTE:
                 // El boton tiene 3 casuisticas :
                 //----- -El boton esta desmarcado y hay que pintarlo
@@ -412,15 +367,6 @@ public class Pruebas {
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 }
-
-                System.out.println("despues--3");
-                System.out.println(estrellasPintadas.get(indiceBoton - 2));
-                System.out.println(estrellasPintadas.get(indiceBoton - 1));
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println(estrellasPintadas.get(indiceBoton + 1));
-                System.out.println(estrellasPintadas.get(indiceBoton + 2));
-                System.out.println("--despues--3-");
-                System.out.println("--------------------");
             }
         });
 
@@ -436,15 +382,6 @@ public class Pruebas {
                 //Desmarcamos todas las posiciones despues de la cuarta (Las pone en false)
                 desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
 
-                System.out.println("Antes--4");
-                System.out.println(estrellasPintadas.get(indiceBoton - 3));
-                System.out.println(estrellasPintadas.get(indiceBoton - 2));
-                System.out.println(estrellasPintadas.get(indiceBoton - 1));
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println(estrellasPintadas.get(indiceBoton + 1));
-                System.out.println("--Antes--4-");
-
-
                 // 2 PARTE:
                 // El boton tiene 3 casuisticas :
                 //----- -El boton esta desmarcado y hay que pintarlo
@@ -461,15 +398,6 @@ public class Pruebas {
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 }
-
-                System.out.println("despues--4");
-                System.out.println(estrellasPintadas.get(indiceBoton - 3));
-                System.out.println(estrellasPintadas.get(indiceBoton - 2));
-                System.out.println(estrellasPintadas.get(indiceBoton - 1));
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println(estrellasPintadas.get(indiceBoton + 1));
-                System.out.println("--despues--4-");
-                System.out.println("--------------------");
             }
         });
 
@@ -485,14 +413,6 @@ public class Pruebas {
                 //Desmarcamos todas las posiciones despues de la quinta (Las pone en false)
                 desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
 
-                System.out.println("Antes--5");
-                System.out.println(estrellasPintadas.get(indiceBoton - 4));
-                System.out.println(estrellasPintadas.get(indiceBoton - 3));
-                System.out.println(estrellasPintadas.get(indiceBoton - 2));
-                System.out.println(estrellasPintadas.get(indiceBoton - 1));
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println("--Antes--5-");
-
                 // 2 PARTE:
                 // El boton tiene 3 casuisticas :
                 //----- -El boton esta desmarcado y hay que pintarlo
@@ -509,15 +429,6 @@ public class Pruebas {
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, indiceBoton, estrellasPintadas);
                 }
-
-                System.out.println("despues--5");
-                System.out.println(estrellasPintadas.get(indiceBoton - 4));
-                System.out.println(estrellasPintadas.get(indiceBoton - 3));
-                System.out.println(estrellasPintadas.get(indiceBoton - 2));
-                System.out.println(estrellasPintadas.get(indiceBoton - 1));
-                System.out.println(estrellasPintadas.get(indiceBoton));
-                System.out.println("--despues--5-");
-                System.out.println("--------------------");
             }
         });
 
