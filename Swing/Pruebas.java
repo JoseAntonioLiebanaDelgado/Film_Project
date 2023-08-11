@@ -271,13 +271,7 @@ public class Pruebas {
         estrellasPintadas.add(false);
         estrellasPintadas.add(false);
 
-        /*for (int i = 0; i < estrellasPintadas.length; i++) {
-            estrellasPintadas[i] = false;
-        }*/
-
         estrella1.addActionListener(new ActionListener() {
-
-
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 int indiceBoton = 0;
@@ -286,6 +280,7 @@ public class Pruebas {
                 // Comprobamos que no hay estrellas siguientes encendidas despues de la 1
                 boolean estrellaSiguienteEncendida = comprobarSiListaBoolEsTrue(estrellasPintadas, indiceBoton);
 
+//
 
                 //Desmarcamos todas las posiciones despues de la primera (Las pone en false)
                 desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
@@ -306,6 +301,8 @@ public class Pruebas {
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                 }
+
+//
 
             }
         });
@@ -489,7 +486,7 @@ public class Pruebas {
         // El constructor de Dimension toma dos argumentos, que representan el ancho y la altura del tamaño deseado para el componente (panel).
         panelPrincipalIzquierdo.setPreferredSize(new Dimension(panelIzquierdoWidth, frameHeight));
 
-        panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 2, 120));
+        panelSuperiorIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 50, 120));
 
         botonIzquierdoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
 
@@ -504,12 +501,14 @@ public class Pruebas {
 
         lineaNegraSeparadora.setPreferredSize(new Dimension(350, 5));
 
-        botonAñadir.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 25, 40));
+        botonAñadir.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 50, 50));
 
 //---
 
-        panelPrincipalDerecho.setPreferredSize(new Dimension(panelDerechoWidth, frameHeight));
+        panelPrincipalDerecho.setPreferredSize(new Dimension(panelDerechoWidth, frameHeight -1500));
         panelPrincipalDerecho.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 40));
+
+//        labelPanelDerecho.setPreferredSize(new Dimension(0,0));
 
         containerPanelDerechoLabel.setPreferredSize(new Dimension(framePadre.getWidth() / 2 - 60, 30));
 
@@ -546,44 +545,46 @@ public class Pruebas {
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        panelPrincipalIzquierdo.setBackground(Color.orange);
+        panelPrincipalIzquierdo.setBackground(Color.black);
 
-        panelSuperiorIzquierdo.setBackground(Color.RED);
-        botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.blue);
-        botonDerechoPanelSuperiorIzquierdo.setBackground(Color.blue);
+        panelSuperiorIzquierdo.setBackground(Color.decode("#117A65"));
+        botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.black);
+        botonDerechoPanelSuperiorIzquierdo.setBackground(Color.black);
 
-        panelCentralIzquierdo.setBackground(Color.white);
-        panelSuperiorCentralIzquierdo.setBackground(Color.GREEN);
-        labelPanelSuperiorCentralIzquierdo.setBackground(Color.red);
+        panelCentralIzquierdo.setBackground(Color.black);
+        panelSuperiorCentralIzquierdo.setBackground(Color.decode("#117A65"));
+        labelPanelSuperiorCentralIzquierdo.setBackground(Color.black);
 
         lineaNegraSeparadora.setBackground(Color.BLACK);
 
-        botonAñadir.setBackground(Color.blue);
+        botonAñadir.setBackground(Color.decode("#117A65"));
 
 //---
 
-        panelPrincipalDerecho.setBackground(Color.blue);
+        panelPrincipalDerecho.setBackground(Color.black);
 
-        panelCuadradoDerechoInfoGeneral.setBackground(Color.GREEN);
+        labelPanelDerecho.setForeground(Color.decode("#117A65"));
 
-        panelInfoIzquierdoDelPanelCuadradoGeneral.setBackground(Color.red);
+        panelCuadradoDerechoInfoGeneral.setBackground(Color.black);
 
-        containerPanelInfoIzquierdoPanelInterno1.setBackground(Color.green);
-        containerPanelInfoIzquierdoPanelInterno2.setBackground(Color.red);
-        containerPanelInfoIzquierdoPanelInterno3.setBackground(Color.magenta);
-        containerPanelInfoIzquierdoPanelInterno4.setBackground(Color.lightGray);
-        containerPanelInfoIzquierdoPanelInterno5.setBackground(Color.red);
-        containerPanelInfoIzquierdoPanelInterno6.setBackground(Color.darkGray);
-        containerPanelInfoIzquierdoPanelInterno7.setBackground(Color.magenta);
-        containerPanelInfoIzquierdoPanelInterno8.setBackground(Color.cyan);
-        containerPanelInfoIzquierdoPanelInterno9.setBackground(Color.pink);
-        containerPanelInfoIzquierdoPanelInterno10.setBackground(Color.green);
-        containerPanelInfoIzquierdoPanelInterno11.setBackground(Color.gray);
-        containerPanelInfoIzquierdoPanelInterno12.setBackground(Color.orange);
-        containerPanelInfoIzquierdoPanelInterno13.setBackground(Color.red);
-        containerPanelInfoIzquierdoPanelInterno14.setBackground(Color.blue);
-        containerPanelInfoIzquierdoPanelInterno15.setBackground(Color.magenta);
-        containerPanelInfoIzquierdoPanelInterno16.setBackground(Color.green);
+        panelInfoIzquierdoDelPanelCuadradoGeneral.setBackground(Color.decode("#117A65"));
+
+        containerPanelInfoIzquierdoPanelInterno1.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno2.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno3.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno4.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno5.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno6.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno7.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno8.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno9.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno10.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno11.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno12.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno13.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno14.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno15.setBackground(Color.decode("#117A65"));
+        containerPanelInfoIzquierdoPanelInterno16.setBackground(Color.decode("#117A65"));
 
         estrella1.setBackground(Color.CYAN);
         estrella2.setBackground(Color.CYAN);
@@ -591,9 +592,9 @@ public class Pruebas {
         estrella4.setBackground(Color.CYAN);
         estrella5.setBackground(Color.CYAN);
 
-        panelInfoDerecho.setBackground(Color.yellow);
+        panelInfoDerecho.setBackground(Color.decode("#117A65"));
 
-        panelInfoDerechoImagen.setBackground(Color.lightGray);
+        panelInfoDerechoImagen.setBackground(Color.decode("#117A65"));
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -690,20 +691,21 @@ public class Pruebas {
 
         JPanel panel1 = new JPanel();
         panel1.setPreferredSize(new Dimension(350, 510));
-        panel1.setBackground(Color.blue);
+        panel1.setBackground(Color.decode("#117A65"));
 
         for (int i = 0; i < lista.size(); i++) {
 
             JLabel labelTitulo = new JLabel(lista.get(i).getNombre());
             labelTitulo.setPreferredSize(new Dimension(160, 40));
-            labelTitulo.setBackground(Color.RED);
+            labelTitulo.setBackground(Color.decode("#117A65"));
+//            labelTitulo.setForeground(Color.decode("#909497"));
             labelTitulo.setOpaque(true);
 
             panel1.add(labelTitulo);
 
             JLabel labelDuracion = new JLabel(lista.get(i).getDuracionMinutos());
             labelDuracion.setPreferredSize(new Dimension(160, 40));
-            labelDuracion.setBackground(Color.RED);
+            labelDuracion.setBackground(Color.decode("#117A65"));
             labelDuracion.setOpaque(true);
 
             panel1.add(labelDuracion);
@@ -747,6 +749,8 @@ public class Pruebas {
             listaBool.set(i, false);
         }
     }
+
+
 }
 
 
