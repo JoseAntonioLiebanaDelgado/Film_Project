@@ -1,6 +1,7 @@
 package Swing;
 
 import ENUM.Genero;
+import ENUM.PalabraClave;
 import ENUM.Pegi;
 import Models.Pelicula;
 
@@ -280,8 +281,6 @@ public class Pruebas {
                 // Comprobamos que no hay estrellas siguientes encendidas despues de la 1
                 boolean estrellaSiguienteEncendida = comprobarSiListaBoolEsTrue(estrellasPintadas, indiceBoton);
 
-//
-
                 //Desmarcamos todas las posiciones despues de la primera (Las pone en false)
                 desmarcarPosicionesPosteriores(indiceBoton, estrellasPintadas);
 
@@ -301,9 +300,6 @@ public class Pruebas {
                 } else {
                     despintarEstrellas(listaBotones, estrellaImagenFinal, estrellasPintadas);
                 }
-
-//
-
             }
         });
 
@@ -505,7 +501,7 @@ public class Pruebas {
 
 //---
 
-        panelPrincipalDerecho.setPreferredSize(new Dimension(panelDerechoWidth, frameHeight -1500));
+        panelPrincipalDerecho.setPreferredSize(new Dimension(panelDerechoWidth, frameHeight - 1500));
         panelPrincipalDerecho.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 40));
 
 //        labelPanelDerecho.setPreferredSize(new Dimension(0,0));
@@ -750,7 +746,16 @@ public class Pruebas {
         }
     }
 
+    public static void imprimirEstadoEstrellas(ArrayList<JButton> listaBotones, ArrayList<Boolean> estrellasPintadas, PalabraClave palabraClave) {
 
+        System.out.println("Estado de las estrellas " + palabraClave.toString().toLowerCase() + " de pulsar:");
+
+        for (int i = 0; i < listaBotones.size(); i++) {
+            boolean estado = estrellasPintadas.get(i);
+            System.out.println("Botón " + (i + 1) + ": " + estado);
+        }
+        System.out.println("---");
+    }
 }
 
 
