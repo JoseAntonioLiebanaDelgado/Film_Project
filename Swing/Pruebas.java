@@ -541,27 +541,27 @@ public class Pruebas {
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
-        panelPrincipalIzquierdo.setBackground(Color.black);
+        panelPrincipalIzquierdo.setBackground(Color.darkGray);
 
         panelSuperiorIzquierdo.setBackground(Color.decode("#117A65"));
-        botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.black);
-        botonDerechoPanelSuperiorIzquierdo.setBackground(Color.black);
+        botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.darkGray);
+        botonDerechoPanelSuperiorIzquierdo.setBackground(Color.darkGray);
 
-        panelCentralIzquierdo.setBackground(Color.black);
+        panelCentralIzquierdo.setBackground(Color.darkGray);
         panelSuperiorCentralIzquierdo.setBackground(Color.decode("#117A65"));
-        labelPanelSuperiorCentralIzquierdo.setBackground(Color.black);
+        labelPanelSuperiorCentralIzquierdo.setBackground(Color.darkGray);
 
-        lineaNegraSeparadora.setBackground(Color.BLACK);
+        lineaNegraSeparadora.setBackground(Color.darkGray);
 
         botonAñadir.setBackground(Color.decode("#117A65"));
 
 //---
 
-        panelPrincipalDerecho.setBackground(Color.black);
+        panelPrincipalDerecho.setBackground(Color.darkGray);
 
         labelPanelDerecho.setForeground(Color.decode("#117A65"));
 
-        panelCuadradoDerechoInfoGeneral.setBackground(Color.black);
+        panelCuadradoDerechoInfoGeneral.setBackground(Color.darkGray);
 
         panelInfoIzquierdoDelPanelCuadradoGeneral.setBackground(Color.decode("#117A65"));
 
