@@ -83,12 +83,49 @@ public class Pruebas {
         JPanel lineaNegraSeparadora = new JPanel();
 
         ArrayList<Pelicula> listaDummy = new ArrayList<>();
+
+        ArrayList<String> repartoESDLA_1_2_3 = new ArrayList<>();
+        repartoESDLA_1_2_3.add("Elijah Wood");
+        repartoESDLA_1_2_3.add("Sean Astin");
+        repartoESDLA_1_2_3.add("Viggo Mortensen");
+        repartoESDLA_1_2_3.add("Orlando Bloom");
+        repartoESDLA_1_2_3.add("Ian McKellen");
+
+        ArrayList<String> repartoELHobbit_1_2_3 = new ArrayList<>();
+        repartoELHobbit_1_2_3.add("Martin Freeman");
+        repartoELHobbit_1_2_3.add("Ian McKellen");
+        repartoELHobbit_1_2_3.add("Richard Armitage");
+        repartoELHobbit_1_2_3.add("Andy Serkis");
+        repartoELHobbit_1_2_3.add("Hugo Weaving");
+
+        ArrayList<String> repartoGladiator = new ArrayList<>();
+        repartoGladiator.add("Russell Crowe");
+        repartoGladiator.add("Joaquin Phoenix");
+        repartoGladiator.add("Connie Nielsen");
+        repartoGladiator.add("Oliver Reed");
+        repartoGladiator.add("Richard Harris");
+
         ArrayList<String> repartoSalvarAlSoldadoRyan = new ArrayList<>();
         repartoSalvarAlSoldadoRyan.add("Tom Hanks");
         repartoSalvarAlSoldadoRyan.add("Matt Damon");
         repartoSalvarAlSoldadoRyan.add("Tom Sizemore");
-        repartoSalvarAlSoldadoRyan.add("Vin Diesel");
+        repartoSalvarAlSoldadoRyan.add("Vin Disel");
         repartoSalvarAlSoldadoRyan.add("Edward Burns");
+
+        ArrayList<String> repartoTopGun = new ArrayList<>();
+        repartoTopGun.add("Tom Cruise");
+        repartoTopGun.add("Val Kilmer");
+        repartoTopGun.add("Kelly McGillis");
+        repartoTopGun.add("Anthony Edwards");
+        repartoTopGun.add("Meg Ryan");
+
+        ArrayList<String> repartoTopGunMaverick = new ArrayList<>();
+        repartoTopGunMaverick.add("Tom Cruise");
+        repartoTopGunMaverick.add("Miles Teller");
+        repartoTopGunMaverick.add("Val Kilmer");
+        repartoTopGunMaverick.add("Glen Powell");
+        repartoTopGunMaverick.add("Jennifer Connelly");
+
 
         Pelicula peli1 = new Pelicula("Soldado",
                 Genero.BELICO,
@@ -108,8 +145,29 @@ public class Pruebas {
                 Pegi.TRECE,
                 4);
 
+        Pelicula peli3 = new Pelicula("El señor de los anillos: La comunidad del anillo",
+                Genero.AVENTURA_FANTASIA,
+                2001,
+                "226",
+                "Peter Jakson",
+                repartoESDLA_1_2_3,
+                Pegi.DOCE,
+                4);
+
+        Pelicula peli4 = new Pelicula("El señor de los anillos: Las dos torres",
+                Genero.AVENTURA_FANTASIA,
+                2002,
+                "259",
+                "Peter Jakson",
+                repartoESDLA_1_2_3,
+                Pegi.TRECE,
+                4);
+
+
         listaDummy.add(peli1);
         listaDummy.add(peli2);
+        listaDummy.add(peli3);
+        listaDummy.add(peli4);
 
         JPanel panelCreado = crearPanelConLabels(listaDummy);
 
@@ -687,13 +745,13 @@ public class Pruebas {
 
         JPanel panel1 = new JPanel();
         panel1.setPreferredSize(new Dimension(350, 510));
-        panel1.setBackground(Color.decode("#117A65"));
+        panel1.setBackground(Color.white);
 
         for (int i = 0; i < lista.size(); i++) {
 
             JLabel labelTitulo = new JLabel(lista.get(i).getNombre());
             labelTitulo.setPreferredSize(new Dimension(160, 40));
-            labelTitulo.setBackground(Color.decode("#117A65"));
+            labelTitulo.setBackground(Color.orange);
 //            labelTitulo.setForeground(Color.decode("#909497"));
             labelTitulo.setOpaque(true);
 
@@ -701,7 +759,7 @@ public class Pruebas {
 
             JLabel labelDuracion = new JLabel(lista.get(i).getDuracionMinutos());
             labelDuracion.setPreferredSize(new Dimension(160, 40));
-            labelDuracion.setBackground(Color.decode("#117A65"));
+            labelDuracion.setBackground(Color.blue);
             labelDuracion.setOpaque(true);
 
             panel1.add(labelDuracion);
