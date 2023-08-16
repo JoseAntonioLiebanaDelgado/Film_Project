@@ -4,13 +4,13 @@ import ENUM.Genero;
 import ENUM.PalabraClave;
 import ENUM.Pegi;
 import Models.Pelicula;
+import UserFrame.ventanaRellenarInformacion;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.Arrays;
 import javax.swing.border.EmptyBorder;
 
 public class Pruebas {
@@ -174,7 +174,10 @@ public class Pruebas {
         botonAñadir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Has clicado el Boton 3. Boton inferior del panel izquierdo");
+
+                ventanaRellenarInformacion ventanaEmergente = new ventanaRellenarInformacion();
+                ventanaEmergente.setVisible(true);
+
             }
         });
 
@@ -813,6 +816,8 @@ public class Pruebas {
         System.out.println("---");
     }
 }
+
+
 
 
 
