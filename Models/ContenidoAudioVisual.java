@@ -36,7 +36,7 @@ class ContenidoAudioVisual {
                                    float puntuacion) {
 
 
-        this.nombre = (nombre.equalsIgnoreCase("") || !nombre.matches("^[a-zA-Z0-9]+$")) ? "Titulo erroneo" : nombre;
+        this.nombre = (nombre.equalsIgnoreCase("") || !nombre.matches("^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _:ñ]*$")) ? "Titulo erroneo" : nombre;
         this.genero = genero;
         this.anyoLanzamiento = (anyoLanzamiento <= 0) ? 0 : anyoLanzamiento;
         this.duracionMinutos = (duracionMinutos.equalsIgnoreCase("") || !duracionMinutos.matches("^[a-zA-Z0-9]+$")) ? "Duracion erronea" : duracionMinutos;

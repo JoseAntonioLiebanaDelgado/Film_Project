@@ -71,7 +71,7 @@ public class Uso_ContenidoAudioVisual {
 
 
         //Creamos 10 Objetos Pelicula. (minutos 228)
-        Pelicula LaComunidadDelAnillo = new Pelicula("El señor de los anillos: La comunidad del anillo",
+        Pelicula LaComunidadDelAnillo = new Pelicula("El senor de los anillos: La comunidad del anillo",
                 Genero.AVENTURA_FANTASIA,
                 2001,
                 "null",

@@ -77,10 +77,14 @@ public class Pruebas {
         // Actualizar la etiqueta de la imagen con el nuevo ImageIcon
         etiquetaImagenReloj.setIcon(imagenRedimensionadaReloj);
 
-        EmptyBorder paddingImagenReloj = new EmptyBorder(8, 0, 0, 0);
+        EmptyBorder paddingImagenReloj = new EmptyBorder(8, 30, 0, 0);
         etiquetaImagenReloj.setBorder(paddingImagenReloj);
 
         JPanel lineaNegraSeparadora = new JPanel();
+
+
+
+
 
         ArrayList<Pelicula> listaDummy = new ArrayList<>();
 
@@ -745,27 +749,30 @@ public class Pruebas {
 
         JPanel panel1 = new JPanel();
         panel1.setPreferredSize(new Dimension(350, 510));
-        panel1.setBackground(Color.white);
+        panel1.setBackground(Color.decode("#117A65"));
 
         for (int i = 0; i < lista.size(); i++) {
 
             JLabel labelTitulo = new JLabel(lista.get(i).getNombre());
-            labelTitulo.setPreferredSize(new Dimension(160, 40));
-            labelTitulo.setBackground(Color.orange);
-//            labelTitulo.setForeground(Color.decode("#909497"));
+            labelTitulo.setPreferredSize(new Dimension(240, 40));
+            labelTitulo.setBackground(Color.decode("#117A65"));
             labelTitulo.setOpaque(true);
+            labelTitulo.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 40, Color.decode("#117A65")));
 
             panel1.add(labelTitulo);
 
             JLabel labelDuracion = new JLabel(lista.get(i).getDuracionMinutos());
-            labelDuracion.setPreferredSize(new Dimension(160, 40));
-            labelDuracion.setBackground(Color.blue);
+            labelDuracion.setPreferredSize(new Dimension(40, 40));
+            labelDuracion.setBackground(Color.decode("#117A65"));
             labelDuracion.setOpaque(true);
+            labelDuracion.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.decode("#117A65")));
 
             panel1.add(labelDuracion);
         }
         return panel1;
     }
+
+
 
     private static void pintarEstrellas(ArrayList<JButton> listaBotones, int indiceBoton, ArrayList<Boolean> listaBool) {
 
