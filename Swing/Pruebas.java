@@ -82,10 +82,6 @@ public class Pruebas {
 
         JPanel lineaNegraSeparadora = new JPanel();
 
-
-
-
-
         ArrayList<Pelicula> listaDummy = new ArrayList<>();
 
         ArrayList<String> repartoESDLA_1_2_3 = new ArrayList<>();
@@ -166,7 +162,6 @@ public class Pruebas {
                 repartoESDLA_1_2_3,
                 Pegi.TRECE,
                 4);
-
 
         listaDummy.add(peli1);
         listaDummy.add(peli2);
@@ -304,7 +299,6 @@ public class Pruebas {
 
         JPanel panelInfoIzquierdoPanelInterno16 = new JPanel();
         panelInfoIzquierdoPanelInterno16.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno16, BoxLayout.X_AXIS));
-
 
         // ImageIcon para la imagen de la estrella vacía
         ImageIcon imagenEstrellaVacia = new ImageIcon("EstrellaVacia.png");
@@ -488,7 +482,6 @@ public class Pruebas {
                 }
             }
         });
-
 
         JPanel panelInfoDerecho = new JPanel();
 
@@ -771,8 +764,6 @@ public class Pruebas {
         }
         return panel1;
     }
-
-
 
     private static void pintarEstrellas(ArrayList<JButton> listaBotones, int indiceBoton, ArrayList<Boolean> listaBool) {
 
