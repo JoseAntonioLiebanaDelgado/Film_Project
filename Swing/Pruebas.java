@@ -612,7 +612,7 @@ public class Pruebas {
 
         panelPrincipalDerecho.setBackground(Color.darkGray);
 
-        labelPanelDerecho.setForeground(Color.decode("#117A65"));
+        labelPanelDerecho.setForeground(Color.decode("#C1FFEA"));
 
         panelCuadradoDerechoInfoGeneral.setBackground(Color.darkGray);
 
@@ -630,10 +630,31 @@ public class Pruebas {
         containerPanelInfoIzquierdoPanelInterno10.setBackground(Color.decode("#117A65"));
         containerPanelInfoIzquierdoPanelInterno11.setBackground(Color.decode("#117A65"));
         containerPanelInfoIzquierdoPanelInterno12.setBackground(Color.decode("#117A65"));
+        panelInfoIzquierdoPanelInterno12.setBackground(Color.decode("#117A65"));
         containerPanelInfoIzquierdoPanelInterno13.setBackground(Color.decode("#117A65"));
         containerPanelInfoIzquierdoPanelInterno14.setBackground(Color.decode("#117A65"));
         containerPanelInfoIzquierdoPanelInterno15.setBackground(Color.decode("#117A65"));
         containerPanelInfoIzquierdoPanelInterno16.setBackground(Color.decode("#117A65"));
+
+        panelInfoIzquierdoLabelInterna1.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna2.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna3.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna4.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna5.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna6.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna7.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna8.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna9.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna10.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna11.setForeground(Color.decode("#C1FFEA"));
+        actorLabel1.setForeground(Color.decode("#C1FFEA"));
+        actorLabel2.setForeground(Color.decode("#C1FFEA"));
+        actorLabel3.setForeground(Color.decode("#C1FFEA"));
+        actorLabel4.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna13.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna14.setForeground(Color.decode("#C1FFEA"));
+        panelInfoIzquierdoLabelInterna15.setForeground(Color.decode("#C1FFEA"));
+
 
         estrella1.setBackground(Color.CYAN);
         estrella2.setBackground(Color.CYAN);
