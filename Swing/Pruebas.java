@@ -127,7 +127,7 @@ public class Pruebas {
         repartoTopGunMaverick.add("Jennifer Connelly");
 
 
-        Pelicula peli1 = new Pelicula("Soldado",
+        Pelicula peli1 = new Pelicula("Soldado Ryan",
                 Genero.BELICO,
                 1998,
                 "169",
@@ -172,16 +172,9 @@ public class Pruebas {
         JButton botonAñadir = new JButton("Boton 3 - Añadir");
 
         SwingUtilities.invokeLater(() -> {
-            JFrame frame = new JFrame("Pruebas");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(300, 200);
-
             botonAñadir.addActionListener(e -> {
                 VentanaInfo.createAndShowGUI();
             });
-
-            frame.add(botonAñadir);
-            frame.setVisible(true);
         });
 //---
 
