@@ -4,7 +4,7 @@ import ENUM.Genero;
 import ENUM.PalabraClave;
 import ENUM.Pegi;
 import Models.Pelicula;
-import UserFrame.ventanaRellenarInformacion;
+import UserFrame.VentanaInfo;
 
 import javax.swing.*;
 import java.awt.*;
@@ -169,18 +169,20 @@ public class Pruebas {
         listaDummy.add(peli4);
 
         JPanel panelCreado = crearPanelConLabels(listaDummy);
-
         JButton botonAñadir = new JButton("Boton 3 - Añadir");
-        botonAñadir.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
 
-                ventanaRellenarInformacion ventanaEmergente = new ventanaRellenarInformacion();
-                ventanaEmergente.setVisible(true);
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Pruebas");
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(300, 200);
 
-            }
+            botonAñadir.addActionListener(e -> {
+                VentanaInfo.createAndShowGUI();
+            });
+
+            frame.add(botonAñadir);
+            frame.setVisible(true);
         });
-
 //---
 
         JPanel panelPrincipalDerecho = new JPanel();

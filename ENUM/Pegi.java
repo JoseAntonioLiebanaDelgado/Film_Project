@@ -27,6 +27,4 @@ public enum Pegi {
     public String getNombre() {
         return nombre;
     }
-
-
 }
