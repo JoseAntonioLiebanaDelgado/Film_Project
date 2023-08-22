@@ -594,19 +594,23 @@ public class Pruebas {
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
+
         panelPrincipalIzquierdo.setBackground(Color.darkGray);
 
         panelSuperiorIzquierdo.setBackground(Color.decode("#117A65"));
         botonIzquierdoPanelSuperiorIzquierdo.setBackground(Color.darkGray);
         botonDerechoPanelSuperiorIzquierdo.setBackground(Color.darkGray);
 
+        labelPanelSuperiorCentralIzquierdo.setBackground(Color.darkGray);
+        labelPanelSuperiorCentralIzquierdo.setForeground(Color.decode("#C1FFEA"));
+
         panelCentralIzquierdo.setBackground(Color.darkGray);
         panelSuperiorCentralIzquierdo.setBackground(Color.decode("#117A65"));
-        labelPanelSuperiorCentralIzquierdo.setBackground(Color.darkGray);
 
         lineaNegraSeparadora.setBackground(Color.darkGray);
 
         botonAñadir.setBackground(Color.decode("#117A65"));
+        botonAñadir.setForeground(Color.decode("#C1FFEA"));
 
 //---
 
@@ -655,7 +659,6 @@ public class Pruebas {
         panelInfoIzquierdoLabelInterna14.setForeground(Color.decode("#C1FFEA"));
         panelInfoIzquierdoLabelInterna15.setForeground(Color.decode("#C1FFEA"));
 
-
         estrella1.setBackground(Color.CYAN);
         estrella2.setBackground(Color.CYAN);
         estrella3.setBackground(Color.CYAN);
@@ -665,6 +668,8 @@ public class Pruebas {
         panelInfoDerecho.setBackground(Color.decode("#117A65"));
 
         panelInfoDerechoImagen.setBackground(Color.decode("#117A65"));
+
+        botonTrailer.setBackground(Color.decode("#117A65"));
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -770,6 +775,8 @@ public class Pruebas {
             labelTitulo.setBackground(Color.decode("#117A65"));
             labelTitulo.setOpaque(true);
             labelTitulo.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 40, Color.decode("#117A65")));
+            labelTitulo.setForeground(Color.decode("#C1FFEA"));
+
 
             panel1.add(labelTitulo);
 
@@ -778,6 +785,8 @@ public class Pruebas {
             labelDuracion.setBackground(Color.decode("#117A65"));
             labelDuracion.setOpaque(true);
             labelDuracion.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.decode("#117A65")));
+            labelDuracion.setForeground(Color.decode("#C1FFEA"));
+
 
             panel1.add(labelDuracion);
         }

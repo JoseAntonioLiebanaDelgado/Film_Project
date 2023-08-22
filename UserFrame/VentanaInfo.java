@@ -3,6 +3,8 @@ package UserFrame;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicButtonUI;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class VentanaInfo {
     public static void main(String[] args) {
@@ -60,27 +62,33 @@ public class VentanaInfo {
         //Creamos el botón de añadir
         JPanel buttonPanel = new JPanel(new BorderLayout());
         JButton botonAnadir = new JButton("Add");
+        botonAnadir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.out.println("Print Prueba boton añadir");
+                System.out.println(nombreTextField.getText());
+                System.out.println(pegiButton0.isSelected()); // Comprobar que boton esta en true
+            }
+        });
         botonAnadir.setPreferredSize(new Dimension(botonAnadir.getPreferredSize().width, botonAnadir.getPreferredSize().height * 2));
 
 // -------
 
+        Color colorLabelTextFieldC1FFEA = Color.decode("#C1FFEA");
+
+        JLabel[] labels = new JLabel[]{nombreLabel, generoLabel, lanzamientoLabel, duracionLabel, directorLabel, repartoLabel, pegiLabel};
+        JTextField[] textFields = new JTextField[]{nombreTextField, generoTextField, lanzamientoTextField, duracionTextField, directorTextField, repartoTextField};
+
+        for (JLabel label : labels) {
+            label.setForeground(colorLabelTextFieldC1FFEA);
+        }
+
+        for (JTextField textField : textFields) {
+            textField.setBackground(colorLabelTextFieldC1FFEA);
+        }
+
         panelPrincipal.setBackground(Color.decode("#117A65"));
         panelCentral.setBackground(Color.decode("#117A65"));
-
-        nombreLabel.setForeground(Color.decode("#C1FFEA"));
-        generoLabel.setForeground(Color.decode("#C1FFEA"));
-        lanzamientoLabel.setForeground(Color.decode("#C1FFEA"));
-        duracionLabel.setForeground(Color.decode("#C1FFEA"));
-        directorLabel.setForeground(Color.decode("#C1FFEA"));
-        repartoLabel.setForeground(Color.decode("#C1FFEA"));
-        pegiLabel.setForeground(Color.decode("#C1FFEA"));
-
-        nombreTextField.setBackground(Color.decode("#C1FFEA"));
-        generoTextField.setBackground(Color.decode("#C1FFEA"));
-        lanzamientoTextField.setBackground(Color.decode("#C1FFEA"));
-        duracionTextField.setBackground(Color.decode("#C1FFEA"));
-        directorTextField.setBackground(Color.decode("#C1FFEA"));
-        repartoTextField.setBackground(Color.decode("#C1FFEA"));
 
         pegiPanel.setBackground(Color.decode("#117A65"));
 
@@ -95,7 +103,6 @@ public class VentanaInfo {
         botonAnadir.setBackground(Color.decode("#C1FFEA"));
 
         botonAnadir.setForeground(Color.decode("#117A65"));
-
 
 // -------
 
