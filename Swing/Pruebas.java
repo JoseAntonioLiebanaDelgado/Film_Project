@@ -128,7 +128,7 @@ public class Pruebas {
 
 
         Pelicula peli1 = new Pelicula("Soldado Ryan",
-                Genero.BELICO,
+                Genero.ACCION,
                 1998,
                 "169",
                 "Steven Spielberg",
@@ -137,7 +137,7 @@ public class Pruebas {
                 4);
 
         Pelicula peli2 = new Pelicula("Gladiator",
-                Genero.BELICO,
+                Genero.ACCION,
                 1998,
                 "200",
                 "Steven Spielberg",
@@ -146,7 +146,7 @@ public class Pruebas {
                 4);
 
         Pelicula peli3 = new Pelicula("El señor de los anillos: La comunidad del anillo",
-                Genero.AVENTURA_FANTASIA,
+                Genero.ACCION,
                 2001,
                 "226",
                 "Peter Jakson",
@@ -155,7 +155,7 @@ public class Pruebas {
                 4);
 
         Pelicula peli4 = new Pelicula("El señor de los anillos: Las dos torres",
-                Genero.AVENTURA_FANTASIA,
+                Genero.ACCION,
                 2002,
                 "259",
                 "Peter Jakson",

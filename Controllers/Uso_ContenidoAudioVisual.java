@@ -72,7 +72,7 @@ public class Uso_ContenidoAudioVisual {
 
         //Creamos 10 Objetos Pelicula. (minutos 228)
         Pelicula LaComunidadDelAnillo = new Pelicula("El senor de los anillos: La comunidad del anillo",
-                Genero.AVENTURA_FANTASIA,
+                Genero.ACCION,
                 2001,
                 "null",
                 "Peter Jakson",
@@ -81,7 +81,7 @@ public class Uso_ContenidoAudioVisual {
                 4);
 
         Pelicula LasDosTorres = new Pelicula("El señor de los anillos: Las dos torres",
-                Genero.AVENTURA_FANTASIA,
+                Genero.ACCION,
                 2002,
                 "259",
                 "Peter Jakson",
@@ -90,7 +90,7 @@ public class Uso_ContenidoAudioVisual {
                 4);
 
         Pelicula ELRetornoDelRey = new Pelicula("El señor de los anillos: El retorno del rey",
-                Genero.AVENTURA_FANTASIA,
+                Genero.ACCION,
                 2003,
                 "254",
                 "Peter Jakson",
@@ -99,7 +99,7 @@ public class Uso_ContenidoAudioVisual {
                 4);
 
         Pelicula UnViajeInesperado = new Pelicula("El Hobbit: Un viaje inesperado",
-                Genero.AVENTURA_FANTASIA,
+                Genero.ACCION,
                 2012,
                 "182",
                 "Peter Jakson",
@@ -107,7 +107,7 @@ public class Uso_ContenidoAudioVisual {
                 Pegi.SIETE, 4);
 
         Pelicula LaDesolacionDeSmaug = new Pelicula("El Hobbit: La desolacion de Smaug",
-                Genero.AVENTURA_FANTASIA,
+                Genero.ACCION,
                 2013,
                 "186",
                 "Peter Jakson",
@@ -116,7 +116,7 @@ public class Uso_ContenidoAudioVisual {
                 4);
 
         Pelicula LaBatallaDeLosCincoEjercitos = new Pelicula("El Hobbit: La batalla de los cinco ejercitos",
-                Genero.AVENTURA_FANTASIA,
+                Genero.ACCION,
                 2014,
                 "164",
                 "Peter Jakson",
@@ -134,7 +134,7 @@ public class Uso_ContenidoAudioVisual {
                 4);
 
         Pelicula SalvarAlSoldadoRyan = new Pelicula("Salvar al soldado Ryan",
-                Genero.BELICO,
+                Genero.ACCION,
                 1998,
                 "169",
                 "Steven Spielberg",
@@ -201,7 +201,7 @@ public class Uso_ContenidoAudioVisual {
 
         //Creamos 3 objetos Serie.
         Serie gameOfThrones = new Serie("Juego de tronos",
-                Genero.FANTASIA_DRAMA_ACCION_AVENTURA_TERROR,
+                Genero.ACCION,
                 2011,
                 "4214",
                 "David Benioff",
@@ -213,7 +213,7 @@ public class Uso_ContenidoAudioVisual {
                 winterIsComing);
 
         Serie vikings = new Serie("Vikingos",
-                Genero.ACCION_AVENTURA,
+                Genero.ACCION,
                 2013,
                 "2684",
                 "Michael Hirst",
@@ -270,7 +270,7 @@ public class Uso_ContenidoAudioVisual {
 
         //Creamos 3 objetos AnimeSerie.
         AnimeSerie dragonBallZ = new AnimeSerie("Dragon Ball Z",
-                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
+                Genero.ACCION,
                 1998,
                 "6.984",
                 "Daisuke Nishio",
@@ -282,7 +282,7 @@ public class Uso_ContenidoAudioVisual {
                 elMiniGokuEsAdorableSoyGohan);
 
         AnimeSerie onePiece = new AnimeSerie("One Piece",
-                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA,
+                Genero.ACCION,
                 1997,
                 "En emisión",
                 "Eiichiro Oda",
@@ -294,7 +294,7 @@ public class Uso_ContenidoAudioVisual {
                 yoSoyLuffyElFuturoReyDeLosPiratas);
 
         AnimeSerie narutoShippuden = new AnimeSerie("Naruto Shippuden",
-                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
+                Genero.ACCION,
                 2007,
                 "11.500",
                 "Hayato Date",
@@ -310,7 +310,7 @@ public class Uso_ContenidoAudioVisual {
 
 
         AnimePelicula dragonBallZElUltimoCombate = new AnimePelicula("Dragon Ball Z: El ultimo combate",
-                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
+                Genero.ACCION,
                 1990,
                 "48",
                 "Daisuke Nishio",
@@ -319,7 +319,7 @@ public class Uso_ContenidoAudioVisual {
                 "Toei Animation");
 
         AnimePelicula onrPieceStampede = new AnimePelicula("One Piece: Stampede",
-                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
+                Genero.ACCION,
                 2019,
                 "101",
                 "Takashi Ōtsuka",
@@ -328,7 +328,7 @@ public class Uso_ContenidoAudioVisual {
                 "Toei Animation");
 
         AnimePelicula narutoShippudenKizuna = new AnimePelicula("Naruto Shippuden: Kizuna",
-                Genero.ACCION_AVENTURA_COMEDIA_FANTASIA_TRAGEDIA,
+                Genero.ACCION,
                 2008,
                 "93",
                 "Daisuke Nishio",
