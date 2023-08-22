@@ -14,6 +14,7 @@ public class VentanaInfo {
         SwingUtilities.invokeLater(() -> {
             createAndShowGUI();
         });
+
     }
 
     public static void createAndShowGUI() {
@@ -65,11 +66,48 @@ public class VentanaInfo {
         botonAnadir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                System.out.println("Print Prueba boton añadir");
-                System.out.println(nombreTextField.getText());
-                System.out.println(pegiButton0.isSelected()); // Comprobar que boton esta en true
+
+//                System.out.println(nombreTextField.getText());
+//                System.out.println(generoTextField.getText());
+//                System.out.println(lanzamientoTextField.getText());
+//                System.out.println(duracionTextField.getText());
+//                System.out.println(directorTextField.getText());
+//                System.out.println(repartoTextField.getText());
+
+                String nombre = nombreTextField.getText();
+                String genero = generoTextField.getText();
+                String lanzamiento = lanzamientoTextField.getText();
+                String duracion = duracionTextField.getText();
+                String director = directorTextField.getText();
+                String reparto = repartoTextField.getText();
+
+                System.out.println("Nombre: " + nombre);
+                System.out.println("Genero: " + genero);
+                System.out.println("Anyo de Lanzamiento: " + lanzamiento);
+                System.out.println("Duracion: " + duracion);
+                System.out.println("Director: " + director);
+                System.out.println("Reparto: " + reparto);
+
+                if (pegiButton0.isSelected()) {
+                    System.out.println(pegiButton0.getText());
+                } else if (pegiButton3.isSelected()) {
+                    System.out.println(pegiButton3.getText());
+                } else if (pegiButton7.isSelected()) {
+                    System.out.println(pegiButton7.getText());
+                } else if (pegiButton12.isSelected()) {
+                    System.out.println(pegiButton12.getText());
+                } else if (pegiButton16.isSelected()) {
+                    System.out.println(pegiButton16.getText());
+                } else if (pegiButton18.isSelected()) {
+                    System.out.println(pegiButton18.getText());
+                } else {
+                    System.out.println("Entra else -- NULL");
+                }
+
+
             }
         });
+
         botonAnadir.setPreferredSize(new Dimension(botonAnadir.getPreferredSize().width, botonAnadir.getPreferredSize().height * 2));
 
 // -------
@@ -78,6 +116,7 @@ public class VentanaInfo {
 
         JLabel[] labels = new JLabel[]{nombreLabel, generoLabel, lanzamientoLabel, duracionLabel, directorLabel, repartoLabel, pegiLabel};
         JTextField[] textFields = new JTextField[]{nombreTextField, generoTextField, lanzamientoTextField, duracionTextField, directorTextField, repartoTextField};
+        JRadioButton[] jRadioButtons = new JRadioButton[]{pegiButton0, pegiButton3, pegiButton7, pegiButton12, pegiButton16, pegiButton18};
 
         for (JLabel label : labels) {
             label.setForeground(colorLabelTextFieldC1FFEA);
@@ -92,12 +131,9 @@ public class VentanaInfo {
 
         pegiPanel.setBackground(Color.decode("#117A65"));
 
-        pegiButton0.setForeground(Color.decode("#C1FFEA"));
-        pegiButton3.setForeground(Color.decode("#C1FFEA"));
-        pegiButton7.setForeground(Color.decode("#C1FFEA"));
-        pegiButton12.setForeground(Color.decode("#C1FFEA"));
-        pegiButton16.setForeground(Color.decode("#C1FFEA"));
-        pegiButton18.setForeground(Color.decode("#C1FFEA"));
+        for (JRadioButton jRadioButton : jRadioButtons) {
+            jRadioButton.setForeground(colorLabelTextFieldC1FFEA);
+        }
 
         botonAnadir.setUI(new BasicButtonUI());
         botonAnadir.setBackground(Color.decode("#C1FFEA"));
