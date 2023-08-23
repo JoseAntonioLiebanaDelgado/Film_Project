@@ -152,6 +152,9 @@ public class VentanaInfo {
                 }
 
                 Pelicula peliculaUser = new Pelicula(userNombre, userGenero, userFinalAynoLanzamiento, userDuracionMinutos, userDirector, userFinalReparto, userPegi, 0);
+                System.out.println(peliculaUser);
+
+                Pelicula resultadoPelicula = pasarPeliculaDeVentanaInfoAPruebas(peliculaUser);
             }
         });
 
@@ -296,4 +299,27 @@ public class VentanaInfo {
             return Integer.parseInt(texto);
         }
     }
+
+    public static Pelicula pasarPeliculaDeVentanaInfoAPruebas(Pelicula elementoPeli) {
+        System.out.println(elementoPeli);
+        return elementoPeli;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -176,6 +176,7 @@ public class Pruebas {
             botonAñadir.addActionListener(e -> {
                 VentanaInfo.createAndShowGUI();
             });
+
         });
 
 //        VentanaInfo.pe;
@@ -844,6 +845,14 @@ public class Pruebas {
         }
         System.out.println("---");
     }
+
+    public static void metodoDummy(){
+
+        // Llamamos al metodo pasarPeliculaDeVentanaInfoAPruebas() de la clase VentanaInfo
+
+//        Pelicula resultado = VentanaInfo.pasarPeliculaDeVentanaInfoAPruebas(resultadoPelicula);
+    }
+
 }
 
 
