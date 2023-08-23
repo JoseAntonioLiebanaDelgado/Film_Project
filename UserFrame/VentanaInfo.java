@@ -1,10 +1,15 @@
 package UserFrame;
 
+import ENUM.Genero;
+import ENUM.Pegi;
+import Models.Pelicula;
+
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicButtonUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class VentanaInfo {
     public static void main(String[] args) {
@@ -34,29 +39,23 @@ public class VentanaInfo {
         JLabel nombreLabel = new JLabel("Nombre");
         JTextField nombreTextField = new JTextField();
 
-//        JLabel generoLabel = new JLabel("Genero");
-//        JTextField generoTextField = new JTextField();
-
         JLabel generoLabel = new JLabel("Genero");
         JPanel generoPanel = new JPanel(new GridLayout(4, 2));
-
         ButtonGroup generoButtonGroup = new ButtonGroup();
+        JRadioButton generoAccionButton = new JRadioButton("Accion");
+        JRadioButton generoAventuraButton = new JRadioButton("Aventura");
+        JRadioButton generoFantasiaButton = new JRadioButton("Fantasia");
+        JRadioButton generoComediaButton = new JRadioButton("Comedia");
+        JRadioButton generoTerrorButton = new JRadioButton("Terror");
+        JRadioButton generoApocalipsisButton = new JRadioButton("Apocalipsis");
+        JRadioButton generoDramaButton = new JRadioButton("Drama");
+        JRadioButton generoRomanceButton = new JRadioButton("Romance");
+        JRadioButton generoBelicoButton = new JRadioButton("Belico");
+        JRadioButton generoMusicalButton = new JRadioButton("Musical");
+        JRadioButton generoHistoricoButton = new JRadioButton("Historico");
+        JRadioButton generoInfantilButton = new JRadioButton("Infantil");
 
-        JRadioButton generoButton1 = new JRadioButton("Accion");
-        JRadioButton generoButton2 = new JRadioButton("Aventura");
-        JRadioButton generoButton3 = new JRadioButton("Fantasia");
-        JRadioButton generoButton4 = new JRadioButton("Comedia");
-        JRadioButton generoButton5 = new JRadioButton("Terror");
-        JRadioButton generoButton6 = new JRadioButton("Apocalipsis");
-        JRadioButton generoButton7 = new JRadioButton("Drama");
-        JRadioButton generoButton8 = new JRadioButton("Romance");
-        JRadioButton generoButton9 = new JRadioButton("Belico");
-        JRadioButton generoButton10 = new JRadioButton("Musical");
-        JRadioButton generoButton11 = new JRadioButton("Historico");
-        JRadioButton generoButton12 = new JRadioButton("Infantil");
-
-
-        JLabel lanzamientoLabel = new JLabel("Anyo de Lanzamiento");
+        JLabel lanzamientoLabel = new JLabel("Anyo de Lanzamiento (Solo numerico)");
         JTextField lanzamientoTextField = new JTextField();
         JLabel duracionLabel = new JLabel("Duracion Minutos");
         JTextField duracionTextField = new JTextField();
@@ -67,19 +66,16 @@ public class VentanaInfo {
 
         JLabel pegiLabel = new JLabel("Pegi");
         JPanel pegiPanel = new JPanel(new GridLayout(1, 6));
-
         // ButtonGroup crea un grupo de botones de opción en el cual solo puede seleccionarse un botón a la vez.
         ButtonGroup pegiButtonGroup = new ButtonGroup();
-
 //        // Creamos un Array de String dóndo guardaremos los "valores" de cada boton.
 //        String[] pegiTexts = {"0", "+3", "+7", "+12", "+16", "+18"};
-
-        JRadioButton pegiButton0 = new JRadioButton("0");
-        JRadioButton pegiButton3 = new JRadioButton("+3");
-        JRadioButton pegiButton7 = new JRadioButton("+7");
-        JRadioButton pegiButton12 = new JRadioButton("+12");
-        JRadioButton pegiButton16 = new JRadioButton("+16");
-        JRadioButton pegiButton18 = new JRadioButton("+18");
+        JRadioButton pegi0Button = new JRadioButton("0");
+        JRadioButton pegi3Button = new JRadioButton("+3");
+        JRadioButton pegi7Button = new JRadioButton("+7");
+        JRadioButton pegi12Button = new JRadioButton("+12");
+        JRadioButton pegi16Button = new JRadioButton("+16");
+        JRadioButton pegi18Button = new JRadioButton("+18");
 
 
         //Creamos el botón de añadir
@@ -89,36 +85,63 @@ public class VentanaInfo {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
-                String nombre = nombreTextField.getText();
-//                String genero = generoTextField.getText();
-                String lanzamiento = lanzamientoTextField.getText();
-                String duracion = duracionTextField.getText();
-                String director = directorTextField.getText();
-                String reparto = repartoTextField.getText();
+                String userNombre = nombreTextField.getText();
+                Genero userGenero = Genero.ACCION;
+                String userRawAnyoLanzamiento = lanzamientoTextField.getText();
+                int userFinalAynoLanzamiento = validarLanzamiento(userRawAnyoLanzamiento);
+                String userDuracionMinutos = duracionTextField.getText();
+                String userDirector = directorTextField.getText();
+                String userRawReparto = repartoTextField.getText();
 
-                System.out.println("Nombre: " + nombre);
-//                System.out.println("Genero: " + genero);
-                System.out.println("Anyo de Lanzamiento: " + lanzamiento);
-                System.out.println("Duracion: " + duracion);
-                System.out.println("Director: " + director);
-                System.out.println("Reparto: " + reparto);
+                ArrayList<String> userFinalReparto = new ArrayList<>();
+                userFinalReparto.add(userRawReparto);
 
-                if (pegiButton0.isSelected()) {
-                    System.out.println(pegiButton0.getText());
-                } else if (pegiButton3.isSelected()) {
-                    System.out.println(pegiButton3.getText());
-                } else if (pegiButton7.isSelected()) {
-                    System.out.println(pegiButton7.getText());
-                } else if (pegiButton12.isSelected()) {
-                    System.out.println(pegiButton12.getText());
-                } else if (pegiButton16.isSelected()) {
-                    System.out.println(pegiButton16.getText());
-                } else if (pegiButton18.isSelected()) {
-                    System.out.println(pegiButton18.getText());
+                Pegi userPegi = Pegi.CERO;
+                if (generoAccionButton.isSelected()) {
+                    userGenero = Genero.ACCION;
+                } else if (generoAventuraButton.isSelected()) {
+                    userGenero = Genero.AVENTURA;
+                } else if (generoFantasiaButton.isSelected()) {
+                    userGenero = Genero.FANTASIA;
+                } else if (generoComediaButton.isSelected()) {
+                    userGenero = Genero.COMEDIA;
+                } else if (generoTerrorButton.isSelected()) {
+                    userGenero = Genero.TERROR;
+                } else if (generoApocalipsisButton.isSelected()) {
+                    userGenero = Genero.APOCALIPSIS;
+                } else if (generoDramaButton.isSelected()) {
+                    userGenero = Genero.DRAMA;
+                } else if (generoRomanceButton.isSelected()) {
+                    userGenero = Genero.ROMANCE;
+                } else if (generoBelicoButton.isSelected()) {
+                    userGenero = Genero.BELICO;
+                } else if (generoMusicalButton.isSelected()) {
+                    userGenero = Genero.MUSICAL;
+                } else if (generoHistoricoButton.isSelected()) {
+                    userGenero = Genero.HISTORICO;
+                } else if (generoInfantilButton.isSelected()) {
+                    userGenero = Genero.INFANTIL;
                 } else {
                     System.out.println("Entra else -- NULL");
                 }
 
+                if (pegi0Button.isSelected()) {
+                    userPegi = Pegi.CERO;
+                } else if (pegi3Button.isSelected()) {
+                    userPegi = Pegi.TRES;
+                } else if (pegi7Button.isSelected()) {
+                    userPegi = Pegi.SIETE;
+                } else if (pegi12Button.isSelected()) {
+                    userPegi = Pegi.DOCE;
+                } else if (pegi16Button.isSelected()) {
+                    userPegi = Pegi.DIECISEIS;
+                } else if (pegi18Button.isSelected()) {
+                    userPegi = Pegi.DIECIOCHO;
+                } else {
+                    System.out.println("Entra else -- NULL");
+                }
+
+                Pelicula peliculaUser = new Pelicula(userNombre, userGenero, userFinalAynoLanzamiento, userDuracionMinutos, userDirector, userFinalReparto, userPegi, 0);
             }
         });
 
@@ -133,8 +156,8 @@ public class VentanaInfo {
 
         JLabel[] labels = new JLabel[]{nombreLabel, generoLabel, lanzamientoLabel, duracionLabel, directorLabel, repartoLabel, pegiLabel};
         JTextField[] textFields = new JTextField[]{nombreTextField, lanzamientoTextField, duracionTextField, directorTextField, repartoTextField};
-        JRadioButton[] jRadioButtonsGenero = new JRadioButton[]{generoButton1, generoButton2, generoButton3, generoButton4, generoButton5, generoButton6, generoButton7, generoButton8, generoButton9, generoButton10, generoButton11, generoButton12};
-        JRadioButton[] jRadioButtonsPegi = new JRadioButton[]{pegiButton0, pegiButton3, pegiButton7, pegiButton12, pegiButton16, pegiButton18};
+        JRadioButton[] jRadioButtonsGenero = new JRadioButton[]{generoAccionButton, generoAventuraButton, generoFantasiaButton, generoComediaButton, generoTerrorButton, generoApocalipsisButton, generoDramaButton, generoRomanceButton, generoBelicoButton, generoMusicalButton, generoHistoricoButton, generoInfantilButton};
+        JRadioButton[] jRadioButtonsPegi = new JRadioButton[]{pegi0Button, pegi3Button, pegi7Button, pegi12Button, pegi16Button, pegi18Button};
 
         for (JLabel label : labels) {
             label.setForeground(colorLabelTextFieldC1FFEA);
@@ -173,33 +196,31 @@ public class VentanaInfo {
 
         panelCentral.add(generoPanel);
 
-        generoPanel.add(generoButton1);
-        generoPanel.add(generoButton2);
-        generoPanel.add(generoButton3);
-        generoPanel.add(generoButton4);
-        generoPanel.add(generoButton5);
-        generoPanel.add(generoButton6);
-        generoPanel.add(generoButton7);
-        generoPanel.add(generoButton8);
-        generoPanel.add(generoButton9);
-        generoPanel.add(generoButton10);
-        generoPanel.add(generoButton11);
-        generoPanel.add(generoButton12);
+        generoPanel.add(generoAccionButton);
+        generoPanel.add(generoAventuraButton);
+        generoPanel.add(generoFantasiaButton);
+        generoPanel.add(generoComediaButton);
+        generoPanel.add(generoTerrorButton);
+        generoPanel.add(generoApocalipsisButton);
+        generoPanel.add(generoDramaButton);
+        generoPanel.add(generoRomanceButton);
+        generoPanel.add(generoBelicoButton);
+        generoPanel.add(generoMusicalButton);
+        generoPanel.add(generoHistoricoButton);
+        generoPanel.add(generoInfantilButton);
 
-
-        generoButtonGroup.add(generoButton1);
-        generoButtonGroup.add(generoButton2);
-        generoButtonGroup.add(generoButton3);
-        generoButtonGroup.add(generoButton4);
-        generoButtonGroup.add(generoButton5);
-        generoButtonGroup.add(generoButton6);
-        generoButtonGroup.add(generoButton7);
-        generoButtonGroup.add(generoButton8);
-        generoButtonGroup.add(generoButton9);
-        generoButtonGroup.add(generoButton10);
-        generoButtonGroup.add(generoButton11);
-        generoButtonGroup.add(generoButton12);
-
+        generoButtonGroup.add(generoAccionButton);
+        generoButtonGroup.add(generoAventuraButton);
+        generoButtonGroup.add(generoFantasiaButton);
+        generoButtonGroup.add(generoComediaButton);
+        generoButtonGroup.add(generoTerrorButton);
+        generoButtonGroup.add(generoApocalipsisButton);
+        generoButtonGroup.add(generoDramaButton);
+        generoButtonGroup.add(generoRomanceButton);
+        generoButtonGroup.add(generoBelicoButton);
+        generoButtonGroup.add(generoMusicalButton);
+        generoButtonGroup.add(generoHistoricoButton);
+        generoButtonGroup.add(generoInfantilButton);
 
         panelCentral.add(lanzamientoLabel);
         panelCentral.add(lanzamientoTextField);
@@ -213,19 +234,19 @@ public class VentanaInfo {
 
         panelCentral.add(pegiPanel);
 
-        pegiPanel.add(pegiButton0);
-        pegiPanel.add(pegiButton3);
-        pegiPanel.add(pegiButton7);
-        pegiPanel.add(pegiButton12);
-        pegiPanel.add(pegiButton16);
-        pegiPanel.add(pegiButton18);
+        pegiPanel.add(pegi0Button);
+        pegiPanel.add(pegi3Button);
+        pegiPanel.add(pegi7Button);
+        pegiPanel.add(pegi12Button);
+        pegiPanel.add(pegi16Button);
+        pegiPanel.add(pegi18Button);
 
-        pegiButtonGroup.add(pegiButton0);
-        pegiButtonGroup.add(pegiButton3);
-        pegiButtonGroup.add(pegiButton7);
-        pegiButtonGroup.add(pegiButton12);
-        pegiButtonGroup.add(pegiButton16);
-        pegiButtonGroup.add(pegiButton18);
+        pegiButtonGroup.add(pegi0Button);
+        pegiButtonGroup.add(pegi3Button);
+        pegiButtonGroup.add(pegi7Button);
+        pegiButtonGroup.add(pegi12Button);
+        pegiButtonGroup.add(pegi16Button);
+        pegiButtonGroup.add(pegi18Button);
 
         buttonPanel.add(botonAnadir, BorderLayout.CENTER);
 
@@ -234,20 +255,35 @@ public class VentanaInfo {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 700);
 
-        generoButton1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton2.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton3.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton4.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton5.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton6.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton7.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton8.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton9.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton10.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton11.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        generoButton12.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-
+        generoAccionButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoAventuraButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoFantasiaButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoComediaButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoTerrorButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoApocalipsisButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoDramaButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoRomanceButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoBelicoButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoMusicalButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoHistoricoButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        generoInfantilButton.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         frame.setVisible(true);
+    }
+
+    private static int validarLanzamiento(String texto) {
+
+        //trim = Borrar espacios en blanco
+
+        if (texto.trim().isEmpty()) {
+            return 1800;
+        } else {
+            for (char c : texto.toCharArray()) {
+                if (!Character.isDigit(c)) {
+                    return 1800; // Valor por defecto
+                }
+            }
+            return Integer.parseInt(texto);
+        }
     }
 }
