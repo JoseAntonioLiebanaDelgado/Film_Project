@@ -21,6 +21,16 @@ public class VentanaInfo {
         });
     }
 
+    ArrayList<String> x = new ArrayList<>();
+    Pelicula peli = new Pelicula("El señor de los anillos: La comunidad del anillo",
+            Genero.ACCION,
+            2001,
+            "226",
+            "Peter Jakson",
+            x,
+            Pegi.DOCE,
+            4);
+
     public static void createAndShowGUI() {
 
         JFrame frame = new JFrame("Add information");

@@ -168,6 +168,7 @@ public class Pruebas {
         listaDummy.add(peli3);
         listaDummy.add(peli4);
 
+
         JPanel panelCreado = crearPanelConLabels(listaDummy);
         JButton botonAñadir = new JButton("Boton 3 - Añadir");
 
@@ -176,6 +177,9 @@ public class Pruebas {
                 VentanaInfo.createAndShowGUI();
             });
         });
+
+//        VentanaInfo.pe;
+
 //---
 
         JPanel panelPrincipalDerecho = new JPanel();
