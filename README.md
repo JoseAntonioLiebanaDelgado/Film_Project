@@ -44,21 +44,21 @@ de los datos es local. Y sobre todo, mi intención adaptarla para iOS y Android.
 
 ## 4. Características de la aplicación y demostración<a name="caracteristicas"></a>
 Al abrir la App, aparece una la [ventana principal](#ventanaprincipal) en la que diferencian dos apartados:
--  [El apartado de la izquierda](#apartadoIzquierdo), ocupa practicamente una cuarta parte de la ventana y está formado por 4 secciones divididas horizontalmente. <br><br>
+-  [El apartado de la izquierda](#apartadoIzquierdo), ocupa practicamente una cuarta parte de la ventana y está formado por 4 módulos divididas horizontalmente. <br><br>
 
-    - [La primera parte:](#primeraparte) 
+    - [Primer módulo:](#primeraparte) 
       - [Botón de Login](#botonlogin)
       - [Botón de Configuraciones](#botonconfiguraciones) <br><br>
       
-    - [Segunda parte:](#segundaparte)
+    - [Segundo módulo:](#segundaparte)
       - [Texto titulo](#textotitulo)
       - [Icono cronómetro](#cronometro) <br><br>
       
-    - [Tercera parte:](#terceraparte)
+    - [Tercer módulo:](#terceraparte)
       - [Lista de elementos](#listaelementos) 
       - [Número de duracion de minutos del elemento](#duracion) <br><br>
     
-    - [Cuarta Parte:](#cuartaparte)
+    - [Cuarto módulo:](#cuartaparte)
       - [Botón añadir](#botonañadir) --> [(Abre otra ventana nueva)](#ventananueva) <br><br><br>
 
 -  [El apartado de la derecha](#apartadoDerecho), ocupa practicamente tres cuartas partes de la ventana y está formado por 2 secciones divididas por un recuadro central. <br><br>
