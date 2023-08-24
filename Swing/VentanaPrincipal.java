@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import javax.swing.border.EmptyBorder;
 
-public class Pruebas {
+public class VentanaPrincipal {
 
     public static void main(String[] args) {
 
