@@ -110,7 +110,7 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
 ## Funcionamiento de elementos por partes  <br><br>
 
 - Ventana principal<a name="ventanaprincipal"></a>  <br><br>
-![Imagen Ventana Principal](Images/Imagen Ventana Principal.png)<br><br>
+![Imagen Ventana Principal](Images/ImagenVentanaPrincipal.png)<br><br>
 
     - Apartado izquierdo<a name="apartadoIzquierdo"></a> <br><br>
 En el apartado izquierdo hay dos botones, uno para hacer login y otro para las configuraciones, 
