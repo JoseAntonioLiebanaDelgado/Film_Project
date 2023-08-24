@@ -39,41 +39,36 @@ de los datos es local. Y sobre todo, mi intención adaptarla para iOS y Android.
 - - -
 
 ## 4. Características de la aplicación y demostración<a name="caracteristicas"></a>
-Al abrir la App, aparece una ventana en la que diferencian dos apartados:
--  El [apartado de la izquierda](#apartadoIzquierdo),ocupa practicamente una cuarta parte de la ventana y está formado por 4 secciones divididas horizontalmente. <br><br>
+Al abrir la App, aparece una la [ventana principal](#ventanaprincipal) en la que diferencian dos apartados:
+-  [El apartado de la izquierda](#apartadoIzquierdo), ocupa practicamente una cuarta parte de la ventana y está formado por 4 secciones divididas horizontalmente. <br><br>
 
-    - La primera parte: 
+    - [La primera parte:](#primeraparte) 
       - [Botón de Login](#botonlogin)
-      - Botón de Configuraciones <br><br>
+      - [Botón de Configuraciones](#botonconfiguraciones) <br><br>
       
-    - Segunda parte:
-      - Texto titulo
-      - Icono cronómetro <br><br>
+    - [Segunda parte:](#segundaparte)
+      - [Texto titulo](#textotitulo)
+      - [Icono cronómetro](#cronometro) <br><br>
       
-    - Tercera parte:
-      - Lista de elementos 
-      - Número de duracion de minutos del elemento <br><br>
+    - [Tercera parte:](#terceraparte)
+      - [Lista de elementos](#listaelementos) 
+      - [Número de duracion de minutos del elemento](#duracion) <br><br>
     
-    - Cuarta Parte:
-      - Botón Añadir (Abre otra ventana nueva) <br><br>
+    - [Cuarta Parte:](#cuartaparte)
+      - [Botón añadir](#botonañadir) --> [(Abre otra ventana nueva)](#ventananueva) <br><br><br>
 
--  El apartado de la derecha, ocupa practicamente tres cuartas partes de la ventana y está formado por 2 secciones divididas por un recuadro central. <br><br>
+-  [El apartado de la derecha](#apartadoDerecho), ocupa practicamente tres cuartas partes de la ventana y está formado por 2 secciones divididas por un recuadro central. <br><br>
 
-    - La parte exterior del recuadro:
-      - Titulo y logo de la App <br><br>
+    - [La parte exterior del recuadro:](#parteexterior)
+      - [Titulo y logo de la App](#tituloylogo) <br><br>
 
-    - La parte interior del recuadro. La cual también está dividida en dos partes: 
-      - Parte izquierda
-        - Campos descriptivos
-        - Campos a rellenar <br><br>
-      - Parte Derecha
-        - Imagen Portada
-        - Botón Trailer <br><br>
-
-
-
-
-
+    - [La parte interior del recuadro. La cual también está dividida en dos partes:](#parteinterior) 
+      - [Parte izquierda](#parteizquierda)
+        - [Campos descriptivos](#camposdescriptivos)
+        - [Campos definidos](#camposdefinidos) <br><br>
+      - [Parte derecha](#partederecha)
+        - [Imagen portada](#imagenportadda)
+        - [Botón trailer](#botontrailer)<br><br>
 - - -
 
 ## 5. Tecnologías utilizadas<a name="tecnologias"></a>
@@ -107,9 +102,41 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
 - - -
 
 
-## Funcionamiento de elementos por partes 
+## Funcionamiento de elementos por partes  <br><br>
+
+- Ventana principal<a name="ventanaprincipal"></a>  <br><br>
+
+    - Apartado de la izquierda<a name="apartadoIzquierdo"></a> <br><br>
+
+        - Primera parte<a name="primeraparte"></a>
+            - Boton de Login<a name="botonlogin"></a>
+            - Boton de Login<a name="botonconfiguraciones"></a> <br><br>
+          
+        - Segunda parte<a name="segundaparte"></a>
+            - Texto titulo<a name="textotitulo"></a>
+            - Icono cronómetro<a name="cronometro"></a> <br><br>
+
+        - Tercera parte<a name="terceraparte"></a>
+            - Lista de elementos<a name="listaelementos"></a>
+            - Número de duracion de minutos del elemento<a name="duracion"></a> <br><br>
+
+        - Cuarta parte<a name="cuartaparte"></a>
+            - Botón Añadir (Abre otra ventana nueva)<a name="botonañadir"></a> <br><br>
+
+    - Apartado de la derecha<a name="apartadoDerecho"></a> <br><br>
+
+        - Parte exterior<a name="parteexterior"></a> 
+            - Titulo y logo de la App<a name="tituloylogo"></a> <br><br>
+        
+        - Parte interior<a name="parteinterior"></a> 
+            - Parte izquierda<a name="parteinterior"></a>
+                - Campos descriptivos<a name="camposdescriptivos"></a>
+                - Campos definidos<a name="camposdefinidos"></a> <br><br>
+              
+            - Parte derecha<a name="partederecha"></a>
+                - Imagen portada<a name="imagenportada"></a>
+                - Botón trailer<a name="botontrailer"></a>
+    
 
 
-
-Apartado de la izquierda<a name="apartadoIzquierdo"></a>
-Boton de Login<a name="botonlogin"></a>
+    
