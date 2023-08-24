@@ -1,4 +1,3 @@
-
 # “VisualVault: Tu Reserva Audiovisual”
 
 <br><br><br><br><br><br>
@@ -7,7 +6,7 @@
 2. [Como funciona “VisualVault: Tu Reserva Audiovisual” -- Funcionamiento](#comofunciona)
 3. [Estado del proyecto](#estado)
 4. [Características de la aplicación y demostración](#caracteristicas)
-5. [Tecnologías utilizadas](#tencnologias)
+5. [Tecnologías utilizadas](#tecnologias)
 6. [Conclusión](#conclusion)
 7. [Como surgió la idea](#idea)<br><br>
 - - -
@@ -39,7 +38,7 @@ En un futuro próximo, tengo pensado migrar los datos a una API gratis, puesto q
 de los datos es local. Y sobre todo, mi intención adaptarla para iOS y Android. <br><br>
 - - -
 
-## 4. Características de la aplicación y demostración<a name="tecnologias"></a>
+## 4. Características de la aplicación y demostración<a name="caracteristicas"></a>
 Al abrir la App, aparece una ventana en la que diferencian dos apartados:
 -  El apartado de la izquierda, ocupa practicamente una cuarta parte de la ventana y está formado por 4 secciones divididas horizontalmente. <br><br>
 
