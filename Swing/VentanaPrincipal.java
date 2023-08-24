@@ -127,19 +127,20 @@ public class VentanaPrincipal {
         repartoTopGunMaverick.add("Jennifer Connelly");
 
 
-        Pelicula peli1 = new Pelicula("Soldado Ryan",
+
+        Pelicula peli1 = new Pelicula("Gladiator",
                 Genero.ACCION,
-                1998,
-                "169",
+                2000,
+                "155",
                 "Steven Spielberg",
                 repartoSalvarAlSoldadoRyan,
                 Pegi.TRECE,
                 4);
 
-        Pelicula peli2 = new Pelicula("Gladiator",
+        Pelicula peli2 = new Pelicula("Salvar al soldado Ryan",
                 Genero.ACCION,
                 1998,
-                "200",
+                "169",
                 "Steven Spielberg",
                 repartoSalvarAlSoldadoRyan,
                 Pegi.TRECE,
@@ -170,7 +171,7 @@ public class VentanaPrincipal {
 
 
         JPanel panelCreado = crearPanelConLabels(listaDummy);
-        JButton botonAñadir = new JButton("Boton 3 - Añadir");
+        JButton botonAñadir = new JButton("Añadir");
 
         SwingUtilities.invokeLater(() -> {
             botonAñadir.addActionListener(e -> {
@@ -282,9 +283,9 @@ public class VentanaPrincipal {
         JLabel panelInfoIzquierdoLabelInterna3 = new JLabel("Genero:");
         JLabel panelInfoIzquierdoLabelInterna4 = new JLabel("Accion");
         JLabel panelInfoIzquierdoLabelInterna5 = new JLabel("Año");
-        JLabel panelInfoIzquierdoLabelInterna6 = new JLabel("1999");
+        JLabel panelInfoIzquierdoLabelInterna6 = new JLabel("2000");
         JLabel panelInfoIzquierdoLabelInterna7 = new JLabel("Duracion:");
-        JLabel panelInfoIzquierdoLabelInterna8 = new JLabel("120:42");
+        JLabel panelInfoIzquierdoLabelInterna8 = new JLabel("155");
         JLabel panelInfoIzquierdoLabelInterna9 = new JLabel("Director:");
         JLabel panelInfoIzquierdoLabelInterna10 = new JLabel("Ridley Scott");
         JLabel panelInfoIzquierdoLabelInterna11 = new JLabel("Actores Principales:");
@@ -293,8 +294,8 @@ public class VentanaPrincipal {
         panelInfoIzquierdoPanelInterno12.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno12, BoxLayout.Y_AXIS));
         JLabel actorLabel1 = new JLabel("Russer Crowe");
         JLabel actorLabel2 = new JLabel("Joaquin Phoenix");
-        JLabel actorLabel3 = new JLabel("Actor 3");
-        JLabel actorLabel4 = new JLabel("Actor 4");
+        JLabel actorLabel3 = new JLabel("Connie Nielsen");
+        JLabel actorLabel4 = new JLabel("Richard Harris");
 
         JLabel panelInfoIzquierdoLabelInterna13 = new JLabel("Pegi:");
         JLabel panelInfoIzquierdoLabelInterna14 = new JLabel("Mayores de 18");
@@ -490,7 +491,7 @@ public class VentanaPrincipal {
 
         JPanel containerPanelDerechoLabel = new JPanel();
 
-        JLabel labelPanelDerecho = new JLabel("Titulo App");
+        JLabel labelPanelDerecho = new JLabel("VisualVault: Tu Reserva Audiovisual");
 
         JPanel panelInfoDerechoImagen = new JPanel();
         panelInfoDerechoImagen.setLayout(new BorderLayout());

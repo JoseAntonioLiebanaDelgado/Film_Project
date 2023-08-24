@@ -33,7 +33,7 @@ public class VentanaInfo {
 
     public static void createAndShowGUI() {
 
-        JFrame frame = new JFrame("Add information");
+        JFrame frame = new JFrame("Añadir Informacion");
 
         JPanel panelPrincipal = new JPanel(new BorderLayout());
 
@@ -65,9 +65,9 @@ public class VentanaInfo {
         JRadioButton generoHistoricoButton = new JRadioButton("Historico");
         JRadioButton generoInfantilButton = new JRadioButton("Infantil");
 
-        JLabel lanzamientoLabel = new JLabel("Anyo de Lanzamiento (Solo numerico)");
+        JLabel lanzamientoLabel = new JLabel("Año de lanzamiento (Numerico)");
         JTextField lanzamientoTextField = new JTextField();
-        JLabel duracionLabel = new JLabel("Duracion Minutos");
+        JLabel duracionLabel = new JLabel("Duracion minutos");
         JTextField duracionTextField = new JTextField();
         JLabel directorLabel = new JLabel("Director");
         JTextField directorTextField = new JTextField();
@@ -90,7 +90,7 @@ public class VentanaInfo {
 
         //Creamos el botón de añadir
         JPanel buttonPanel = new JPanel(new BorderLayout());
-        JButton botonAnadir = new JButton("Add");
+        JButton botonAnadir = new JButton("Añadir");
         botonAnadir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
