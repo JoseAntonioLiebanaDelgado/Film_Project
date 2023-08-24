@@ -26,7 +26,7 @@ public class VentanaPrincipal {
 
         JPanel panelSuperiorIzquierdo = new JPanel();
 
-        ImageIcon imagenBoton1 = new ImageIcon("people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg");
+        ImageIcon imagenBoton1 = new ImageIcon("Images/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg");
         // Redimensionar la imagen
         Image imagenOriginalBoton1 = imagenBoton1.getImage();
         Image imagenRedimensionadaBoton1 = imagenOriginalBoton1.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
@@ -41,7 +41,7 @@ public class VentanaPrincipal {
             }
         });
 
-        ImageIcon imagenBoton2 = new ImageIcon("263100.png");
+        ImageIcon imagenBoton2 = new ImageIcon("Images/263100.png");
         // Redimensionar la imagen
         Image imagenOriginalBoton2 = imagenBoton2.getImage();
         Image imagenRedimensionadaBoton2 = imagenOriginalBoton2.getScaledInstance(20, 20, Image.SCALE_SMOOTH);
@@ -62,7 +62,7 @@ public class VentanaPrincipal {
 
         JLabel labelPanelSuperiorCentralIzquierdo = new JLabel("Titulo Elemento");
 
-        ImageIcon imagenReloj = new ImageIcon("crono.png");
+        ImageIcon imagenReloj = new ImageIcon("Images/crono.png");
 
         JLabel etiquetaImagenReloj = new JLabel(imagenReloj);
 
@@ -304,7 +304,7 @@ public class VentanaPrincipal {
         panelInfoIzquierdoPanelInterno16.setLayout(new BoxLayout(panelInfoIzquierdoPanelInterno16, BoxLayout.X_AXIS));
 
         // ImageIcon para la imagen de la estrella vacía
-        ImageIcon imagenEstrellaVacia = new ImageIcon("EstrellaVacia.png");
+        ImageIcon imagenEstrellaVacia = new ImageIcon("Images/EstrellaVacia.png");
         Image imagenOriginalEstrellaVacia = imagenEstrellaVacia.getImage();
         Image rawImagenRedimensionadaEstrellaVacia = imagenOriginalEstrellaVacia.getScaledInstance(10, 10, Image.SCALE_SMOOTH);
         ImageIcon estrellaImagenFinal = new ImageIcon(rawImagenRedimensionadaEstrellaVacia);
@@ -495,7 +495,7 @@ public class VentanaPrincipal {
         JPanel panelInfoDerechoImagen = new JPanel();
         panelInfoDerechoImagen.setLayout(new BorderLayout());
 
-        ImageIcon imagenPortada = new ImageIcon("Gladiator.jpg");
+        ImageIcon imagenPortada = new ImageIcon("Images/Gladiator.jpg");
         JLabel etiquetaImagenPortada = new JLabel(imagenPortada);
 
         GridBagConstraints posImagenPanelDerecho = new GridBagConstraints();
@@ -800,7 +800,7 @@ public class VentanaPrincipal {
 
     private static void pintarEstrellas(ArrayList<JButton> listaBotones, int indiceBoton, ArrayList<Boolean> listaBool) {
 
-        ImageIcon imagenEstrellaPintada = new ImageIcon("EstrellaPintada.png");
+        ImageIcon imagenEstrellaPintada = new ImageIcon("Images/EstrellaPintada.png");
         Image imagenOriginalEstrellaPintada = imagenEstrellaPintada.getImage();
         Image rawImagenRedimensionadaEstrellaPintada = imagenOriginalEstrellaPintada.getScaledInstance(12, 12, Image.SCALE_SMOOTH);
         ImageIcon imagenRedimensionadaEstrellaPintada = new ImageIcon(rawImagenRedimensionadaEstrellaPintada);
