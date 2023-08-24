@@ -1,8 +1,8 @@
 # “VisualVault: Tu Reserva Audiovisual”<br><br>
 
-![Logo1](Images/logo 1.png)
-![Logo1](Images/logo 3.png)
-![Logo1](Images/logo 2.png)
+![logo 1](Images/logo 1.png)
+![logo 3](Images/logo 3.png)
+![logo 4](Images/logo 2.png)
 
 <br><br>
 
