@@ -112,24 +112,53 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
 - Ventana principal<a name="ventanaprincipal"></a>  <br><br>
 ![Ventana Principal](Images/Imagen Ventana Principal.png)<br><br>
 
-    - Apartado de la izquierda<a name="apartadoIzquierdo"></a> <br><br>
+    - Apartado izquierdo<a name="apartadoIzquierdo"></a> <br><br>
+En el apartado izquierdo hay dos botones, uno para hacer login y otro para las configuraciones, 
+a continuación aparecerá una barra de búsqueda, debajo aparecerá nuestra lista de elementos 
+y en la parte inferior, un botón para añadir mas elementos a lista. 
+Éste botón nos abrirá otra ventana la cual tendrá como función almacenar información de un nuevo 
+elemento y una vez añadido, aparecerá en la lista.)<br><br>
+![Apartado Izquierdo](Images/Apartado izquierdo.png)<br><br>
 
-        - Primera parte<a name="primeraparte"></a>
-            - Boton de Login<a name="botonlogin"></a>
-            - Boton de Login<a name="botonconfiguraciones"></a> <br><br>
-          
-        - Segunda parte<a name="segundaparte"></a>
-            - Texto titulo<a name="textotitulo"></a>
-            - Icono cronómetro<a name="cronometro"></a> <br><br>
+        - Primer módulo<a name="primeraparte"></a> <br><br>
+        En el primer módulo aparecen los dos botones. <br>
+        El del Login y el de las Configuraciones.<br><br>
+        ![Apartado Izquierdo](Images/Modulo 1de4.png)<br><br>
+            - Boton de Login<a name="botonlogin"></a><br><br>
+              ![Apartado Izquierdo](Images/Boton login.png)<br><br>
+            - Boton de Configuraciones<a name="botonconfiguraciones"></a> <br><br>
+              ![Apartado Izquierdo](Images/Boton configuraciones.png)<br><br>
 
-        - Tercera parte<a name="terceraparte"></a>
-            - Lista de elementos<a name="listaelementos"></a>
+        - Segundo módulo<a name="segundaparte"></a> <br><br>
+
+          En el segundo módulo hay un pequeño apartado con un escrito “Titulo Elemento” y al lado un icono de un cronometro.
+          Y justo debajo y haciendo referencia al escrito y al icono, debajo del escrito estarán los nombres de 
+          los elementos y justo al lado, debajo del icono del cronómetro se especifíca la duración del elemento en minutos. <br><br>
+          ![Apartado Izquierdo](Images/Modulo 2de4.png)<br><br>
+
+          - Texto titulo<a name="textotitulo"></a><br><br>
+          ![Apartado Izquierdo](Images/Titulo elemento.png)<br><br>
+          - Icono cronómetro<a name="cronometro"></a> <br><br>
+          ![Apartado Izquierdo](Images/cronometro.png)<br><br>
+
+        - Tercer módulo<a name="terceraparte"></a><br><br>
+
+          En el tercer módulo, justo debajo del segundo, haciendo referencia al escrito y al icono se sitúan los nombres de los elementos 
+          y justo al lado, debajo del icono del cronómetro se especifíca la duración del elemento en minutos. <br><br>
+          ![Apartado Izquierdo](Images/Lista.png)<br><br>
+
+            - Lista de elementos<a name="listaelementos"></a><br><br>
+            ![Apartado Izquierdo](Images/Lista nombres.png)<br><br>
+
             - Número de duracion de minutos del elemento<a name="duracion"></a> <br><br>
+            ![Apartado Izquierdo](Images/Lista minutos.png)<br><br>
 
-        - Cuarta parte<a name="cuartaparte"></a>
+        - Cuarto módulo<a name="cuartaparte"></a> <br><br>
+        En el cuarto módulo tenemos unicamente el botón para añadir nuevos elementos a la lista. <br><br>
             - Botón Añadir (Abre otra ventana nueva)<a name="botonañadir"></a> <br><br>
+            ![Apartado Izquierdo](Images/Boton añadir ventana principal.png)<br><br>
 
-    - Apartado de la derecha<a name="apartadoDerecho"></a> <br><br>
+    - Apartado derecho<a name="apartadoDerecho"></a> <br><br>
 
         - Parte exterior<a name="parteexterior"></a> 
             - Titulo y logo de la App<a name="tituloylogo"></a> <br><br>

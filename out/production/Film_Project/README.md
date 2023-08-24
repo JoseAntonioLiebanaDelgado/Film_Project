@@ -112,11 +112,17 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
 - Ventana principal<a name="ventanaprincipal"></a>  <br><br>
 ![Ventana Principal](Images/Imagen Ventana Principal.png)<br><br>
 
-    - Apartado de la izquierda<a name="apartadoIzquierdo"></a> <br><br>
+    - Apartado izquierdo<a name="apartadoIzquierdo"></a> <br><br>
+En el apartado izquierdo hay dos botones, uno para hacer login y otro para las configuraciones, 
+a continuación aparecerá una barra de búsqueda, debajo aparecerá nuestra lista de elementos 
+y en la parte inferior, un botón para añadir mas elementos a lista. 
+Éste botón nos abrirá otra ventana la cual tendrá como función almacenar información de un nuevo 
+elemento y una vez añadido, aparecerá en la lista.)<br><br>
+      ![Apartado Izquierdo](Images/Apartado izquierdo.png)<br><br>
 
         - Primera parte<a name="primeraparte"></a>
             - Boton de Login<a name="botonlogin"></a>
-            - Boton de Login<a name="botonconfiguraciones"></a> <br><br>
+            - Boton de Configuraciones<a name="botonconfiguraciones"></a> <br><br>
           
         - Segunda parte<a name="segundaparte"></a>
             - Texto titulo<a name="textotitulo"></a>
@@ -129,7 +135,7 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
         - Cuarta parte<a name="cuartaparte"></a>
             - Botón Añadir (Abre otra ventana nueva)<a name="botonañadir"></a> <br><br>
 
-    - Apartado de la derecha<a name="apartadoDerecho"></a> <br><br>
+    - Apartado derecho<a name="apartadoDerecho"></a> <br><br>
 
         - Parte exterior<a name="parteexterior"></a> 
             - Titulo y logo de la App<a name="tituloylogo"></a> <br><br>
