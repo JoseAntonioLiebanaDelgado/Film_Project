@@ -1,6 +1,10 @@
-# “VisualVault: Tu Reserva Audiovisual”
+# “VisualVault: Tu Reserva Audiovisual”<br><br>
 
-<br><br><br><br><br><br>
+![Logo1](Images/logo 1.png)
+![Logo1](Images/logo 3.png)
+![Logo1](Images/logo 2.png)
+
+<br><br>
 
 1. [Que es “VisualVault: Tu Reserva Audiovisual” -- Descripción](#quees)
 2. [Como funciona “VisualVault: Tu Reserva Audiovisual” -- Funcionamiento](#comofunciona)
@@ -77,7 +81,8 @@ En este proyecto se han utilizado las siguientes tecnologías:
 - GitHub Desktop 
 - IDE: IntelliJ<br>
 
-![img_1.png](img_1.png)
+![TecnologiasUtilizadas](Images/TecnologiasUtilizadas.png)
+
 - - -
 
 ## 6. Conclusión<a name="conclusion"></a>
@@ -105,6 +110,7 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
 ## Funcionamiento de elementos por partes  <br><br>
 
 - Ventana principal<a name="ventanaprincipal"></a>  <br><br>
+![Ventana Principal](Images/Imagen Ventana Principal.png)<br><br>
 
     - Apartado de la izquierda<a name="apartadoIzquierdo"></a> <br><br>
 
