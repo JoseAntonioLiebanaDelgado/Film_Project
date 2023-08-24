@@ -40,7 +40,7 @@ de los datos es local. Y sobre todo, mi intención adaptarla para iOS y Android.
 
 ## 4. Características de la aplicación y demostración<a name="caracteristicas"></a>
 Al abrir la App, aparece una ventana en la que diferencian dos apartados:
--  El apartado de la izquierda, ocupa practicamente una cuarta parte de la ventana y está formado por 4 secciones divididas horizontalmente. <br><br>
+-  El [apartado de la izquierda](#apartadoIzquierdo),ocupa practicamente una cuarta parte de la ventana y está formado por 4 secciones divididas horizontalmente. <br><br>
 
     - La primera parte: 
       - [Botón de Login](#botonlogin)
@@ -107,9 +107,9 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
 - - -
 
 
+## Funcionamiento de elementos por partes 
 
-## Botón de Login<a name="botonlogin"></a>
-jhgf
-kjhg
-lkjhg
-lkjhg
+
+
+Apartado de la izquierda<a name="apartadoIzquierdo"></a>
+Boton de Login<a name="botonlogin"></a>
