@@ -76,8 +76,6 @@ En este proyecto se han utilizado las siguientes tecnologías:
 - Google
 - GitHub Desktop 
 - IDE: IntelliJ<br>
-
-![img_1.png](img_1.png)
 - - -
 
 ## 6. Conclusión<a name="conclusion"></a>
