@@ -1,8 +1,8 @@
 # “VisualVault: Tu Reserva Audiovisual”<br><br>
 
-![logo 1](Images/logo 1.png)
-![logo 3](Images/logo 3.png)
-![logo 2](Images/logo 2.png)
+![logo 1](Images/logoUno.png)
+![logo 3](Images/logoTres.png)
+![logo 2](Images/logoDos.png)
 
 <br><br>
 
@@ -118,12 +118,12 @@ a continuación aparecerá una barra de búsqueda, debajo aparecerá nuestra lis
 y en la parte inferior, un botón para añadir mas elementos a lista. 
 Éste botón nos abrirá otra ventana la cual tendrá como función almacenar información de un nuevo 
 elemento y una vez añadido, aparecerá en la lista.)<br><br>
-![Apartado Izquierdo](Images/Apartado izquierdo.png)<br><br>
+![Apartado Izquierdo](Images/ApartadoIzquierdo.png)<br><br>
 
         - Primer módulo<a name="primeraparte"></a> <br><br>
         En el primer módulo aparecen los dos botones. <br>
         El del Login y el de las Configuraciones.<br><br>
-        ![Modulo 1de4](Images/Modulo 1de4.png)<br><br>
+        ![Modulo 1de4](Images/ModuloUnodeCuatro.png)<br><br>
             - Boton de Login<a name="botonlogin"></a><br><br>
               ![Boton login](Images/Boton login.png)<br><br>
             - Boton de Configuraciones<a name="botonconfiguraciones"></a> <br><br>
@@ -134,7 +134,7 @@ elemento y una vez añadido, aparecerá en la lista.)<br><br>
           En el segundo módulo hay un pequeño apartado con un escrito “Titulo Elemento” y al lado un icono de un cronometro.
           Y justo debajo y haciendo referencia al escrito y al icono, debajo del escrito estarán los nombres de 
           los elementos y justo al lado, debajo del icono del cronómetro se especifíca la duración del elemento en minutos. <br><br>
-          ![Modulo 2de4](Images/Modulo 2de4.png)<br><br>
+          ![Modulo 2de4](Images/ModuloDosDeCuatro.png)<br><br>
 
           - Texto titulo<a name="textotitulo"></a><br><br>
           ![Titulo elemento](Images/Titulo elemento.png)<br><br>
@@ -145,18 +145,18 @@ elemento y una vez añadido, aparecerá en la lista.)<br><br>
 
           En el tercer módulo, justo debajo del segundo, haciendo referencia al escrito y al icono se sitúan los nombres de los elementos 
           y justo al lado, debajo del icono del cronómetro se especifíca la duración del elemento en minutos. <br><br>
-          ![Lista](Images/Lista.png)<br><br>
+          ![Lista](Images/ModuloTresdeCuatro.png)<br><br>
 
             - Lista de elementos<a name="listaelementos"></a><br><br>
-            ![Lista nombres](Images/Lista nombres.png)<br><br>
+            ![Lista nombres](Images/ListaNombres.png)<br><br>
 
             - Número de duracion de minutos del elemento<a name="duracion"></a> <br><br>
-            ![Lista minutos](Images/Lista minutos.png)<br><br>
+            ![Lista minutos](Images/ListaMinutos.png)<br><br>
 
         - Cuarto módulo<a name="cuartaparte"></a> <br><br>
         En el cuarto módulo tenemos unicamente el botón para añadir nuevos elementos a la lista. <br><br>
             - Botón Añadir (Abre otra ventana nueva)<a name="botonañadir"></a> <br><br>
-            ![Boton añadir ventana principal](Images/Boton añadir ventana principal.png)<br><br>
+            ![Boton añadir ventana principal](Images/BotonAnadirVentanaPrincipal.png)<br><br>
 
     - Apartado derecho<a name="apartadoDerecho"></a> <br><br>
 
