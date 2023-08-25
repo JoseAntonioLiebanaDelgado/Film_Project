@@ -1,4 +1,4 @@
-# “VisualVault: Tu Reserva Audiovisual”<br><br>
+# VISUALVAULT: Tu Reserva Audiovisual<br><br>
 
 ![logo 1](Images/logoUno.png)
 ![logo 3](Images/logoTres.png)
@@ -6,8 +6,8 @@
 
 <br><br>
 
-1. [Que es “VisualVault: Tu Reserva Audiovisual” -- Descripción](#quees)
-2. [Como funciona “VisualVault: Tu Reserva Audiovisual” -- Funcionamiento](#comofunciona)
+1. [Que es VISUALVAULT: Tu Reserva Audiovisual -- Descripción](#quees)
+2. [Como funciona VISUALVAULT: Tu Reserva Audiovisual -- Funcionamiento](#comofunciona)
 3. [Estado del proyecto](#estado)
 4. [Características de la aplicación y demostración](#caracteristicas)
 5. [Tecnologías utilizadas](#tecnologias)
