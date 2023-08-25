@@ -163,8 +163,8 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
             toda la información del elemento seleccionado en la lista). <br><br>
             ![BotonAnadirVentanaPrincipal](Images/BotonAnadirVentanaPrincipal.png)<br><br>
           
-          - Añadir Información<a name="VentanaInfo"></a> <br><br>
-          La ventana de "Añadir Información" aparecerá unicamante si el usuario clica en el botón inferior "Añadir" de la ventana principal. <br><br>
+          - Ventana para añadir Información<a name="VentanaInfo"></a> <br><br>
+          La ventana para "Añadir Información" aparecerá unicamante si el usuario clica en el botón inferior "Añadir" de la ventana principal. <br><br>
           En esta ventana el usuario tiene la opción de añadir información en el campo del nombre, elegir una opción entre 12 para el género,
           el año de lanzamiento, la duración en minutos, el director, el reparto, elegir otra opción entre 6 para la edad que el usuario crea recomendada 
           y una puntuación con estrellas del 1 al 5 (El usuario puede modificar la puntuación de las estrellas siempre que quiera).<br><br>
