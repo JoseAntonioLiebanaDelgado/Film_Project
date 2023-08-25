@@ -156,21 +156,21 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
         - Cuarto módulo<a name="cuartaparte"></a> <br><br>
         En el cuarto módulo tenemos únicamente el botón para añadir nuevos elementos a la lista. <br><br>
       
-            - Botón Añadir --> [(Abre una nueva ventana para añadir Información)](#VentanaInfo)<a name="botonañadir"></a> <br><br>
+            - Botón Añadir <a name="botonañadir"></a> <br><br>
             Este botón, una vez ha sido clicado, abrirá otra ventana en la que el usuario puede agregar información.
             De esta misma información, aparecerá el nombre y los minutos en la lista de elementos y 
             todas las demás especifícaciones en el apartado derecho de la App (Dónde se muestra 
             toda la información del elemento seleccionado en la lista). <br><br>
             ![BotonAnadirVentanaPrincipal](Images/BotonAnadirVentanaPrincipal.png)<br><br>
           
-          - Añadir Información<a name="ventanaprincipal"></a> <br><br>
+          - Añadir Información<a name="VentanaInfo"></a> <br><br>
           La ventana de "Añadir Información" aparecerá unicamante si el usuario clica en el botón inferior "Añadir" de la ventana principal. <br><br>
           En esta ventana el usuario tiene la opción de añadir información en el campo del nombre, elegir una opción entre 12 para el género,
           el año de lanzamiento, la duración en minutos, el director, el reparto, elegir otra opción entre 6 para la edad que el usuario crea recomendada 
           y una puntuación con estrellas del 1 al 5 (El usuario puede modificar la puntuación de las estrellas siempre que quiera).<br><br>
           IMPORTANTE: El usuario debe clicar en el botón inferior de esta nueva ventana. (En el botón de añadir). <br><br>
           Cualquier campo que se haya agregado, si ha sido correctamente añadido, aparecerá junto con un nuevo elemento en la lista de la ventana principal. <br><br>
-          ![VentanaInfo](Images/VentanaInfo.png)<br><br>
+          ![VentanaInfo](Images/VentanaInfo.png)<a name="VentanaInfo"></a> <br><br>
 
             <br><br>
           ---
