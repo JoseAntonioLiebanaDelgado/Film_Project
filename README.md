@@ -170,9 +170,8 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
           y una puntuación con estrellas del 1 al 5 (El usuario puede modificar la puntuación de las estrellas siempre que quiera).<br><br>
           IMPORTANTE: El usuario debe clicar en el botón inferior de esta nueva ventana. (En el botón de añadir). <br><br>
           Cualquier campo que se haya agregado, si ha sido correctamente añadido, aparecerá junto con un nuevo elemento en la lista de la ventana principal. <br><br>
-          ![VentanaInfo](Images/VentanaInfo.png)<a name="VentanaInfo"></a> <br><br>
+          ![VentanaInfo](Images/VentanaInfo.png)<a name="VentanaInfo"></a> <br><br><br>
 
-            <br><br>
           ---
 
     - Apartado derecho<a name="apartadoDerecho"></a> <br><br>
