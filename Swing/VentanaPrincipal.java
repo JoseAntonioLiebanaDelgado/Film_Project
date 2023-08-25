@@ -491,7 +491,7 @@ public class VentanaPrincipal {
 
         JPanel containerPanelDerechoLabel = new JPanel();
 
-        JLabel labelPanelDerecho = new JLabel("VisualVault: Tu Reserva Audiovisual");
+        JLabel labelPanelDerecho = new JLabel("VISUALVAULT: Tu Reserva Audiovisual");
 
         JPanel panelInfoDerechoImagen = new JPanel();
         panelInfoDerechoImagen.setLayout(new BorderLayout());
