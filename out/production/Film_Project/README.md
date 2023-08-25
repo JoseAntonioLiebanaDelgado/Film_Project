@@ -59,8 +59,8 @@ Al abrir la App, aparece una la [ventana principal](#ventanaprincipal) en la que
       - [Número de duracion de minutos del elemento](#duracion) <br><br>
     
     - [Cuarto módulo:](#cuartaparte)
-      - [Botón añadir](#botonañadir) --> [(Abre otra ventana nueva)](#ventananueva) <br><br><br>
-
+      - [Botón añadir](#botonañadir) --> [(Abre otra ventana nueva llamada "Ventana Información")](#VentanaInfo) <br>
+---
 -  [El apartado de la derecha](#apartadoDerecho), ocupa practicamente tres cuartas partes de la ventana y está formado por 2 secciones divididas por un recuadro central. <br><br>
 
     - [La parte exterior del recuadro:](#parteexterior)
@@ -110,7 +110,7 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
 ## Funcionamiento de elementos por partes  <br><br>
 
 - Ventana principal<a name="ventanaprincipal"></a>  <br><br>
-![Imagen Ventana Principal](Images/ImagenVentanaPrincipal.png)<br><br>
+![magenVentanaPrincipal](Images/ImagenVentanaPrincipal.png)<br><br>
 
     - Apartado izquierdo<a name="apartadoIzquierdo"></a> <br><br>
 En el apartado izquierdo hay dos botones, uno para hacer login y otro para las configuraciones, 
@@ -118,26 +118,26 @@ a continuación aparecerá una barra de búsqueda, debajo aparecerá nuestra lis
 y en la parte inferior, un botón para añadir mas elementos a lista. 
 Éste botón nos abrirá otra ventana la cual tendrá como función almacenar información de un nuevo 
 elemento y una vez añadido, aparecerá en la lista.)<br><br>
-![Apartado Izquierdo](Images/ApartadoIzquierdo.png)<br><br>
+![ApartadoIzquierdo](Images/ApartadoIzquierdo.png)<br><br>
 
         - Primer módulo<a name="primeraparte"></a> <br><br>
         En el primer módulo aparecen los dos botones. <br>
         El del Login y el de las Configuraciones.<br><br>
-        ![Modulo 1de4](Images/ModuloUnodeCuatro.png)<br><br>
+        ![ModuloUnodeCuatro](Images/ModuloUnodeCuatro.png)<br><br>
             - Boton de Login<a name="botonlogin"></a><br><br>
-              ![Boton login](Images/Boton login.png)<br><br>
+              ![BotonLogin](Images/BotonLogin.png)<br><br>
             - Boton de Configuraciones<a name="botonconfiguraciones"></a> <br><br>
-              ![Boton configuraciones](Images/Boton configuraciones.png)<br><br>
+              ![BotonConfiguraciones](Images/BotonConfiguraciones.png)<br><br>
 
         - Segundo módulo<a name="segundaparte"></a> <br><br>
 
           En el segundo módulo hay un pequeño apartado con un escrito “Titulo Elemento” y al lado un icono de un cronometro.
           Y justo debajo y haciendo referencia al escrito y al icono, debajo del escrito estarán los nombres de 
           los elementos y justo al lado, debajo del icono del cronómetro se especifíca la duración del elemento en minutos. <br><br>
-          ![Modulo 2de4](Images/ModuloDosDeCuatro.png)<br><br>
+          ![ModuloDosDeCuatro](Images/ModuloDosDeCuatro.png)<br><br>
 
           - Texto titulo<a name="textotitulo"></a><br><br>
-          ![Titulo elemento](Images/TituloElemento.png)<br><br>
+          ![TituloElemento](Images/TituloElemento.png)<br><br>
           - Icono cronómetro<a name="cronometro"></a> <br><br>
           ![Cronometro](Images/Cronometro.png)<br><br>
 
@@ -145,22 +145,33 @@ elemento y una vez añadido, aparecerá en la lista.)<br><br>
 
           En el tercer módulo, justo debajo del segundo, haciendo referencia al escrito y al icono se sitúan los nombres de los elementos 
           y justo al lado, debajo del icono del cronómetro se especifíca la duración del elemento en minutos. <br><br>
-          ![Lista](Images/ModuloTresdeCuatro.png)<br><br>
+          ![ModuloTresdeCuatro](Images/ModuloTresdeCuatro.png)<br><br>
 
             - Lista de elementos<a name="listaelementos"></a><br><br>
-            ![Lista nombres](Images/ListaNombres.png)<br><br>
+            ![ListaNombres](Images/ListaNombres.png)<br><br>
 
             - Número de duracion de minutos del elemento<a name="duracion"></a> <br><br>
-            ![Lista minutos](Images/ListaMinutos.png)<br><br>
+            ![ListaMinutos](Images/ListaMinutos.png)<br><br>
 
         - Cuarto módulo<a name="cuartaparte"></a> <br><br>
-        En el cuarto módulo tenemos unicamente el botón para añadir nuevos elementos a la lista. <br><br>
-            - Botón Añadir (Abre otra ventana nueva)<a name="botonañadir"></a> <br><br>
-            Este botón, una vez ha sido clicado, abrirá otra ventana en la que podremos agregar información.
+        En el cuarto módulo tenemos únicamente el botón para añadir nuevos elementos a la lista. <br><br>
+            - Botón Añadir --> [(Abre otra ventana nueva llamada "Ventana Información")](#VentanaInfo)<a name="botonañadir"></a> <br><br>
+            Éste botón, una vez ha sido clicado, abrirá otra ventana en la que el usuario puede agregar información.
             De ésta misma información, aparecerá el nombre y los minutos en la lista de elementos y 
             todas las demás especifícaciones en el apartado derecho de la App (Dónde se muestra 
             toda la información del elemento seleccionado en la lista). <br><br>
-            ![Boton añadir ventana principal](Images/BotonAnadirVentanaPrincipal.png)<br><br>
+            ![BotonAnadirVentanaPrincipal](Images/BotonAnadirVentanaPrincipal.png)<br><br>
+          
+          - Ventana Información<a name="ventanaprincipal"></a> <br><br>
+          La "Ventana Información" aparecerá unicamante si el usuario clica en el botón inferior "Añadir" de la ventana principal. <br><br>
+          En esta ventana el usuario tiene la opción de añadir información en el campo del nombre, elegir una opción entre 12 para el genero,
+          el año de lanzamiento, la duración en minutos, el director, el reparto, elegir otra opción entre 6 para la edad que el usuario crea recomendada 
+          y una puntuación con estrellas del 1 al 5 (El usuario puede modificar la puntuación de las estrellas siempre que quiera).<br><br>
+          IMPORTANTE: El usuario debe clicar en el botón inferior de esta nueva ventana. (En el botón de añadir). <br><br>
+          Cualquier campo que se haya agregado, si ha sido correctamente añadido, aparecerá junto con un nuevo elemento en la lista de la ventana principal.
+          
+            <br><br><br><br>
+          ---
 
     - Apartado derecho<a name="apartadoDerecho"></a> <br><br>
     En apartado derecho de la App está dividido en dos secciones. Una seria la parte exterior del recuerdo central, 
@@ -169,21 +180,30 @@ elemento y una vez añadido, aparecerá en la lista.)<br><br>
     Podemos ver el título del elemento, el genero, el año de lanzamiento, la duración en minutos, el director, 
     los actores principales, la recomendación de edad y la puntuación. <br><br>
     Todo esta información aparecerá si el usuario la ha introducido, en caso de haber clicado el botón de añadir. <br><br>
-    ![Boton añadir ventana principal](Images/Apartadoderecho.png)<br><br>
+    ![Apartadoderecho](Images/ApartadoDerecho.png)<br><br>
 
         - Parte exterior<a name="parteexterior"></a> <br><br>
         En la parte exterior del recuadro unicamente encontraremos el título de la App. <br><br>
             - Titulo y logo de la App<a name="tituloylogo"></a> <br><br>
-        
-        - Parte interior<a name="parteinterior"></a> 
-            - Parte izquierda<a name="parteinterior"></a>
-                - Campos descriptivos<a name="camposdescriptivos"></a>
-                - Campos definidos<a name="camposdefinidos"></a> <br><br>
+            ![TituloApp](Images/TituloApp.png)<br><br>
+
+        - Parte interior<a name="parteinterior"></a> <br><br>
+        La parte interior se puede ver como también está dividida en dos partes:<br><br>
+        La parte izquierda dónde aparece toda la información escrita y la puntuación de la película seleccionada.<br><br>
+        La parte derecha dónde aparece la imagen de la portada de la película seleccionada y un botón que rediríge a un trailer de Youtube. <br><br>
+
+            - Parte izquierda<a name="parteinterior"></a> <br><br>
+                - Campos descriptivos<a name="camposdescriptivos"></a> <br><br>
+                ![CamposDescriptivos](Images/CamposDescriptivos.png)<br><br>
               
-            - Parte derecha<a name="partederecha"></a>
-                - Imagen portada<a name="imagenportada"></a>
-                - Botón trailer<a name="botontrailer"></a>
-    
+                - Campos definidos<a name="camposdefinidos"></a> <br><br>
+                ![CamposDefinidos](Images/CamposDefinidos.png)<br><br>
+              
+            - Parte derecha<a name="partederecha"></a> <br><br>
+                - Imagen portada<a name="imagenportada"></a> <br><br>
+                ![ImagenPortada](Images/ImagenPortada.png)<br><br>
+                - Botón trailer<a name="botontrailer"></a> <br><br>
+                ![BotonTrailer](Images/BotonTrailer.png)<br><br>
 
 
     

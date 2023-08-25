@@ -59,8 +59,8 @@ Al abrir la App, aparece una la [ventana principal](#ventanaprincipal) en la que
       - [Número de duracion de minutos del elemento](#duracion) <br><br>
     
     - [Cuarto módulo:](#cuartaparte)
-      - [Botón añadir](#botonañadir) --> [(Abre otra ventana nueva)](#ventananueva) <br><br><br>
-
+      - [Botón añadir](#botonañadir) --> [(Abre una nueva ventana para añadir información)](#VentanaInfo) <br>
+---
 -  [El apartado de la derecha](#apartadoDerecho), ocupa practicamente tres cuartas partes de la ventana y está formado por 2 secciones divididas por un recuadro central. <br><br>
 
     - [La parte exterior del recuadro:](#parteexterior)
@@ -155,12 +155,24 @@ elemento y una vez añadido, aparecerá en la lista.)<br><br>
 
         - Cuarto módulo<a name="cuartaparte"></a> <br><br>
         En el cuarto módulo tenemos únicamente el botón para añadir nuevos elementos a la lista. <br><br>
-            - Botón Añadir (Abre otra ventana nueva)<a name="botonañadir"></a> <br><br>
-            Éste botón, una vez ha sido clicado, abrirá otra ventana en la que podremos agregar información.
+            - Botón Añadir --> [(Abre una nueva ventana para añadir Información)](#VentanaInfo)<a name="botonañadir"></a> <br><br>
+            Éste botón, una vez ha sido clicado, abrirá otra ventana en la que el usuario puede agregar información.
             De ésta misma información, aparecerá el nombre y los minutos en la lista de elementos y 
             todas las demás especifícaciones en el apartado derecho de la App (Dónde se muestra 
             toda la información del elemento seleccionado en la lista). <br><br>
             ![BotonAnadirVentanaPrincipal](Images/BotonAnadirVentanaPrincipal.png)<br><br>
+          
+          - Añadir Información<a name="ventanaprincipal"></a> <br><br>
+          La ventana de "Añadir Información" aparecerá unicamante si el usuario clica en el botón inferior "Añadir" de la ventana principal. <br><br>
+          En esta ventana el usuario tiene la opción de añadir información en el campo del nombre, elegir una opción entre 12 para el genero,
+          el año de lanzamiento, la duración en minutos, el director, el reparto, elegir otra opción entre 6 para la edad que el usuario crea recomendada 
+          y una puntuación con estrellas del 1 al 5 (El usuario puede modificar la puntuación de las estrellas siempre que quiera).<br><br>
+          IMPORTANTE: El usuario debe clicar en el botón inferior de esta nueva ventana. (En el botón de añadir). <br><br>
+          Cualquier campo que se haya agregado, si ha sido correctamente añadido, aparecerá junto con un nuevo elemento en la lista de la ventana principal. <br><br>
+          ![VentanaInfo](Images/VentanaInfo.png)<br><br>
+
+            <br><br>
+          ---
 
     - Apartado derecho<a name="apartadoDerecho"></a> <br><br>
     En apartado derecho de la App está dividido en dos secciones. Una seria la parte exterior del recuerdo central, 
@@ -169,7 +181,7 @@ elemento y una vez añadido, aparecerá en la lista.)<br><br>
     Podemos ver el título del elemento, el genero, el año de lanzamiento, la duración en minutos, el director, 
     los actores principales, la recomendación de edad y la puntuación. <br><br>
     Todo esta información aparecerá si el usuario la ha introducido, en caso de haber clicado el botón de añadir. <br><br>
-    ![Apartadoderecho](Images/Apartadoderecho.png)<br><br>
+    ![Apartadoderecho](Images/ApartadoDerecho.png)<br><br>
 
         - Parte exterior<a name="parteexterior"></a> <br><br>
         En la parte exterior del recuadro unicamente encontraremos el título de la App. <br><br>
