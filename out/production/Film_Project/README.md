@@ -1,4 +1,4 @@
-# “VisualVault: Tu Reserva Audiovisual”<br><br>
+# VISUALVAULT: Tu Reserva Audiovisual<br><br>
 
 ![logo 1](Images/logoUno.png)
 ![logo 3](Images/logoTres.png)
@@ -6,8 +6,8 @@
 
 <br><br>
 
-1. [Que es “VisualVault: Tu Reserva Audiovisual” -- Descripción](#quees)
-2. [Como funciona “VisualVault: Tu Reserva Audiovisual” -- Funcionamiento](#comofunciona)
+1. [Que es VISUALVAULT: Tu Reserva Audiovisual -- Descripción](#quees)
+2. [Como funciona VISUALVAULT: Tu Reserva Audiovisual -- Funcionamiento](#comofunciona)
 3. [Estado del proyecto](#estado)
 4. [Características de la aplicación y demostración](#caracteristicas)
 5. [Tecnologías utilizadas](#tecnologias)
@@ -15,22 +15,22 @@
 7. [Como surgió la idea](#idea)<br><br>
 - - -
 
-## 1. ¿Qué es “VisualVault: Tu Reserva Audiovisual”? -- Descripcion <a name="quees"></a>
-VisualVault: Tu Reserva Audiovisual, es una App de escritorio en Java, la cual tiene como finalidad 
+## 1. ¿Qué es VISUALVAULT: Tu Reserva Audiovisual? -- Descripcion <a name="quees"></a>
+VisualVault: Tu Reserva Audiovisual es una App de escritorio en Java, la cual tiene como finalidad 
 almacenar los datos de películas, series y documentales, entre otros contenidos audiovisuales. 
 Es una biblioteca para guardar los datos de tus contenidos audiovisuales favoritos.<br><br>
 - - -
 
-## 2. ¿Cómo funciona “VisualVault: Tu Reserva Audiovisual”? -- Funcionamiento<a name="comofunciona"></a>
-Al iniciar la App, automaticamente se abre una ventana en la que a primera vista se diferencian dos apartados. 
+## 2. ¿Cómo funciona VISUALVAULT: Tu Reserva Audiovisual? -- Funcionamiento<a name="comofunciona"></a>
+Al iniciar la App, automáticamente se abre una ventana en la que a primera vista se diferencian dos apartados. 
 Uno a la izquierda y otro a la derecha.
 
 En el apartado izquierdo hay dos botones, uno para hacer login y otro para las configuraciones, 
 a continuación aparecerá una barra de búsqueda, debajo aparecerá nuestra lista de elementos 
-y en la parte inferior, un botón para añadir mas elementos a lista. Éste botón nos abrirá otra ventana 
+y en la parte inferior, un botón para añadir más elementos a lista. Este botón nos abrirá otra ventana 
 para rellenar la información del nuevo elemento.
 
-En el apartado de la derecha aparecerá el titulo de la App, la información del elemento que esté seleccionado
+En el apartado de la derecha aparecerá el título de la App, la información del elemento que esté seleccionado
 en la lista del apartado izquierdo y un botón que llevará a un trailer de Youtube.<br><br>
 - - -
 
@@ -59,7 +59,7 @@ Al abrir la App, aparece una la [ventana principal](#ventanaprincipal) en la que
       - [Número de duracion de minutos del elemento](#duracion) <br><br>
     
     - [Cuarto módulo:](#cuartaparte)
-      - [Botón añadir](#botonañadir) --> [(Abre otra ventana nueva llamada "Ventana Información")](#VentanaInfo) <br>
+      - [Botón añadir](#botonañadir) --> [(Abre una nueva ventana para añadir información)](#VentanaInfo) <br>
 ---
 -  [El apartado de la derecha](#apartadoDerecho), ocupa practicamente tres cuartas partes de la ventana y está formado por 2 secciones divididas por un recuadro central. <br><br>
 
@@ -86,7 +86,7 @@ En este proyecto se han utilizado las siguientes tecnologías:
 - - -
 
 ## 6. Conclusión<a name="conclusion"></a>
-A día de hoy puedo dar una conclusión, pero no final, ya que como comentaba el proyecto no está ni mucho menos acabado. 
+A día de hoy puedo dar una conclusión, pero no final, ya que como comentaba, el proyecto no está ni mucho menos acabado. 
 
 Dedicar mi tiempo en este pequeño proyecto ha servido para poder seguir adquiriendo confianza y motivación, 
 ya que me he encontrado con nuevos problemas y los he superado.
@@ -95,7 +95,6 @@ En resumidas cuentas, mi conclusión actual, es que este proyecto me ha sido ben
 - - -
 
 ## 7. Como surgió la idea<a name="idea"></a>
-
 Esta idea surgió hablando con un amigo, el cual pasa muchas horas viendo series y películas. 
 Me dijo que con todas las plataformas que hay, cada vez cuesta más de escoger una película o una serie y 
 que al final casi siempre ve las mismas. Le contesté que se hiciese una lista de películas
@@ -113,20 +112,21 @@ de esa manera no se perdería tanto tiempo buscando y viendo portadas de pelícu
 ![magenVentanaPrincipal](Images/ImagenVentanaPrincipal.png)<br><br>
 
     - Apartado izquierdo<a name="apartadoIzquierdo"></a> <br><br>
-En el apartado izquierdo hay dos botones, uno para hacer login y otro para las configuraciones, 
-a continuación aparecerá una barra de búsqueda, debajo aparecerá nuestra lista de elementos 
-y en la parte inferior, un botón para añadir mas elementos a lista. 
-Éste botón nos abrirá otra ventana la cual tendrá como función almacenar información de un nuevo 
-elemento y una vez añadido, aparecerá en la lista.)<br><br>
-![ApartadoIzquierdo](Images/ApartadoIzquierdo.png)<br><br>
+    En el apartado izquierdo hay dos botones, uno para hacer login y otro para las configuraciones, 
+    a continuación aparecerá una barra de búsqueda, debajo aparecerá nuestra lista de elementos 
+    y en la parte inferior, un botón para añadir más elementos a lista. 
+    Este botón nos abrirá otra ventana, la cual tendrá como función almacenar información de un nuevo 
+    elemento y una vez añadido, aparecerá en la lista.)<br><br>
+    ![ApartadoIzquierdo](Images/ApartadoIzquierdo.png)<br><br>
 
         - Primer módulo<a name="primeraparte"></a> <br><br>
+      
         En el primer módulo aparecen los dos botones. <br>
         El del Login y el de las Configuraciones.<br><br>
         ![ModuloUnodeCuatro](Images/ModuloUnodeCuatro.png)<br><br>
-            - Boton de Login<a name="botonlogin"></a><br><br>
+            - Botón de Login<a name="botonlogin"></a><br><br>
               ![BotonLogin](Images/BotonLogin.png)<br><br>
-            - Boton de Configuraciones<a name="botonconfiguraciones"></a> <br><br>
+            - Botón de Configuraciones<a name="botonconfiguraciones"></a> <br><br>
               ![BotonConfiguraciones](Images/BotonConfiguraciones.png)<br><br>
 
         - Segundo módulo<a name="segundaparte"></a> <br><br>
@@ -155,35 +155,37 @@ elemento y una vez añadido, aparecerá en la lista.)<br><br>
 
         - Cuarto módulo<a name="cuartaparte"></a> <br><br>
         En el cuarto módulo tenemos únicamente el botón para añadir nuevos elementos a la lista. <br><br>
-            - Botón Añadir --> [(Abre otra ventana nueva llamada "Ventana Información")](#VentanaInfo)<a name="botonañadir"></a> <br><br>
-            Éste botón, una vez ha sido clicado, abrirá otra ventana en la que el usuario puede agregar información.
-            De ésta misma información, aparecerá el nombre y los minutos en la lista de elementos y 
+      
+            - Botón Añadir <a name="botonañadir"></a> <br><br>
+            Este botón, una vez ha sido clicado, abrirá otra ventana en la que el usuario puede agregar información.
+            De esta misma información, aparecerá el nombre y los minutos en la lista de elementos y 
             todas las demás especifícaciones en el apartado derecho de la App (Dónde se muestra 
             toda la información del elemento seleccionado en la lista). <br><br>
             ![BotonAnadirVentanaPrincipal](Images/BotonAnadirVentanaPrincipal.png)<br><br>
           
-          - Ventana Información<a name="ventanaprincipal"></a> <br><br>
-          La "Ventana Información" aparecerá unicamante si el usuario clica en el botón inferior "Añadir" de la ventana principal. <br><br>
-          En esta ventana el usuario tiene la opción de añadir información en el campo del nombre, elegir una opción entre 12 para el genero,
+          - Ventana para añadir Información<a name="VentanaInfo"></a> <br><br>
+          La ventana para "Añadir Información" aparecerá unicamante si el usuario clica en el botón inferior "Añadir" de la ventana principal. <br><br>
+          En esta ventana el usuario tiene la opción de añadir información en el campo del nombre, elegir una opción entre 12 para el género,
           el año de lanzamiento, la duración en minutos, el director, el reparto, elegir otra opción entre 6 para la edad que el usuario crea recomendada 
           y una puntuación con estrellas del 1 al 5 (El usuario puede modificar la puntuación de las estrellas siempre que quiera).<br><br>
           IMPORTANTE: El usuario debe clicar en el botón inferior de esta nueva ventana. (En el botón de añadir). <br><br>
-          Cualquier campo que se haya agregado, si ha sido correctamente añadido, aparecerá junto con un nuevo elemento en la lista de la ventana principal.
-          
-            <br><br><br><br>
+          Cualquier campo que se haya agregado, si ha sido correctamente añadido, aparecerá junto con un nuevo elemento en la lista de la ventana principal. <br><br>
+          ![VentanaInfo](Images/VentanaInfo.png)<a name="VentanaInfo"></a> <br><br>
+
+            <br><br>
           ---
 
     - Apartado derecho<a name="apartadoDerecho"></a> <br><br>
-    En apartado derecho de la App está dividido en dos secciones. Una seria la parte exterior del recuerdo central, 
+    En apartado derecho de la App está dividido en dos secciones. Una sería la parte exterior del recuerdo central, 
     donde únicamente se sitúa el título de la App. Y la otra sería el mismo recuadro y lo que contiene dentro. <br><br>
-    En éste apartado derecho aparece la información de cada elemento que esté seleccionado en la lista de la parte izquierda de la App. <br><br>
-    Podemos ver el título del elemento, el genero, el año de lanzamiento, la duración en minutos, el director, 
+    En este apartado derecho aparece la información de cada elemento que esté seleccionado en la lista de la parte izquierda de la App. <br><br>
+    Podemos ver el título del elemento, el género, el año de lanzamiento, la duración en minutos, el director, 
     los actores principales, la recomendación de edad y la puntuación. <br><br>
-    Todo esta información aparecerá si el usuario la ha introducido, en caso de haber clicado el botón de añadir. <br><br>
+    Toda esta información aparecerá si el usuario la ha introducido, en caso de haber clicado el botón de añadir. <br><br>
     ![Apartadoderecho](Images/ApartadoDerecho.png)<br><br>
 
         - Parte exterior<a name="parteexterior"></a> <br><br>
-        En la parte exterior del recuadro unicamente encontraremos el título de la App. <br><br>
+        En la parte exterior del recuadro únicamente encontraremos el título de la App. <br><br>
             - Titulo y logo de la App<a name="tituloylogo"></a> <br><br>
             ![TituloApp](Images/TituloApp.png)<br><br>
 
@@ -194,15 +196,21 @@ elemento y una vez añadido, aparecerá en la lista.)<br><br>
 
             - Parte izquierda<a name="parteinterior"></a> <br><br>
                 - Campos descriptivos<a name="camposdescriptivos"></a> <br><br>
+                Los campos descriptivos son los nombres de cada caracteristicas que pueden estar definidos a su derecha o no. 
+                Los campos descriptivos siempre serán los mismos. <br><br>
                 ![CamposDescriptivos](Images/CamposDescriptivos.png)<br><br>
               
                 - Campos definidos<a name="camposdefinidos"></a> <br><br>
+                Los campos definidos son los resultados o definiciones de cada campo descriptivo. Puede haber algo escritoo seleccionado o no. <br><br>
                 ![CamposDefinidos](Images/CamposDefinidos.png)<br><br>
               
             - Parte derecha<a name="partederecha"></a> <br><br>
                 - Imagen portada<a name="imagenportada"></a> <br><br>
+                La imagen de portada cambiará junto con todos los demás datos cuando se seleccione un elemento diferente. <br><br>
                 ![ImagenPortada](Images/ImagenPortada.png)<br><br>
+              
                 - Botón trailer<a name="botontrailer"></a> <br><br>
+                La función del botón del trailer es enviar al usuario que clique el botón a un trailer de YouTube. <br><br>
                 ![BotonTrailer](Images/BotonTrailer.png)<br><br>
 
 
