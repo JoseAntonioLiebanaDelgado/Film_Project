@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+
 public class VentanaInfo {
     public static void main(String[] args) {
         /*SwingUtilities.invokeLater(() ->
@@ -154,7 +155,7 @@ public class VentanaInfo {
                 Pelicula peliculaUser = new Pelicula(userNombre, userGenero, userFinalAynoLanzamiento, userDuracionMinutos, userDirector, userFinalReparto, userPegi, 0);
                 System.out.println(peliculaUser);
 
-                Pelicula resultadoPelicula = pasarPeliculaDeVentanaInfoAPruebas(peliculaUser);
+                pasarInfoPeliculaDeVentanaInfoAVentanaPrincipal(peliculaUser);
             }
         });
 
@@ -300,9 +301,8 @@ public class VentanaInfo {
         }
     }
 
-    public static Pelicula pasarPeliculaDeVentanaInfoAPruebas(Pelicula elementoPeli) {
-        System.out.println(elementoPeli);
-        return elementoPeli;
+    public static Pelicula pasarInfoPeliculaDeVentanaInfoAVentanaPrincipal(Pelicula objetoPelicula){
+        return objetoPelicula;
     }
 
 }

@@ -84,6 +84,7 @@ public class VentanaPrincipal {
 
         ArrayList<Pelicula> listaDummy = new ArrayList<>();
 
+
         ArrayList<String> repartoESDLA_1_2_3 = new ArrayList<>();
         repartoESDLA_1_2_3.add("Elijah Wood");
         repartoESDLA_1_2_3.add("Sean Astin");
@@ -163,6 +164,8 @@ public class VentanaPrincipal {
                 repartoESDLA_1_2_3,
                 Pegi.TRECE,
                 4);
+
+        recojerInfoPeliculaDeVentanaInfo(peli1);
 
         listaDummy.add(peli1);
         listaDummy.add(peli2);
@@ -847,11 +850,9 @@ public class VentanaPrincipal {
         System.out.println("---");
     }
 
-    public static void metodoDummy(){
-
-        // Llamamos al metodo pasarPeliculaDeVentanaInfoAPruebas() de la clase VentanaInfo
-
-//        Pelicula resultado = VentanaInfo.pasarPeliculaDeVentanaInfoAPruebas(resultadoPelicula);
+    public static Pelicula recojerInfoPeliculaDeVentanaInfo(Pelicula objetoPelicula){
+        Pelicula resultadoPeli = VentanaInfo.pasarInfoPeliculaDeVentanaInfoAVentanaPrincipal(objetoPelicula);
+        return objetoPelicula;
     }
 
 }
