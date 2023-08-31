@@ -128,7 +128,6 @@ public class VentanaPrincipal {
         repartoTopGunMaverick.add("Jennifer Connelly");
 
 
-
         Pelicula peli1 = new Pelicula("Gladiator",
                 Genero.ACCION,
                 2000,
@@ -165,13 +164,10 @@ public class VentanaPrincipal {
                 Pegi.TRECE,
                 4);
 
-        recojerInfoPeliculaDeVentanaInfo(peli1);
-
         listaDummy.add(peli1);
         listaDummy.add(peli2);
         listaDummy.add(peli3);
         listaDummy.add(peli4);
-
 
         JPanel panelCreado = crearPanelConLabels(listaDummy);
         JButton botonAñadir = new JButton("Añadir");
@@ -850,9 +846,9 @@ public class VentanaPrincipal {
         System.out.println("---");
     }
 
-    public static Pelicula recojerInfoPeliculaDeVentanaInfo(Pelicula objetoPelicula){
-        Pelicula resultadoPeli = VentanaInfo.pasarInfoPeliculaDeVentanaInfoAVentanaPrincipal(objetoPelicula);
-        return objetoPelicula;
+    public static void recibirPelicula(Pelicula peli){
+        System.out.println("IMPRIMIENDO PELICULA RECIBIDA:");
+        System.out.println(peli.getNombre());
     }
 
 }

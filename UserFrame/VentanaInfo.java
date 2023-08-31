@@ -3,6 +3,7 @@ package UserFrame;
 import ENUM.Genero;
 import ENUM.Pegi;
 import Models.Pelicula;
+import Swing.VentanaPrincipal;
 
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicButtonUI;
@@ -13,7 +14,36 @@ import java.util.ArrayList;
 
 
 public class VentanaInfo {
+
     public static void main(String[] args) {
+
+
+        ArrayList<Pelicula> listaDummy = new ArrayList<>();
+
+        ArrayList<String> repartoESDLA_1_2_3 = new ArrayList<>();
+        repartoESDLA_1_2_3.add("Elijah Wood");
+        repartoESDLA_1_2_3.add("Sean Astin");
+        repartoESDLA_1_2_3.add("Viggo Mortensen");
+        repartoESDLA_1_2_3.add("Orlando Bloom");
+        repartoESDLA_1_2_3.add("Ian McKellen");
+
+        Pelicula peliDummy = new Pelicula("El señor de los anillos: Las dos torres",
+                Genero.ACCION,
+                2002,
+                "179",
+                "Peter Jakson",
+                repartoESDLA_1_2_3,
+                Pegi.TRECE,
+                4);
+
+
+
+
+
+
+
+
+
         /*SwingUtilities.invokeLater(() ->
         { createAndShowGUI(); }); Esto se encarga de garantizar que la creación y la presentación de la interfaz gráfica
         (ventanas, botones, etc..), se realice correctamente dentro del contexto de la arquitectura de Swing.*/
@@ -155,7 +185,7 @@ public class VentanaInfo {
                 Pelicula peliculaUser = new Pelicula(userNombre, userGenero, userFinalAynoLanzamiento, userDuracionMinutos, userDirector, userFinalReparto, userPegi, 0);
                 System.out.println(peliculaUser);
 
-                pasarInfoPeliculaDeVentanaInfoAVentanaPrincipal(peliculaUser);
+                VentanaPrincipal.recibirPelicula(peliculaUser);
             }
         });
 
@@ -300,11 +330,6 @@ public class VentanaInfo {
             return Integer.parseInt(texto);
         }
     }
-
-    public static Pelicula pasarInfoPeliculaDeVentanaInfoAVentanaPrincipal(Pelicula objetoPelicula){
-        return objetoPelicula;
-    }
-
 }
 
 
