@@ -84,7 +84,6 @@ public class VentanaPrincipal {
 
         ArrayList<Pelicula> listaDummy = new ArrayList<>();
 
-
         ArrayList<String> repartoESDLA_1_2_3 = new ArrayList<>();
         repartoESDLA_1_2_3.add("Elijah Wood");
         repartoESDLA_1_2_3.add("Sean Astin");
@@ -170,6 +169,16 @@ public class VentanaPrincipal {
         listaDummy.add(peli4);
 
         JPanel panelCreado = crearPanelConLabels(listaDummy);
+
+        JButton botonRefreshLista = new JButton("Actualizar lista");
+
+        botonRefreshLista.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                System.out.println("Has pulsado el botón para actualizar la lista");
+            }
+        });
+
         JButton botonAñadir = new JButton("Añadir");
 
         SwingUtilities.invokeLater(() -> {
@@ -178,8 +187,6 @@ public class VentanaPrincipal {
             });
 
         });
-
-//        VentanaInfo.pe;
 
 //---
 
@@ -546,7 +553,7 @@ public class VentanaPrincipal {
 
         botonDerechoPanelSuperiorIzquierdo.setPreferredSize(new Dimension(50, 50));
 
-        panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 4 + 75, 600));
+        panelCentralIzquierdo.setPreferredSize(new Dimension(framePadre.getWidth() / 4 + 75, 570));
 
         panelSuperiorCentralIzquierdo.setPreferredSize(new Dimension(350, 60));
 
@@ -555,7 +562,8 @@ public class VentanaPrincipal {
 
         lineaNegraSeparadora.setPreferredSize(new Dimension(350, 5));
 
-        botonAñadir.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 50, 50));
+        botonRefreshLista.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 50, 42));
+        botonAñadir.setPreferredSize(new Dimension(framePadre.getWidth() / 3 - 50, 42));
 
 //---
 
@@ -582,6 +590,8 @@ public class VentanaPrincipal {
         panelSuperiorIzquierdo.setOpaque(true);
         panelCentralIzquierdo.setOpaque(true);
         panelSuperiorCentralIzquierdo.setOpaque(true);
+        botonRefreshLista.setOpaque(true);
+        botonRefreshLista.setBorderPainted(false);
         botonAñadir.setOpaque(true);
         botonAñadir.setBorderPainted(false);
 
@@ -613,6 +623,9 @@ public class VentanaPrincipal {
         panelSuperiorCentralIzquierdo.setBackground(Color.decode("#117A65"));
 
         lineaNegraSeparadora.setBackground(Color.darkGray);
+
+        botonRefreshLista.setBackground(Color.decode("#117A65"));
+        botonRefreshLista.setForeground(Color.decode("#C1FFEA"));
 
         botonAñadir.setBackground(Color.decode("#117A65"));
         botonAñadir.setForeground(Color.decode("#C1FFEA"));
@@ -693,6 +706,7 @@ public class VentanaPrincipal {
         panelCentralIzquierdo.add(lineaNegraSeparadora);
         panelCentralIzquierdo.add(panelCreado);
 
+        panelPrincipalIzquierdo.add(botonRefreshLista);
         panelPrincipalIzquierdo.add(botonAñadir);
 
 //---
@@ -846,7 +860,7 @@ public class VentanaPrincipal {
         System.out.println("---");
     }
 
-    public static void recibirPelicula(Pelicula peli){
+    public static void recibirPelicula(Pelicula peli) {
         System.out.println("IMPRIMIENDO PELICULA RECIBIDA:");
         System.out.println(peli.getNombre());
     }
