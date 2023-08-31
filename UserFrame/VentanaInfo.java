@@ -17,7 +17,7 @@ public class VentanaInfo {
 
     public static void main(String[] args) {
 
-//
+
 //        ArrayList<Pelicula> listaDummy = new ArrayList<>();
 //
 //        ArrayList<String> repartoESDLA_1_2_3 = new ArrayList<>();
