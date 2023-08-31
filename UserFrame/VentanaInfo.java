@@ -17,31 +17,24 @@ public class VentanaInfo {
 
     public static void main(String[] args) {
 
-
-        ArrayList<Pelicula> listaDummy = new ArrayList<>();
-
-        ArrayList<String> repartoESDLA_1_2_3 = new ArrayList<>();
-        repartoESDLA_1_2_3.add("Elijah Wood");
-        repartoESDLA_1_2_3.add("Sean Astin");
-        repartoESDLA_1_2_3.add("Viggo Mortensen");
-        repartoESDLA_1_2_3.add("Orlando Bloom");
-        repartoESDLA_1_2_3.add("Ian McKellen");
-
-        Pelicula peliDummy = new Pelicula("El señor de los anillos: Las dos torres",
-                Genero.ACCION,
-                2002,
-                "179",
-                "Peter Jakson",
-                repartoESDLA_1_2_3,
-                Pegi.TRECE,
-                4);
-
-
-
-
-
-
-
+//
+//        ArrayList<Pelicula> listaDummy = new ArrayList<>();
+//
+//        ArrayList<String> repartoESDLA_1_2_3 = new ArrayList<>();
+//        repartoESDLA_1_2_3.add("Elijah Wood");
+//        repartoESDLA_1_2_3.add("Sean Astin");
+//        repartoESDLA_1_2_3.add("Viggo Mortensen");
+//        repartoESDLA_1_2_3.add("Orlando Bloom");
+//        repartoESDLA_1_2_3.add("Ian McKellen");
+//
+//        Pelicula peliDummy = new Pelicula("El señor de los anillos: Las dos torres",
+//                Genero.ACCION,
+//                2002,
+//                "179",
+//                "Peter Jakson",
+//                repartoESDLA_1_2_3,
+//                Pegi.TRECE,
+//                4);
 
 
         /*SwingUtilities.invokeLater(() ->
