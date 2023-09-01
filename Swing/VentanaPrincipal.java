@@ -15,6 +15,8 @@ import javax.swing.border.EmptyBorder;
 
 public class VentanaPrincipal {
 
+    static Pelicula peliculaUser = new Pelicula();
+
     public static void main(String[] args) {
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -163,10 +165,6 @@ public class VentanaPrincipal {
                 Pegi.TRECE,
                 4);
 
-        listaDummy.add(peli1);
-        listaDummy.add(peli2);
-        listaDummy.add(peli3);
-        listaDummy.add(peli4);
 
         JPanel panelCreado = crearPanelConLabels(listaDummy);
 
@@ -176,6 +174,11 @@ public class VentanaPrincipal {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 System.out.println("Has pulsado el botón para actualizar la lista");
+                listaDummy.add(peli1);
+                listaDummy.add(peli2);
+                listaDummy.add(peli3);
+                listaDummy.add(peli4);
+                listaDummy.add(peliculaUser);
             }
         });
 
@@ -185,7 +188,6 @@ public class VentanaPrincipal {
             botonAñadir.addActionListener(e -> {
                 VentanaInfo.createAndShowGUI();
             });
-
         });
 
 //---
@@ -861,6 +863,7 @@ public class VentanaPrincipal {
     }
 
     public static void recibirPelicula(Pelicula peli) {
+        peliculaUser = peli;
         System.out.println("IMPRIMIENDO PELICULA RECIBIDA:");
         System.out.println(peli.getNombre());
     }

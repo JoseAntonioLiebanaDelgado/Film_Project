@@ -44,6 +44,17 @@ public class Pelicula extends ContenidoAudioVisual {
         this.reparto = (reparto.isEmpty()) ? repartoErroneo : reparto;
     }
 
+
+    public Pelicula() {
+        super("Titulo vacio", Genero.ACCION, 0, "0", "Director vacio", Pegi.DOCE, 0);
+
+        ArrayList<String> repartoDummy = new ArrayList<>();
+
+        this.reparto = repartoDummy;
+    }
+
+
+
     /**
      * Método getter que nos permitirá acceder a éste valor o atributo.
      *
