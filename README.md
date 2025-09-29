@@ -1,3 +1,8 @@
+> ⚠️ **Nota importante**  
+> Este proyecto aún **no está finalizado**, pero ha sido fundamental para practicar y mejorar mis habilidades en **Java Swing** y en el desarrollo de aplicaciones de escritorio.  
+> Lo mantengo aquí como muestra de mi proceso de aprendizaje y evolución.
+
+
 # VISUALVAULT: Tu Reserva Audiovisual<br><br>
 
 ![logo 1](Images/logoUno.png)
