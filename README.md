@@ -20,7 +20,7 @@
 7. [Como surgió la idea](#idea)<br><br>
 - - -
 
-## 1. ¿Qué es VISUALVAULT: Tu Reserva Audiovisual? -- Descripcion <a name="quees"></a>
+## 1. ¿Qué es VISUALVAULT: Tu Reserva Audiovisual? -- Descripción <a name="quees"></a>
 VisualVault: Tu Reserva Audiovisual es una App de escritorio en Java, la cual tiene como finalidad 
 almacenar los datos de películas, series y documentales, entre otros contenidos audiovisuales. 
 Es una biblioteca para guardar los datos de tus contenidos audiovisuales favoritos.<br><br>
